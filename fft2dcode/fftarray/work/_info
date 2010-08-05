@@ -1,0 +1,243 @@
+m255
+13
+cModel Technology
+d/home/theja/current/samuel/design/fftarray
+vAGU
+IFR[1YVo>aJfKS7N2oW=:X3
+VdkMk>Oz^M5:TcY:1>@j1]3
+w1224739989
+F./AGU.v
+F00defines.v
+L0 3
+VdkMk>Oz^M5:TcY:1>@j1]3
+OE;L;6.2b;35
+r1
+31
+o-work work
+n@a@g@u
+vAGUabSequencer
+Ido`]M8MmoS4Who:mngQ:o0
+VS8P8IN0QiNnJ[TUI:Vz_21
+w1224696156
+F./AGUabSequencer.v
+F00defines.v
+L0 3
+VS8P8IN0QiNnJ[TUI:Vz_21
+OE;L;6.2b;35
+r1
+31
+o-work work
+n@a@g@uab@sequencer
+vAGUwSequencer
+IoOm;=jhLFM:6_N7Uhz8b[0
+VAl1?`K4l4WK?Qb9RHO5_Y0
+w1224696156
+F./AGUwSequencer.v
+F00defines.v
+L0 6
+VAl1?`K4l4WK?Qb9RHO5_Y0
+OE;L;6.2b;35
+r1
+31
+o-work work
+n@a@g@uw@sequencer
+vButterfly
+Id:[JQgbWCl;aiBVCS^Pkm0
+Vaj`SVNzCWKPk?:4MVVa_V2
+w1224696156
+F./Butterfly.v
+F00defines.v
+L0 8
+Vaj`SVNzCWKPk?:4MVVa_V2
+OE;L;6.2b;35
+r1
+31
+o-work work
+n@butterfly
+vButterfly_Mult
+I88<Hm]4USUgm1`f]0jXCM0
+V?AO@BlhbL=klcZICRggz83
+w1224696156
+F./Butterfly_Mult.v
+F00defines.v
+L0 3
+V?AO@BlhbL=klcZICRggz83
+OE;L;6.2b;35
+r1
+31
+o-work work
+n@butterfly_@mult
+vController
+Il>g27GZi?9hUW[Vc:`b>h3
+VPn<Gz;e6j3Zf4G7c0Q=nh0
+w1224776667
+F./Controller.v
+F00defines.v
+L0 4
+VPn<Gz;e6j3Zf4G7c0Q=nh0
+OE;L;6.2b;35
+r1
+31
+o-work work
+n@controller
+vdetailed_testbench
+I^6DW:5mOFHEfT2o_zTbhG2
+VLYPSYbfzhdfm5zS0F@;K@3
+w1224794301
+F./detailed_testbench.v
+F00defines.v
+L0 3
+VLYPSYbfzhdfm5zS0F@;K@3
+OE;L;6.2b;35
+r1
+31
+o-work work
+vFFTARRAY
+Ih_9`<L3I[BF:MFdmHf32z2
+Vbkk2kN2;IRdm:S4HR1Yl<0
+w1224790676
+F./FFTARRAY.v
+F00defines.v
+L0 3
+Vbkk2kN2;IRdm:S4HR1Yl<0
+OE;L;6.2b;35
+r1
+31
+o-work work
+n@f@f@t@a@r@r@a@y
+vFFTARRAY_Controller
+I8f9BbNHlz5FoH@5=li]0A3
+V@GTJTBN3MPHVEWYK9TnWA3
+w1224789294
+F./FFTARRAY_Controller.v
+F00defines.v
+L0 10
+V@GTJTBN3MPHVEWYK9TnWA3
+OE;L;6.2b;35
+r1
+31
+o-work work
+n@f@f@t@a@r@r@a@y_@controller
+Efftbrams
+w1223891529
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_signed <9<Kcl:S52:oW`F]FQhb20
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+F./fftbrams.vhd
+l0
+L9
+VOIDRGb:`WGNK=2BFAcI2_1
+OE;C;6.2b;35
+31
+o-93 -explicit -work work
+tExplicit 1
+Abehavioral
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_signed <9<Kcl:S52:oW`F]FQhb20
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work fftbrams OIDRGb:`WGNK=2BFAcI2_1
+l56
+L28
+V3fIDn4I]VM13Q`Q`9OhEE2
+OE;C;6.2b;35
+31
+M4 ieee std_logic_1164
+M3 ieee std_logic_signed
+M2 ieee std_logic_arith
+M1 ieee numeric_std
+o-93 -explicit -work work
+tExplicit 1
+vIO
+IHf1^N<2KZ_`e>[jJ<@AkG3
+VZHM67je8nJXzeGkE^J2:;2
+w1224696156
+F./IO.v
+F00defines.v
+L0 6
+VZHM67je8nJXzeGkE^J2:;2
+OE;L;6.2b;35
+r1
+31
+o-work work
+n@i@o
+Esinglebram
+w1223691541
+DP std textio K]Z^fghZ6B=BjnK5NomDT3
+DP work txt_util ?]=mM4nMZH;K3XONX4i122
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+F./singlebram.vhd
+l0
+L9
+Vz=D:Oo;=3?8?CeI8?ii]03
+OE;C;6.2b;35
+31
+o-93 -explicit -work work
+tExplicit 1
+Asinglebram_a
+DP xilinxcorelib blkmemdp_pkg_v6_3 nd2dn[YMHJz]5PH21A]1B0
+DP xilinxcorelib ul_utils oQZV22TQNUWm_PlLE^[Ve3
+DP xilinxcorelib blkmemdp_mem_init_file_pack_v6_3 OfbVh;Bg3RCW@3<ifzf1G1
+DP ieee vital_timing OBWK>;kUYmkG<OChK2lhV1
+DE xilinxcorelib blkmemdp_v6_3 NLSW_fkHc[Z0;KCl:OA_W1
+DP std textio K]Z^fghZ6B=BjnK5NomDT3
+DP work txt_util ?]=mM4nMZH;K3XONX4i122
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work singlebram z=D:Oo;=3?8?CeI8?ii]03
+l101
+L25
+VLj9DGHHnZlYg3SN;QnbzI3
+OE;C;6.2b;35
+31
+M7 ieee std_logic_1164
+M6 work txt_util
+M5 std textio
+M4 ieee vital_timing
+M3 xilinxcorelib blkmemdp_mem_init_file_pack_v6_3
+M2 xilinxcorelib ul_utils
+M1 xilinxcorelib blkmemdp_pkg_v6_3
+o-93 -explicit -work work
+tExplicit 1
+Ptxt_util
+DP std textio K]Z^fghZ6B=BjnK5NomDT3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+w1205242216
+F./txt_util.vhd
+l0
+L6
+V?]=mM4nMZH;K3XONX4i122
+OE;C;6.2b;35
+31
+b1
+M2 ieee std_logic_1164
+M1 std textio
+o-93 -explicit -work work
+tExplicit 1
+Bbody
+DB work txt_util ?]=mM4nMZH;K3XONX4i122
+DP std textio K]Z^fghZ6B=BjnK5NomDT3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+l0
+L6
+Vnlf11MM2>MMzeSGf_7]]O3
+OE;C;6.2b;35
+31
+M2 ieee std_logic_1164
+M1 std textio
+o-93 -explicit -work work
+tExplicit 1
+nbody
+vunit_1DFFT
+I1MCzMET;[@i@<LUOdLM`z3
+VTm0YTM1AiehI8:b0GOkke3
+w1224696156
+F./unit_1DFFT.v
+F00defines.v
+L0 3
+VTm0YTM1AiehI8:b0GOkke3
+OE;L;6.2b;35
+r1
+31
+o-work work
+nunit_1@d@f@f@t

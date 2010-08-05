@@ -1,0 +1,462 @@
+# //  ModelSim SE 6.2b Jul 31 2006 Linux 2.6.24-19-generic
+# //
+# //  Copyright 2006 Mentor Graphics Corporation
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+fo fftnew.do
+# ambiguous command name "fo": focus font for force foreach foreachGridWindow foreachSignalsWindow foreachVariablesWindow foreachWaveWindow foreachWindow format formatTime format_vsim_error
+do fftnew.do
+# ./
+# ** Warning: (vlib-34) Library already exists at "work".
+# Modifying /home/theja/administrative/randomunix/scripts/modelsimSE6/modeltech/linux/../modelsim.ini
+# ** Warning: (vlib-34) Library already exists at "XilinxCoreLib".
+# Modifying /home/theja/administrative/randomunix/scripts/modelsimSE6/modeltech/linux/../modelsim.ini
+# Model Technology ModelSim SE vcom 6.2b Compiler 2006.07 Jul 31 2006
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling package blkmemdp_pkg_v6_3
+# -- Compiling package body blkmemdp_pkg_v6_3
+# -- Loading package blkmemdp_pkg_v6_3
+# Model Technology ModelSim SE vcom 6.2b Compiler 2006.07 Jul 31 2006
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling package ul_utils
+# -- Compiling package body ul_utils
+# -- Loading package ul_utils
+# -- Compiling package math_int
+# -- Compiling package body math_int
+# -- Loading package math_int
+# Model Technology ModelSim SE vcom 6.2b Compiler 2006.07 Jul 31 2006
+# -- Loading package standard
+# -- Loading package textio
+# -- Loading package std_logic_1164
+# -- Loading package ul_utils
+# -- Compiling package blkmemdp_mem_init_file_pack_v6_3
+# -- Compiling package body blkmemdp_mem_init_file_pack_v6_3
+# -- Loading package blkmemdp_mem_init_file_pack_v6_3
+# Model Technology ModelSim SE vcom 6.2b Compiler 2006.07 Jul 31 2006
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package vital_timing
+# -- Loading package textio
+# -- Loading package ul_utils
+# -- Loading package blkmemdp_mem_init_file_pack_v6_3
+# -- Loading package blkmemdp_pkg_v6_3
+# -- Compiling entity blkmemdp_v6_3
+# -- Compiling architecture behavioral of blkmemdp_v6_3
+# Model Technology ModelSim SE vcom 6.2b Compiler 2006.07 Jul 31 2006
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package textio
+# -- Compiling package txt_util
+# -- Compiling package body txt_util
+# -- Loading package txt_util
+# Model Technology ModelSim SE vcom 6.2b Compiler 2006.07 Jul 31 2006
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package textio
+# -- Loading package txt_util
+# -- Compiling entity singlebram
+# -- Compiling architecture singlebram_a of singlebram
+# -- Loading package vital_timing
+# -- Loading package ul_utils
+# -- Loading package blkmemdp_mem_init_file_pack_v6_3
+# -- Loading package blkmemdp_pkg_v6_3
+# -- Loading entity blkmemdp_v6_3
+# Model Technology ModelSim SE vcom 6.2b Compiler 2006.07 Jul 31 2006
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_signed
+# -- Loading package numeric_std
+# -- Compiling entity fftbrams
+# -- Compiling architecture behavioral of fftbrams
+# Model Technology ModelSim SE vlog 6.2b Compiler 2006.07 Jul 31 2006
+# Model Technology ModelSim SE vlog 6.2b Compiler 2006.07 Jul 31 2006
+# -- Compiling module Butterfly_Mult
+# 
+# Top level modules:
+# 	Butterfly_Mult
+# Model Technology ModelSim SE vlog 6.2b Compiler 2006.07 Jul 31 2006
+# -- Compiling module Butterfly
+# 
+# Top level modules:
+# 	Butterfly
+# Model Technology ModelSim SE vlog 6.2b Compiler 2006.07 Jul 31 2006
+# -- Compiling module AGUwSequencer
+# 
+# Top level modules:
+# 	AGUwSequencer
+# Model Technology ModelSim SE vlog 6.2b Compiler 2006.07 Jul 31 2006
+# -- Compiling module AGUabSequencer
+# 
+# Top level modules:
+# 	AGUabSequencer
+# Model Technology ModelSim SE vlog 6.2b Compiler 2006.07 Jul 31 2006
+# -- Compiling module AGU
+# 
+# Top level modules:
+# 	AGU
+# Model Technology ModelSim SE vlog 6.2b Compiler 2006.07 Jul 31 2006
+# -- Compiling module Controller
+# 
+# Top level modules:
+# 	Controller
+# Model Technology ModelSim SE vlog 6.2b Compiler 2006.07 Jul 31 2006
+# -- Compiling module IO
+# 
+# Top level modules:
+# 	IO
+# Model Technology ModelSim SE vlog 6.2b Compiler 2006.07 Jul 31 2006
+# -- Compiling module unit_1DFFT
+# 
+# Top level modules:
+# 	unit_1DFFT
+# Model Technology ModelSim SE vlog 6.2b Compiler 2006.07 Jul 31 2006
+# -- Compiling module Transposer
+# 
+# Top level modules:
+# 	Transposer
+# Model Technology ModelSim SE vlog 6.2b Compiler 2006.07 Jul 31 2006
+# -- Compiling module FFT2D_Controller
+# 
+# Top level modules:
+# 	FFT2D_Controller
+# Model Technology ModelSim SE vlog 6.2b Compiler 2006.07 Jul 31 2006
+# -- Compiling module FFT2D
+# 
+# Top level modules:
+# 	FFT2D
+# Model Technology ModelSim SE vlog 6.2b Compiler 2006.07 Jul 31 2006
+# -- Compiling module detailed_testbench
+# 
+# Top level modules:
+# 	detailed_testbench
+# vsim -t ps work.detailed_testbench 
+# Loading work.detailed_testbench
+# Loading work.FFT2D
+# Loading work.FFT2D_Controller
+# Loading work.unit_1DFFT
+# Loading work.Controller
+# Loading work.AGU
+# Loading work.AGUabSequencer
+# Loading work.AGUwSequencer
+# Loading work.Butterfly
+# Loading work.Butterfly_Mult
+# Loading work.IO
+# Loading work.Transposer
+# Loading /home/theja/administrative/randomunix/scripts/modelsimSE6/modeltech/linux/../std.standard
+# Loading /home/theja/administrative/randomunix/scripts/modelsimSE6/modeltech/linux/../ieee.std_logic_1164(body)
+# Loading /home/theja/administrative/randomunix/scripts/modelsimSE6/modeltech/linux/../ieee.std_logic_arith(body)
+# Loading /home/theja/administrative/randomunix/scripts/modelsimSE6/modeltech/linux/../ieee.std_logic_signed(body)
+# Loading /home/theja/administrative/randomunix/scripts/modelsimSE6/modeltech/linux/../ieee.numeric_std(body)
+# Loading work.fftbrams(behavioral)
+# Loading /home/theja/administrative/randomunix/scripts/modelsimSE6/modeltech/linux/../std.textio(body)
+# Loading work.txt_util(body)
+# Loading /home/theja/administrative/randomunix/scripts/modelsimSE6/modeltech/linux/../ieee.vital_timing(body)
+# Loading XilinxCoreLib.ul_utils(body)
+# Loading XilinxCoreLib.blkmemdp_mem_init_file_pack_v6_3(body)
+# Loading XilinxCoreLib.blkmemdp_pkg_v6_3(body)
+# Loading work.singlebram(singlebram_a)
+# Loading XilinxCoreLib.blkmemdp_v6_3(behavioral)
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: No matching channel descriptor '2' found.  Ignoring the write in to the invalid channel.
+#    Time: 31450 ps  Iteration: 3  Instance: /detailed_testbench
+# ** Note: $finish    : ./detailed_testbench.v(183)
+#    Time: 31452 ps  Iteration: 0  Instance: /detailed_testbench
+# 1
+# Break in Module detailed_testbench at ./detailed_testbench.v line 183
+do fftnew.do
+# ./
+# ** Warning: (vlib-34) Library already exists at "work".
+# Modifying /home/theja/administrative/randomunix/scripts/modelsimSE6/modeltech/linux/../modelsim.ini
+# ** Warning: (vlib-34) Library already exists at "XilinxCoreLib".
+# Modifying /home/theja/administrative/randomunix/scripts/modelsimSE6/modeltech/linux/../modelsim.ini
+# Model Technology ModelSim SE vcom 6.2b Compiler 2006.07 Jul 31 2006
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling package blkmemdp_pkg_v6_3
+# -- Compiling package body blkmemdp_pkg_v6_3
+# -- Loading package blkmemdp_pkg_v6_3
+# Model Technology ModelSim SE vcom 6.2b Compiler 2006.07 Jul 31 2006
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling package ul_utils
+# -- Compiling package body ul_utils
+# -- Loading package ul_utils
+# -- Compiling package math_int
+# -- Compiling package body math_int
+# -- Loading package math_int
+# Model Technology ModelSim SE vcom 6.2b Compiler 2006.07 Jul 31 2006
+# -- Loading package standard
+# -- Loading package textio
+# -- Loading package std_logic_1164
+# -- Loading package ul_utils
+# -- Compiling package blkmemdp_mem_init_file_pack_v6_3
+# -- Compiling package body blkmemdp_mem_init_file_pack_v6_3
+# -- Loading package blkmemdp_mem_init_file_pack_v6_3
+# Model Technology ModelSim SE vcom 6.2b Compiler 2006.07 Jul 31 2006
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package vital_timing
+# -- Loading package textio
+# -- Loading package ul_utils
+# -- Loading package blkmemdp_mem_init_file_pack_v6_3
+# -- Loading package blkmemdp_pkg_v6_3
+# -- Compiling entity blkmemdp_v6_3
+# -- Compiling architecture behavioral of blkmemdp_v6_3
+# Model Technology ModelSim SE vcom 6.2b Compiler 2006.07 Jul 31 2006
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package textio
+# -- Compiling package txt_util
+# -- Compiling package body txt_util
+# -- Loading package txt_util
+# Model Technology ModelSim SE vcom 6.2b Compiler 2006.07 Jul 31 2006
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package textio
+# -- Loading package txt_util
+# -- Compiling entity singlebram
+# -- Compiling architecture singlebram_a of singlebram
+# -- Loading package vital_timing
+# -- Loading package ul_utils
+# -- Loading package blkmemdp_mem_init_file_pack_v6_3
+# -- Loading package blkmemdp_pkg_v6_3
+# -- Loading entity blkmemdp_v6_3
+# Model Technology ModelSim SE vcom 6.2b Compiler 2006.07 Jul 31 2006
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_signed
+# -- Loading package numeric_std
+# -- Compiling entity fftbrams
+# -- Compiling architecture behavioral of fftbrams
+# Model Technology ModelSim SE vlog 6.2b Compiler 2006.07 Jul 31 2006
+# Model Technology ModelSim SE vlog 6.2b Compiler 2006.07 Jul 31 2006
+# -- Compiling module Butterfly_Mult
+# 
+# Top level modules:
+# 	Butterfly_Mult
+# Model Technology ModelSim SE vlog 6.2b Compiler 2006.07 Jul 31 2006
+# -- Compiling module Butterfly
+# 
+# Top level modules:
+# 	Butterfly
+# Model Technology ModelSim SE vlog 6.2b Compiler 2006.07 Jul 31 2006
+# -- Compiling module AGUwSequencer
+# 
+# Top level modules:
+# 	AGUwSequencer
+# Model Technology ModelSim SE vlog 6.2b Compiler 2006.07 Jul 31 2006
+# -- Compiling module AGUabSequencer
+# 
+# Top level modules:
+# 	AGUabSequencer
+# Model Technology ModelSim SE vlog 6.2b Compiler 2006.07 Jul 31 2006
+# -- Compiling module AGU
+# 
+# Top level modules:
+# 	AGU
+# Model Technology ModelSim SE vlog 6.2b Compiler 2006.07 Jul 31 2006
+# -- Compiling module Controller
+# 
+# Top level modules:
+# 	Controller
+# Model Technology ModelSim SE vlog 6.2b Compiler 2006.07 Jul 31 2006
+# -- Compiling module IO
+# 
+# Top level modules:
+# 	IO
+# Model Technology ModelSim SE vlog 6.2b Compiler 2006.07 Jul 31 2006
+# -- Compiling module unit_1DFFT
+# 
+# Top level modules:
+# 	unit_1DFFT
+# Model Technology ModelSim SE vlog 6.2b Compiler 2006.07 Jul 31 2006
+# -- Compiling module Transposer
+# 
+# Top level modules:
+# 	Transposer
+# Model Technology ModelSim SE vlog 6.2b Compiler 2006.07 Jul 31 2006
+# -- Compiling module FFT2D_Controller
+# 
+# Top level modules:
+# 	FFT2D_Controller
+# Model Technology ModelSim SE vlog 6.2b Compiler 2006.07 Jul 31 2006
+# -- Compiling module FFT2D
+# 
+# Top level modules:
+# 	FFT2D
+# Model Technology ModelSim SE vlog 6.2b Compiler 2006.07 Jul 31 2006
+# -- Compiling module detailed_testbench
+# 
+# Top level modules:
+# 	detailed_testbench
+# vsim -t ps work.detailed_testbench 
+# Loading work.detailed_testbench
+# Loading work.FFT2D
+# Loading work.FFT2D_Controller
+# Loading work.unit_1DFFT
+# Loading work.Controller
+# Loading work.AGU
+# Loading work.AGUabSequencer
+# Loading work.AGUwSequencer
+# Loading work.Butterfly
+# Loading work.Butterfly_Mult
+# Loading work.IO
+# Loading work.Transposer
+# Loading /home/theja/administrative/randomunix/scripts/modelsimSE6/modeltech/linux/../std.standard
+# Loading /home/theja/administrative/randomunix/scripts/modelsimSE6/modeltech/linux/../ieee.std_logic_1164(body)
+# Loading /home/theja/administrative/randomunix/scripts/modelsimSE6/modeltech/linux/../ieee.std_logic_arith(body)
+# Loading /home/theja/administrative/randomunix/scripts/modelsimSE6/modeltech/linux/../ieee.std_logic_signed(body)
+# Loading /home/theja/administrative/randomunix/scripts/modelsimSE6/modeltech/linux/../ieee.numeric_std(body)
+# Loading work.fftbrams(behavioral)
+# Loading /home/theja/administrative/randomunix/scripts/modelsimSE6/modeltech/linux/../std.textio(body)
+# Loading work.txt_util(body)
+# Loading /home/theja/administrative/randomunix/scripts/modelsimSE6/modeltech/linux/../ieee.vital_timing(body)
+# Loading XilinxCoreLib.ul_utils(body)
+# Loading XilinxCoreLib.blkmemdp_mem_init_file_pack_v6_3(body)
+# Loading XilinxCoreLib.blkmemdp_pkg_v6_3(body)
+# Loading work.singlebram(singlebram_a)
+# Loading XilinxCoreLib.blkmemdp_v6_3(behavioral)
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /detailed_testbench/inst_fftbrams
+# ** Warning: No matching channel descriptor '2' found.  Ignoring the write in to the invalid channel.
+#    Time: 31450 ps  Iteration: 3  Instance: /detailed_testbench
+# ** Note: $finish    : ./detailed_testbench.v(183)
+#    Time: 31452 ps  Iteration: 0  Instance: /detailed_testbench
+# 1
+# Break in Module detailed_testbench at ./detailed_testbench.v line 183

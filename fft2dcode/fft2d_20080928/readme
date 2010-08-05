@@ -1,0 +1,37 @@
+Theja: July 2nd 2008
+
+This folder contains the verilog RTL for a 64*64 2D FFT module.
+
+The top module is FFT2D.v
+
+The testbench which can be used with verilog-XL is detailed_2DTOP_times.v
+
+000defines.v contains global constants for this 2D FFT processor.
+
+The heirarchy is as follows:
+
+FFT2D ->
+    ROM
+    FFT2D_IO ->
+		sFifo	
+    FFT2D_RAM
+    FFT2d_Controller
+    Transposer
+    unit_1DFFT ->
+		IO
+		Controller
+		AGU ->
+			AGUabSequencer
+			AGUwSequencer
+		Butterfly ->
+			Butterfly_Mult
+				Butterfly_Mult_Wallace
+					Butterfly_Mult_CLA16
+					Butterfly_Mult_Wallace_Adder
+					Butterfly_Mult_CLA4
+					Butterfly_Mult_FullAdder
+					Butterfly_Mult_HalfAdder
+					
+		
+
+

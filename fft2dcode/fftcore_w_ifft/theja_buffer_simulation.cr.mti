@@ -1,0 +1,41 @@
+/home/theja/current/samuel/modelsim_playground/theja_buffer_simulation/fftbrams.vhd {1 {vcom -work work -2002 -explicit -novopt /home/theja/current/samuel/modelsim_playground/theja_buffer_simulation/fftbrams.vhd
+Model Technology ModelSim SE vcom 6.2b Compiler 2006.07 Jul 31 2006
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package std_logic_signed
+-- Loading package numeric_std
+-- Compiling entity fftbrams
+-- Compiling architecture behavioral of fftbrams
+
+} {} {}} /home/theja/current/samuel/modelsim_playground/theja_buffer_simulation/txt_util.vhd {1 {vcom -work work -2002 -explicit -novopt /home/theja/current/samuel/modelsim_playground/theja_buffer_simulation/txt_util.vhd
+Model Technology ModelSim SE vcom 6.2b Compiler 2006.07 Jul 31 2006
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package textio
+-- Compiling package txt_util
+-- Compiling package body txt_util
+-- Loading package txt_util
+
+} {} {}} /home/theja/current/samuel/modelsim_playground/theja_buffer_simulation/fftbramstb.vhd {1 {vcom -work work -2002 -explicit -novopt /home/theja/current/samuel/modelsim_playground/theja_buffer_simulation/fftbramstb.vhd
+Model Technology ModelSim SE vcom 6.2b Compiler 2006.07 Jul 31 2006
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package std_logic_signed
+-- Loading package numeric_std
+-- Loading package textio
+-- Loading package txt_util
+-- Compiling entity fftbramstb
+-- Compiling architecture testbench of fftbramstb
+
+} {} {}} /home/theja/current/samuel/modelsim_playground/theja_buffer_simulation/singlebram.vhd {0 {vcom -work work -2002 -explicit -novopt /home/theja/current/samuel/modelsim_playground/theja_buffer_simulation/singlebram.vhd
+Model Technology ModelSim SE vcom 6.2b Compiler 2006.07 Jul 31 2006
+-- Loading package standard
+-- Loading package std_logic_1164
+** Error: /home/theja/current/samuel/modelsim_playground/theja_buffer_simulation/singlebram.vhd(4): Library xilinxcorelib not found.
+-- Loading package textio
+-- Loading package txt_util
+** Error: /home/theja/current/samuel/modelsim_playground/theja_buffer_simulation/singlebram.vhd(9): VHDL Compiler exiting
+
+} {5.0 6.0 8.0 9.0} {}}

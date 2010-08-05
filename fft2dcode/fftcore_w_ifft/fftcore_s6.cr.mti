@@ -1,0 +1,123 @@
+/home/theja/current/samuel/modelsim_playground/theja_buffer_simulation/AGU.v {1 {vlog -work work -novopt /home/theja/current/samuel/modelsim_playground/theja_buffer_simulation/AGU.v
+Model Technology ModelSim SE vlog 6.2b Compiler 2006.07 Jul 31 2006
+-- Compiling module AGU
+
+Top level modules:
+	AGU
+
+} {} {}} /home/theja/current/samuel/modelsim_playground/theja_buffer_simulation/FFT2D.v {1 {vlog -work work -novopt /home/theja/current/samuel/modelsim_playground/theja_buffer_simulation/FFT2D.v
+Model Technology ModelSim SE vlog 6.2b Compiler 2006.07 Jul 31 2006
+-- Compiling module FFT2D
+
+Top level modules:
+	FFT2D
+
+} {} {}} /home/theja/current/samuel/modelsim_playground/theja_buffer_simulation/00defines.v {1 {vlog -work work -novopt /home/theja/current/samuel/modelsim_playground/theja_buffer_simulation/00defines.v
+Model Technology ModelSim SE vlog 6.2b Compiler 2006.07 Jul 31 2006
+
+} {} {}} /home/theja/current/samuel/modelsim_playground/theja_buffer_simulation/AGUwSequencer.v {1 {vlog -work work -novopt /home/theja/current/samuel/modelsim_playground/theja_buffer_simulation/AGUwSequencer.v
+Model Technology ModelSim SE vlog 6.2b Compiler 2006.07 Jul 31 2006
+-- Compiling module AGUwSequencer
+
+Top level modules:
+	AGUwSequencer
+
+} {} {}} /home/theja/current/samuel/modelsim_playground/theja_buffer_simulation/IO.v {1 {vlog -work work -novopt /home/theja/current/samuel/modelsim_playground/theja_buffer_simulation/IO.v
+Model Technology ModelSim SE vlog 6.2b Compiler 2006.07 Jul 31 2006
+-- Compiling module IO
+
+Top level modules:
+	IO
+
+} {} {}} /home/theja/current/samuel/modelsim_playground/theja_buffer_simulation/Butterfly_Mult_CLA16.v {1 {vlog -work work -novopt /home/theja/current/samuel/modelsim_playground/theja_buffer_simulation/Butterfly_Mult_CLA16.v
+Model Technology ModelSim SE vlog 6.2b Compiler 2006.07 Jul 31 2006
+-- Compiling module Butterfly_Mult_CLA16
+
+Top level modules:
+	Butterfly_Mult_CLA16
+
+} {} {}} /home/theja/current/samuel/modelsim_playground/theja_buffer_simulation/Transposer.v {1 {vlog -work work -novopt /home/theja/current/samuel/modelsim_playground/theja_buffer_simulation/Transposer.v
+Model Technology ModelSim SE vlog 6.2b Compiler 2006.07 Jul 31 2006
+-- Compiling module Transposer
+
+Top level modules:
+	Transposer
+
+} {} {}} /home/theja/current/samuel/modelsim_playground/theja_buffer_simulation/Butterfly.v {1 {vlog -work work -novopt /home/theja/current/samuel/modelsim_playground/theja_buffer_simulation/Butterfly.v
+Model Technology ModelSim SE vlog 6.2b Compiler 2006.07 Jul 31 2006
+-- Compiling module Butterfly
+
+Top level modules:
+	Butterfly
+
+} {} {}} /home/theja/current/samuel/modelsim_playground/theja_buffer_simulation/AGUabSequencer.v {1 {vlog -work work -novopt /home/theja/current/samuel/modelsim_playground/theja_buffer_simulation/AGUabSequencer.v
+Model Technology ModelSim SE vlog 6.2b Compiler 2006.07 Jul 31 2006
+-- Compiling module AGUabSequencer
+
+Top level modules:
+	AGUabSequencer
+
+} {} {}} /home/theja/current/samuel/modelsim_playground/theja_buffer_simulation/Controller.v {1 {vlog -work work -novopt /home/theja/current/samuel/modelsim_playground/theja_buffer_simulation/Controller.v
+Model Technology ModelSim SE vlog 6.2b Compiler 2006.07 Jul 31 2006
+-- Compiling module Controller
+
+Top level modules:
+	Controller
+
+} {} {}} /home/theja/current/samuel/modelsim_playground/theja_buffer_simulation/Butterfly_Mult_FullAdder.v {1 {vlog -work work -novopt /home/theja/current/samuel/modelsim_playground/theja_buffer_simulation/Butterfly_Mult_FullAdder.v
+Model Technology ModelSim SE vlog 6.2b Compiler 2006.07 Jul 31 2006
+-- Compiling module Butterfly_Mult_FullAdder
+
+Top level modules:
+	Butterfly_Mult_FullAdder
+
+} {} {}} /home/theja/current/samuel/modelsim_playground/theja_buffer_simulation/Butterfly_Mult_CLA4.v {1 {vlog -work work -novopt /home/theja/current/samuel/modelsim_playground/theja_buffer_simulation/Butterfly_Mult_CLA4.v
+Model Technology ModelSim SE vlog 6.2b Compiler 2006.07 Jul 31 2006
+-- Compiling module Butterfly_Mult_CLA4
+
+Top level modules:
+	Butterfly_Mult_CLA4
+
+} {} {}} /home/theja/current/samuel/modelsim_playground/theja_buffer_simulation/FFT2D_Controller.v {1 {vlog -work work -novopt /home/theja/current/samuel/modelsim_playground/theja_buffer_simulation/FFT2D_Controller.v
+Model Technology ModelSim SE vlog 6.2b Compiler 2006.07 Jul 31 2006
+-- Compiling module FFT2D_Controller
+
+Top level modules:
+	FFT2D_Controller
+
+} {} {}} /home/theja/current/samuel/modelsim_playground/theja_buffer_simulation/Butterfly_Mult_Wallace_Adder.v {1 {vlog -work work -novopt /home/theja/current/samuel/modelsim_playground/theja_buffer_simulation/Butterfly_Mult_Wallace_Adder.v
+Model Technology ModelSim SE vlog 6.2b Compiler 2006.07 Jul 31 2006
+-- Compiling module Butterfly_Mult_Wallace_Adder
+
+Top level modules:
+	Butterfly_Mult_Wallace_Adder
+
+} {} {}} /home/theja/current/samuel/modelsim_playground/theja_buffer_simulation/Butterfly_Mult.v {1 {vlog -work work -novopt /home/theja/current/samuel/modelsim_playground/theja_buffer_simulation/Butterfly_Mult.v
+Model Technology ModelSim SE vlog 6.2b Compiler 2006.07 Jul 31 2006
+-- Compiling module Butterfly_Mult
+
+Top level modules:
+	Butterfly_Mult
+
+} {} {}} /home/theja/current/samuel/modelsim_playground/theja_buffer_simulation/Butterfly_Mult_Wallace.v {1 {vlog -work work -novopt /home/theja/current/samuel/modelsim_playground/theja_buffer_simulation/Butterfly_Mult_Wallace.v
+Model Technology ModelSim SE vlog 6.2b Compiler 2006.07 Jul 31 2006
+-- Compiling module Butterfly_Mult_Wallace
+
+Top level modules:
+	Butterfly_Mult_Wallace
+
+} {} {}} /home/theja/current/samuel/modelsim_playground/theja_buffer_simulation/unit_1DFFT.v {1 {vlog -work work -novopt /home/theja/current/samuel/modelsim_playground/theja_buffer_simulation/unit_1DFFT.v
+Model Technology ModelSim SE vlog 6.2b Compiler 2006.07 Jul 31 2006
+-- Compiling module unit_1DFFT
+
+Top level modules:
+	unit_1DFFT
+
+} {} {}} /home/theja/current/samuel/modelsim_playground/theja_buffer_simulation/Butterfly_Mult_HalfAdder.v {1 {vlog -work work -novopt /home/theja/current/samuel/modelsim_playground/theja_buffer_simulation/Butterfly_Mult_HalfAdder.v
+Model Technology ModelSim SE vlog 6.2b Compiler 2006.07 Jul 31 2006
+-- Compiling module Butterfly_Mult_HalfAdder
+
+Top level modules:
+	Butterfly_Mult_HalfAdder
+
+} {} {}}

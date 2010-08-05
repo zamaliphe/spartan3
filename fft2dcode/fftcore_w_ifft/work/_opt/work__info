@@ -1,0 +1,336 @@
+m255
+13
+cModel Technology
+d/home/sfan/fft/general_design/verilogtb_prob2
+T_opt
+V@QeebeXL3D0F8jz_LH4ji1
+04 18 4 work detailed_testbench fast 0
+o-quiet +acc -auto_acc_if_foreign -work work
+tExplicit 1
+OE;O;6.2b;35
+vAGU
+InD`aP<MSV[cW>oWfSMmca1
+Vmoo1;:czC[EYhJUk03DWd3
+w1223801006
+F./AGU.v
+F00defines.v
+L0 3
+Vmoo1;:czC[EYhJUk03DWd3
+OE;L;6.2b;35
+r1
+31
+o-work work
+n@a@g@u
+vAGUabSequencer
+I55cP[?<B]bc5U?KMR=1VY2
+VZU_TDHBg=b9IX@L6c_L;Q0
+w1223787732
+F./AGUabSequencer.v
+F00defines.v
+L0 3
+VZU_TDHBg=b9IX@L6c_L;Q0
+OE;L;6.2b;35
+r1
+31
+o-work work
+n@a@g@uab@sequencer
+vAGUwSequencer
+IclYG6iI5g66h5A]VE3KKe2
+Vz7`_iMao34CF]Yand9CG>2
+w1223694773
+F./AGUwSequencer.v
+F00defines.v
+L0 6
+Vz7`_iMao34CF]Yand9CG>2
+OE;L;6.2b;35
+r1
+31
+o-work work
+n@a@g@uw@sequencer
+vButterfly
+Id:[JQgbWCl;aiBVCS^Pkm0
+Vaj`SVNzCWKPk?:4MVVa_V2
+w1223787700
+F./Butterfly.v
+F00defines.v
+L0 8
+Vaj`SVNzCWKPk?:4MVVa_V2
+OE;L;6.2b;35
+r1
+31
+o-work work
+n@butterfly
+vButterfly_Mult
+IRSE<AR]W9G2:aS7?Bg^n]3
+V?AO@BlhbL=klcZICRggz83
+w1223694773
+F./Butterfly_Mult.v
+F00defines.v
+L0 3
+V?AO@BlhbL=klcZICRggz83
+OE;L;6.2b;35
+r1
+31
+o-work work
+n@butterfly_@mult
+vButterfly_Mult_CLA16
+I7hG6]EiLTU12Gn;II5ZO`1
+VGVA2TT1SSI]Y]R;=2TU=23
+w1220197750
+F./Butterfly_Mult_CLA16.v
+L0 4
+VGVA2TT1SSI]Y]R;=2TU=23
+OE;L;6.2b;35
+r1
+31
+o-work work
+n@butterfly_@mult_@c@l@a16
+vButterfly_Mult_CLA4
+I3h;kK?BcdZ95Z@8z8SW7O0
+VfIM>0ZRJX?I8>nLm^zc[k1
+w1220197750
+F./Butterfly_Mult_CLA4.v
+L0 1
+VfIM>0ZRJX?I8>nLm^zc[k1
+OE;L;6.2b;35
+r1
+31
+o-work work
+n@butterfly_@mult_@c@l@a4
+vButterfly_Mult_FullAdder
+IR:0o`DW]NGEeW4KCPjUc>3
+VBNLBgbXXVeT]DI3c27DSK1
+w1220197751
+F./Butterfly_Mult_FullAdder.v
+L0 1
+VBNLBgbXXVeT]DI3c27DSK1
+OE;L;6.2b;35
+r1
+31
+o-work work
+n@butterfly_@mult_@full@adder
+vButterfly_Mult_HalfAdder
+IA_@Jld^:;@b4adUHm^[c42
+V@T6[d8HF=VRKSK9DoUEXh2
+w1220197751
+F./Butterfly_Mult_HalfAdder.v
+L0 1
+V@T6[d8HF=VRKSK9DoUEXh2
+OE;L;6.2b;35
+r1
+31
+o-work work
+n@butterfly_@mult_@half@adder
+vButterfly_Mult_Wallace
+I2fXkA6l4OZOQboc1oi_B?3
+V`7<0gBoE76;b[ekY8BCh=3
+w1220197751
+F./Butterfly_Mult_Wallace.v
+L0 2
+V`7<0gBoE76;b[ekY8BCh=3
+OE;L;6.2b;35
+r1
+31
+o-work work
+n@butterfly_@mult_@wallace
+vButterfly_Mult_Wallace_Adder
+II?BJahhFjdFT2DZMKLFXV2
+VG:Pd?@fW`EEdQ]]3iI86V3
+w1220197751
+F./Butterfly_Mult_Wallace_Adder.v
+L0 1
+VG:Pd?@fW`EEdQ]]3iI86V3
+OE;L;6.2b;35
+r1
+31
+o-work work
+n@butterfly_@mult_@wallace_@adder
+vController
+Iz`zkIJMD4:nd<gK[S>C3L3
+Vh3hiXQc;C<XQN@aV;Z>az0
+w1223694773
+F./Controller.v
+F00defines.v
+L0 4
+Vh3hiXQc;C<XQN@aV;Z>az0
+OE;L;6.2b;35
+r1
+31
+o-work work
+n@controller
+vdetailed_testbench
+Io`neh?aN5gZ[`fCIkK[Od3
+VLYPSYbfzhdfm5zS0F@;K@3
+w1223913180
+F./detailed_testbench.v
+F00defines.v
+L0 3
+VLYPSYbfzhdfm5zS0F@;K@3
+OE;L;6.2b;35
+r1
+31
+o-work work
+vFFT2D
+IZf@gUKFgfc=HY>Y:aXOa92
+VeD4BcFllQ^ZdI93^P?^X53
+w1223908939
+F./FFT2D.v
+F00defines.v
+L0 3
+VeD4BcFllQ^ZdI93^P?^X53
+OE;L;6.2b;35
+r1
+31
+o-work work
+n@f@f@t2@d
+vFFT2D_Controller
+IiVIn3@TR1H5RF7SE8?7bY0
+V1m0[<NiAeUTY2zD:9B9j21
+w1223802999
+F./FFT2D_Controller.v
+F00defines.v
+L0 13
+V1m0[<NiAeUTY2zD:9B9j21
+OE;L;6.2b;35
+r1
+31
+o-work work
+n@f@f@t2@d_@controller
+Efftbrams
+w1223891529
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_signed <9<Kcl:S52:oW`F]FQhb20
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+31
+F./fftbrams.vhd
+l0
+L9
+VOIDRGb:`WGNK=2BFAcI2_1
+OE;C;6.2b;35
+o-93 -explicit -work work
+tExplicit 1
+Abehavioral
+DE work singlebram z=D:Oo;=3?8?CeI8?ii]03
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_signed <9<Kcl:S52:oW`F]FQhb20
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work fftbrams OIDRGb:`WGNK=2BFAcI2_1
+31
+M4 ieee std_logic_1164
+M3 ieee std_logic_signed
+M2 ieee std_logic_arith
+M1 ieee numeric_std
+l56
+L28
+V3fIDn4I]VM13Q`Q`9OhEE2
+OE;C;6.2b;35
+o-93 -explicit -work work
+tExplicit 1
+vIO
+IHf1^N<2KZ_`e>[jJ<@AkG3
+VZHM67je8nJXzeGkE^J2:;2
+w1223694773
+F./IO.v
+F00defines.v
+L0 6
+VZHM67je8nJXzeGkE^J2:;2
+OE;L;6.2b;35
+r1
+31
+o-work work
+n@i@o
+Esinglebram
+w1223691541
+DP std textio K]Z^fghZ6B=BjnK5NomDT3
+DP work txt_util ?]=mM4nMZH;K3XONX4i122
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+F./singlebram.vhd
+l0
+L9
+Vz=D:Oo;=3?8?CeI8?ii]03
+OE;C;6.2b;35
+31
+o-93 -explicit -work work
+tExplicit 1
+Asinglebram_a
+DP xilinxcorelib blkmemdp_pkg_v6_3 nd2dn[YMHJz]5PH21A]1B0
+DP xilinxcorelib ul_utils oQZV22TQNUWm_PlLE^[Ve3
+DP xilinxcorelib blkmemdp_mem_init_file_pack_v6_3 OfbVh;Bg3RCW@3<ifzf1G1
+DP ieee vital_timing OBWK>;kUYmkG<OChK2lhV1
+DE xilinxcorelib blkmemdp_v6_3 NLSW_fkHc[Z0;KCl:OA_W1
+DP std textio K]Z^fghZ6B=BjnK5NomDT3
+DP work txt_util ?]=mM4nMZH;K3XONX4i122
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work singlebram z=D:Oo;=3?8?CeI8?ii]03
+31
+M7 ieee std_logic_1164
+M6 work txt_util
+M5 std textio
+M4 ieee vital_timing
+M3 xilinxcorelib blkmemdp_mem_init_file_pack_v6_3
+M2 xilinxcorelib ul_utils
+M1 xilinxcorelib blkmemdp_pkg_v6_3
+l101
+L25
+VLj9DGHHnZlYg3SN;QnbzI3
+OE;C;6.2b;35
+o-93 -explicit -work work
+tExplicit 1
+vTransposer
+IhZfBf;ala5gSL_A:lT=nZ0
+VYl0N4STME0RcXjLT7M@:A2
+w1223904412
+F./Transposer.v
+F00defines.v
+FTransposer_temp/Transposer_temp.v
+L0 3
+VYl0N4STME0RcXjLT7M@:A2
+OE;L;6.2b;35
+r1
+31
+o-work work
+n@transposer
+Ptxt_util
+DP std textio K]Z^fghZ6B=BjnK5NomDT3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+w1205242216
+F./txt_util.vhd
+l0
+L6
+V?]=mM4nMZH;K3XONX4i122
+OE;C;6.2b;35
+31
+b1
+M2 ieee std_logic_1164
+M1 std textio
+o-93 -explicit -work work
+tExplicit 1
+Bbody
+DB work txt_util ?]=mM4nMZH;K3XONX4i122
+DP std textio K]Z^fghZ6B=BjnK5NomDT3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+31
+M2 ieee std_logic_1164
+M1 std textio
+l0
+L6
+Vnlf11MM2>MMzeSGf_7]]O3
+OE;C;6.2b;35
+o-93 -explicit -work work
+tExplicit 1
+nbody
+vunit_1DFFT
+IcmF2?<zC8HUU`b9B4Z2m?3
+V]ghOZE@UmcA=K70HAK<ch3
+w1223898341
+F./unit_1DFFT.v
+F00defines.v
+L0 3
+V]ghOZE@UmcA=K70HAK<ch3
+OE;L;6.2b;35
+r1
+31
+o-work work
+nunit_1@d@f@f@t

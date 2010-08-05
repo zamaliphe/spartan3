@@ -1,0 +1,160 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2003 Xilinx, Inc.
+// All Right Reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 8.2i
+//  \   \         Application : ISE
+//  /   /         Filename : detailed_2DFFT_TOPx.tfw
+// /___/   /\     Timestamp : Thu Mar 13 16:23:07 2008
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: 
+//Design Name: detailed_2DFFT_TOPx
+//Device: Xilinx
+//
+`timescale 1ns/1ps
+
+module detailed_2DFFT_TOPx;
+    reg [15:0] io_fft2d_data$inout$reg = 16'b0000000000000000;
+    wire [15:0] io_fft2d_data = io_fft2d_data$inout$reg;
+    reg i_fft2d_reset = 1'b0;
+    reg i_fft2d_start = 1'b0;
+    reg i_fft2d_base_clock = 1'b0;
+    wire o_TIP;
+    wire o_busy;
+//-------------------added by Theja--------------------
+	`define TOP_NN2 8192	//N*N*2 (representing the total number of writes or data bytes)
+	`define TOP_DATA_WIDTH 16//Data width is the same
+	integer i;
+	reg [`TOP_DATA_WIDTH-1:0] ip_data_mem[0:`TOP_NN2-1];  
+	integer j2;
+	reg [6:0]j1;
+	integer OUTPUT_FILE;
+	
+	initial begin
+		$readmemb("ip_data.list", ip_data_mem); 
+	end
+	
+	initial
+	begin
+		i_fft2d_reset 	<= 1;
+		i_fft2d_start 	<= 0;
+		i_fft2d_base_clock<= 0;
+		io_fft2d_data$inout$reg	<= 0;
+
+		#300
+		i_fft2d_reset 	<= 0;
+		i_fft2d_start 	<= 1;
+
+		#200	
+		for(i=0;i<`TOP_NN2;i=i+1)
+		begin
+			#200
+			io_fft2d_data$inout$reg <= ip_data_mem[i];
+		end
+		#200
+
+		io_fft2d_data$inout$reg <= 16'bZZZZ_ZZZZ_ZZZZ_ZZZZ;	//XILINX RELATED... IMPORTANT Theja 12th March 2008
+		
+	end
+
+	//-------------data collection on stdout---------------------------------------
+	always #200 j1=j1+1;
+	always #200 j2 = {(io_fft2d_data[`TOP_DATA_WIDTH-1]==1)?16'b1111_1111_1111_1111:0,io_fft2d_data};
+	initial
+	begin
+	    OUTPUT_FILE = $fopen("op2d_rect_20080402x.txt");
+		j1=0;
+		j2=0;
+		//#1963100 	//Only fft and write
+		#2852900 		//full output with proper bit reversing
+				 		//fft+trans+bitrev+write
+
+		j1 = -1;
+        #200 
+        $monitor("%d %d",j2, j1);
+		$fmonitor(OUTPUT_FILE,"%d %d",j2, j1);
+		#1638200 		//to monitor all 64 rows of complex data
+		$fclose(OUTPUT_FILE);
+	    $finish;
+	end
+	//-------------data collection on stdout---------------------------------------
+
+//-------------------added by Theja ends---------------
+	
+	
+	
+    parameter PERIOD = 200;
+    parameter real DUTY_CYCLE = 0.5;
+    parameter OFFSET = 0;
+
+    initial    // Clock process for i_fft2d_base_clock
+    begin
+        #OFFSET;
+        forever
+        begin
+            i_fft2d_base_clock = 1'b0;
+            #(PERIOD-(PERIOD*DUTY_CYCLE)) i_fft2d_base_clock = 1'b1;
+            #(PERIOD*DUTY_CYCLE);
+        end
+    end
+
+    FFT2D UUT (
+        .io_fft2d_data(io_fft2d_data),
+        .i_fft2d_reset(i_fft2d_reset),
+        .i_fft2d_start(i_fft2d_start),
+        .i_fft2d_base_clock(i_fft2d_base_clock),
+        .o_TIP(o_TIP),
+        .o_busy(o_busy));
+
+    integer TX_FILE = 0;
+    integer TX_ERROR = 0;
+    
+    initial begin  // Open the results file...
+        TX_FILE = $fopen("results.txt");
+        #5.0002e+006 // Final time:  5.0002e+006 ns
+        if (TX_ERROR == 0) begin
+            $display("No errors or warnings.");
+            $fdisplay(TX_FILE, "No errors or warnings.");
+        end else begin
+            $display("%d errors found in simulation.", TX_ERROR);
+            $fdisplay(TX_FILE, "%d errors found in simulation.", TX_ERROR);
+        end
+        $fclose(TX_FILE);
+        $stop;
+    end
+
+    initial begin
+    end
+
+    task CHECK_o_TIP;
+        input NEXT_o_TIP;
+
+        #0 begin
+            if (NEXT_o_TIP !== o_TIP) begin
+                $display("Error at time=%dns o_TIP=%b, expected=%b", $time, o_TIP, NEXT_o_TIP);
+                $fdisplay(TX_FILE, "Error at time=%dns o_TIP=%b, expected=%b", $time, o_TIP, NEXT_o_TIP);
+                $fflush(TX_FILE);
+                TX_ERROR = TX_ERROR + 1;
+            end
+        end
+    endtask
+    task CHECK_o_busy;
+        input NEXT_o_busy;
+
+        #0 begin
+            if (NEXT_o_busy !== o_busy) begin
+                $display("Error at time=%dns o_busy=%b, expected=%b", $time, o_busy, NEXT_o_busy);
+                $fdisplay(TX_FILE, "Error at time=%dns o_busy=%b, expected=%b", $time, o_busy, NEXT_o_busy);
+                $fflush(TX_FILE);
+                TX_ERROR = TX_ERROR + 1;
+            end
+        end
+    endtask
+
+endmodule
+

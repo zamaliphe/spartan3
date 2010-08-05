@@ -1,0 +1,62 @@
+H 2141964 10 4 0 29 28 0 0 0 0
+L 13 xilinxcorelib 13 XilinxCoreLib
+L 4 ieee 19 $MODEL_TECH/../ieee
+L 3 std 18 $MODEL_TECH/../std
+L 4 work 4 work
+D 46 XilinxCoreLib.blkmemdp_mem_init_file_pack_v6_3 9R?RT>3G;Im[cJ`H^dCTk1 5 1
+D 52 XilinxCoreLib.blkmemdp_mem_init_file_pack_v6_3(body) 9R?RT>3G;Im[cJ`H^dCTk1 4 1
+D 31 XilinxCoreLib.blkmemdp_pkg_v6_3 9h_6QLjAf7>a;9<Ka3DlT1 1 1
+D 37 XilinxCoreLib.blkmemdp_pkg_v6_3(body) 9h_6QLjAf7>a;9<Ka3DlT1 0 1
+D 39 XilinxCoreLib.blkmemdp_v6_3(behavioral) MO<^ZR1`X8o^Ee][SVc:o3 8 1
+D 22 XilinxCoreLib.ul_utils g3Y@?Sh9CJG<ZlPGnFVEl0 3 1
+D 28 XilinxCoreLib.ul_utils(body) g3Y@?Sh9CJG<ZlPGnFVEl0 2 1
+D 8 work.AGU nD`aP<MSV[cW>oWfSMmca1 14 0
+D 19 work.AGUabSequencer 55cP[?<B]bc5U?KMR=1VY2 12 0
+D 18 work.AGUwSequencer clYG6iI5g66h5A]VE3KKe2 13 0
+D 14 work.Butterfly d:[JQgbWCl;aiBVCS^Pkm0 22 0
+D 19 work.Butterfly_Mult RSE<AR]W9G2:aS7?Bg^n]3 21 0
+D 25 work.Butterfly_Mult_CLA16 7hG6]EiLTU12Gn;II5ZO`1 16 0
+D 24 work.Butterfly_Mult_CLA4 3h;kK?BcdZ95Z@8z8SW7O0 15 0
+D 29 work.Butterfly_Mult_FullAdder R:0o`DW]NGEeW4KCPjUc>3 18 0
+D 29 work.Butterfly_Mult_HalfAdder A_@Jld^:;@b4adUHm^[c42 17 0
+D 27 work.Butterfly_Mult_Wallace 2fXkA6l4OZOQboc1oi_B?3 20 0
+D 33 work.Butterfly_Mult_Wallace_Adder I?BJahhFjdFT2DZMKLFXV2 19 0
+D 15 work.Controller z`zkIJMD4:nd<gK[S>C3L3 11 0
+D 10 work.FFT2D Zf@gUKFgfc=HY>Y:aXOa92 26 0
+D 21 work.FFT2D_Controller iVIn3@TR1H5RF7SE8?7bY0 10 0
+D 7 work.IO Hf1^N<2KZ_`e>[jJ<@AkG3 23 0
+D 15 work.Transposer hZfBf;ala5gSL_A:lT=nZ0 25 0
+D 23 work.detailed_testbench o`neh?aN5gZ[`fCIkK[Od3 28 0
+D 25 work.fftbrams(behavioral) 3fIDn4I]VM13Q`Q`9OhEE2 27 1
+D 29 work.singlebram(singlebram_a) Lj9DGHHnZlYg3SN;QnbzI3 9 1
+D 13 work.txt_util nlf11MM2>MMzeSGf_7]]O3 7 1
+D 19 work.txt_util(body) nlf11MM2>MMzeSGf_7]]O3 6 1
+D 15 work.unit_1DFFT cmF2?<zC8HUU`b9B4Z2m?3 24 0
+2 4 fast 0 =@E2SC;eW8?MzLJSaD6BE2 27 28 1
+2 4 fast 0 MWg>18ZWzzDXIaBG^oZd:1 11 11 1
+2 4 fast 0 ^iUNKLO@HK3Z6YM4U6kTi1 12 12 1
+2 4 fast 0 4Ji:Id>RPVMcD2<NP>]J<1 25 25 1
+2 4 fast 0 KQ^1I`f<TiRaR:WG5BYgV1 26 26 1
+2 0  0 9h_6QLjAf7>a;9<Ka3DlT1 0 0 1
+2 0  0 fBaC@2LKWYROgl>faU=`h1 1 1 1
+2 0  0 g3Y@?Sh9CJG<ZlPGnFVEl0 2 2 1
+2 0  0 kFzKZnQ`55Z?9IPP;<8b22 3 3 1
+2 0  0 9R?RT>3G;Im[cJ`H^dCTk1 4 4 1
+2 0  0 V_<hEEcM;^Pm3kO[1d1Wm0 5 5 1
+2 0  0 nlf11MM2>MMzeSGf_7]]O3 6 6 1
+2 0  0 _ZOimz>RdJKBTbL^CG_cW0 7 7 1
+2 4 fast 0 BdV9VeaBa;O3ej<Uo[6UQ0 13 13 1
+2 4 fast 0 8XXc31>doIERz9T=ghba61 14 14 1
+2 4 fast 0 g1cNE`;G@D:L5caHZbSl=0 10 10 1
+2 4 fast 0 BF<cYV5z`=6nzz9k_OIN:2 17 17 1
+2 4 fast 0 5gCGz>edG8^iccgad3l080 15 15 1
+2 4 fast 0 EP11n7FB`[;PCKcQPH>X@0 16 16 1
+2 0  1 S[J@lYT5N3JRO4O0IR38m3 8 8 1
+2 0  1 LaoaLhS_K6H8S1jcVmKQN2 9 9 1
+2 4 fast 0 PnV`f`4n3`^f]kKb6cK0>1 18 18 1
+2 4 fast 0 lBNLST<LzW]TBeAnKmQCK3 19 19 1
+2 4 fast 0 m@F>>Jok5P;9HmA<Z[CDK2 20 20 1
+2 4 fast 0 jRKaZRQ:Ge1KJlKe566kk1 21 21 1
+2 4 fast 0 F5e`0IPA4QlKU2_XXK<[]2 22 22 1
+2 4 fast 0 NP7WgX<]Cb6g7WI=?oBA32 23 23 1
+2 4 fast 0 k2oH`;979k6?zYN3PXSiL1 24 24 1

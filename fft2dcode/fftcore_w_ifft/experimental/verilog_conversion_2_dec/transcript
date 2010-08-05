@@ -1,0 +1,44 @@
+# //  ModelSim SE 6.2b Jul 31 2006 Linux 2.6.24-19-generic
+# //
+# //  Copyright 2006 Mentor Graphics Corporation
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+do converter.do
+# ./
+# ** Warning: (vlib-34) Library already exists at "work".
+# Modifying /home/theja/administrative/randomunix/scripts/modelsimSE6/modeltech/linux/../modelsim.ini
+# Model Technology ModelSim SE vlog 6.2b Compiler 2006.07 Jul 31 2006
+# -- Compiling module converter
+# 
+# Top level modules:
+# 	converter
+# vsim -t ps work.converter 
+# Loading work.converter
+run -all
+# ** Warning: No matching channel descriptor '2' found.  Ignoring the write in to the invalid channel.
+#    Time: 1028 ps  Iteration: 2  Instance: /converter
+# ** Note: $finish    : ./converter.v(32)
+#    Time: 1030 ps  Iteration: 0  Instance: /converter
+# 1
+# Break in Module converter at ./converter.v line 32
+do converter.do
+# ./
+# ** Warning: (vlib-34) Library already exists at "work".
+# Modifying /home/theja/administrative/randomunix/scripts/modelsimSE6/modeltech/linux/../modelsim.ini
+# Model Technology ModelSim SE vlog 6.2b Compiler 2006.07 Jul 31 2006
+# -- Compiling module converter
+# 
+# Top level modules:
+# 	converter
+# vsim -t ps work.converter 
+# Loading work.converter
+run -all
+# ** Warning: No matching channel descriptor '2' found.  Ignoring the write in to the invalid channel.
+#    Time: 1024 ps  Iteration: 1  Instance: /converter
+# ** Note: $finish    : ./converter.v(31)
+#    Time: 1026 ps  Iteration: 0  Instance: /converter

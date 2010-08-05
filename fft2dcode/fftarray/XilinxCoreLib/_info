@@ -1,0 +1,145 @@
+m255
+13
+cModel Technology
+d/home/theja/current/samuel/design/fftarray
+Pblkmemdp_mem_init_file_pack_v6_3
+DP xilinxcorelib ul_utils oQZV22TQNUWm_PlLE^[Ve3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DP std textio K]Z^fghZ6B=BjnK5NomDT3
+w1165016689
+F./blkmemdp_mem_init_file_pack_v6_3.vhd
+l0
+L69
+VOfbVh;Bg3RCW@3<ifzf1G1
+OE;C;6.2b;35
+31
+b1
+M3 std textio
+M2 ieee std_logic_1164
+M1 xilinxcorelib ul_utils
+o-93 -explicit -work XilinxCoreLib
+tExplicit 1
+Bbody
+DB work blkmemdp_mem_init_file_pack_v6_3 OfbVh;Bg3RCW@3<ifzf1G1
+DP xilinxcorelib ul_utils oQZV22TQNUWm_PlLE^[Ve3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DP std textio K]Z^fghZ6B=BjnK5NomDT3
+l0
+L69
+V9R?RT>3G;Im[cJ`H^dCTk1
+OE;C;6.2b;35
+31
+M3 std textio
+M2 ieee std_logic_1164
+M1 xilinxcorelib ul_utils
+o-93 -explicit -work XilinxCoreLib
+tExplicit 1
+nbody
+Pblkmemdp_pkg_v6_3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+w1165016682
+F./blkmemdp_pkg_v6_3.vhd
+l0
+L62
+Vnd2dn[YMHJz]5PH21A]1B0
+OE;C;6.2b;35
+31
+b1
+M1 ieee std_logic_1164
+o-93 -explicit -work XilinxCoreLib
+tExplicit 1
+Bbody
+DB work blkmemdp_pkg_v6_3 nd2dn[YMHJz]5PH21A]1B0
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+l0
+L62
+V9h_6QLjAf7>a;9<Ka3DlT1
+OE;C;6.2b;35
+31
+M1 ieee std_logic_1164
+o-93 -explicit -work XilinxCoreLib
+tExplicit 1
+nbody
+Eblkmemdp_v6_3
+w1165016682
+DP xilinxcorelib blkmemdp_pkg_v6_3 nd2dn[YMHJz]5PH21A]1B0
+DP xilinxcorelib ul_utils oQZV22TQNUWm_PlLE^[Ve3
+DP std textio K]Z^fghZ6B=BjnK5NomDT3
+DP xilinxcorelib blkmemdp_mem_init_file_pack_v6_3 OfbVh;Bg3RCW@3<ifzf1G1
+DP ieee vital_timing OBWK>;kUYmkG<OChK2lhV1
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+F./blkmemdp_v6_3.vhd
+l0
+L69
+VNLSW_fkHc[Z0;KCl:OA_W1
+OE;C;6.2b;35
+31
+o-93 -explicit -work XilinxCoreLib
+tExplicit 1
+Abehavioral
+DP xilinxcorelib blkmemdp_pkg_v6_3 nd2dn[YMHJz]5PH21A]1B0
+DP xilinxcorelib ul_utils oQZV22TQNUWm_PlLE^[Ve3
+DP std textio K]Z^fghZ6B=BjnK5NomDT3
+DP xilinxcorelib blkmemdp_mem_init_file_pack_v6_3 OfbVh;Bg3RCW@3<ifzf1G1
+DP ieee vital_timing OBWK>;kUYmkG<OChK2lhV1
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work blkmemdp_v6_3 NLSW_fkHc[Z0;KCl:OA_W1
+l460
+L163
+VMO<^ZR1`X8o^Ee][SVc:o3
+OE;C;6.2b;35
+31
+M6 ieee std_logic_1164
+M5 ieee vital_timing
+M4 xilinxcorelib blkmemdp_mem_init_file_pack_v6_3
+M3 std textio
+M2 xilinxcorelib ul_utils
+M1 xilinxcorelib blkmemdp_pkg_v6_3
+o-93 -explicit -work XilinxCoreLib
+tExplicit 1
+Pmath_int
+w1165016684
+F./ul_utils.vhd
+l0
+L875
+V?7aa0VoC7c9m4NzzT_o072
+OE;C;6.2b;35
+31
+b1
+o-93 -explicit -work XilinxCoreLib
+tExplicit 1
+Bbody
+DB work math_int ?7aa0VoC7c9m4NzzT_o072
+l0
+L875
+VfRieNZP9do?OChVQ35Z;L3
+OE;C;6.2b;35
+31
+o-93 -explicit -work XilinxCoreLib
+tExplicit 1
+nbody
+Pul_utils
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+w1165016684
+F./ul_utils.vhd
+l0
+L20
+VoQZV22TQNUWm_PlLE^[Ve3
+OE;C;6.2b;35
+31
+b1
+M1 ieee std_logic_1164
+o-93 -explicit -work XilinxCoreLib
+tExplicit 1
+Bbody
+DB work ul_utils oQZV22TQNUWm_PlLE^[Ve3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+l0
+L20
+Vg3Y@?Sh9CJG<ZlPGnFVEl0
+OE;C;6.2b;35
+31
+M1 ieee std_logic_1164
+o-93 -explicit -work XilinxCoreLib
+tExplicit 1
+nbody
