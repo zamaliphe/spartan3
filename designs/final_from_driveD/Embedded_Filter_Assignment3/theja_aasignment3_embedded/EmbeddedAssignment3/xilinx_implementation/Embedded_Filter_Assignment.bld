@@ -1,0 +1,28 @@
+Release 8.1i ngdbuild I.24
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+
+Command Line: ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc
+D:/Embedded_Filter_Assignment3/Embedded_Filter_Assignment.ucf -p
+xc3s500e-fg320-4 Embedded_Filter_Assignment.ngc Embedded_Filter_Assignment.ngd 
+
+Reading NGO file
+'d:/Embedded_Filter_Assignment3/xilinx_implementation/Embedded_Filter_Assignment
+.ngc' ...
+
+Applying constraints in
+"D:/Embedded_Filter_Assignment3/Embedded_Filter_Assignment.ucf" to the design...
+
+Checking timing specifications ...
+Checking expanded design ...
+WARNING:NgdBuild:443 - SFF primitive 'processor/read_strobe_flop' has
+   unconnected output pin
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   1
+
+Total memory usage is 66752 kilobytes
+
+Writing NGD file "Embedded_Filter_Assignment.ngd" ...
+
+Writing NGDBUILD log file "Embedded_Filter_Assignment.bld"...

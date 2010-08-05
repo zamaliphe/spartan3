@@ -1,0 +1,192 @@
+Release 8.1i par I.24
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+
+SEXY-LAPTOP-NO1::  Wed Apr 08 13:54:54 2009
+
+par -w -intstyle ise -ol std -t 1 Embedded_Filter_Assignment_map.ncd
+Embedded_Filter_Assignment.ncd Embedded_Filter_Assignment.pcf 
+
+
+Constraints file: Embedded_Filter_Assignment.pcf.
+Loading device for application Rf_Device from file '3s500e.nph' in environment D:\Xilinx.
+   "Embedded_Filter_Assignment" is an NCD, version 3.1, device xc3s500e, package fg320, speed -4
+
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
+Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.260 Volts)
+
+
+Device speed data version:  "PRODUCTION 1.17 2005-11-04".
+
+
+Design Summary Report:
+
+ Number of External IOBs                          42 out of 232    18%
+
+   Number of External Input IOBs                 11
+
+      Number of External Input IBUFs             11
+        Number of LOCed External Input IBUFs     11 out of 11    100%
+
+
+   Number of External Output IOBs                27
+
+      Number of External Output IOBs             27
+        Number of LOCed External Output IOBs     27 out of 27    100%
+
+
+   Number of External Bidir IOBs                  4
+
+      Number of External Bidir IOBs               4
+        Number of LOCed External Bidir IOBs       4 out of 4     100%
+
+
+   Number of BUFGMUXs                  1 out of 24      4%
+   Number of RAMB16s                   1 out of 20      5%
+   Number of Slices                  124 out of 4656    2%
+      Number of SLICEMs               34 out of 2328    1%
+
+
+
+Overall effort level (-ol):   Standard 
+Placer effort level (-pl):    High 
+Placer cost table entry (-t): 1
+Router effort level (-rl):    Standard 
+
+Starting initial Timing Analysis.  REAL time: 11 secs 
+Finished initial Timing Analysis.  REAL time: 11 secs 
+
+
+Starting Placer
+
+Phase 1.1
+Phase 1.1 (Checksum:989c7f) REAL time: 12 secs 
+
+Phase 2.31
+Phase 2.31 (Checksum:1312cfe) REAL time: 12 secs 
+
+Phase 3.2
+......
+.................
+
+
+Phase 3.2 (Checksum:98a243) REAL time: 21 secs 
+
+Phase 4.30
+Phase 4.30 (Checksum:26259fc) REAL time: 21 secs 
+
+Phase 5.8
+..............
+..
+..............
+..
+..
+..
+Phase 5.8 (Checksum:9c649e) REAL time: 23 secs 
+
+Phase 6.5
+Phase 6.5 (Checksum:39386fa) REAL time: 23 secs 
+
+Phase 7.18
+Phase 7.18 (Checksum:42c1d79) REAL time: 25 secs 
+
+Phase 8.5
+Phase 8.5 (Checksum:4c4b3f8) REAL time: 25 secs 
+
+Writing design to file Embedded_Filter_Assignment.ncd
+
+
+Total REAL time to Placer completion: 25 secs 
+Total CPU time to Placer completion: 24 secs 
+
+Starting Router
+
+Phase 1: 1127 unrouted;       REAL time: 33 secs 
+
+Phase 2: 993 unrouted;       REAL time: 33 secs 
+
+Phase 3: 200 unrouted;       REAL time: 34 secs 
+
+Phase 4: 200 unrouted; (0)      REAL time: 34 secs 
+
+Phase 5: 200 unrouted; (0)      REAL time: 34 secs 
+
+Phase 6: 200 unrouted; (0)      REAL time: 34 secs 
+
+Phase 7: 0 unrouted; (0)      REAL time: 34 secs 
+
+Phase 8: 0 unrouted; (0)      REAL time: 35 secs 
+
+
+Total REAL time to Router completion: 35 secs 
+Total CPU time to Router completion: 34 secs 
+
+Generating "PAR" statistics.
+
+**************************
+Generating Clock Report
+**************************
+
++---------------------+--------------+------+------+------------+-------------+
+|        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
++---------------------+--------------+------+------+------------+-------------+
+|           clk_BUFGP | BUFGMUX_X1Y11| No   |  117 |  0.074     |  0.203      |
++---------------------+--------------+------+------+------------+-------------+
+
+* Net Skew is the difference between the minimum and maximum routing
+only delays for the net. Note this is different from Clock Skew which
+is reported in TRCE timing report. Clock Skew is the difference between
+the minimum and maximum path delays which includes logic delays.
+
+
+   The Delay Summary Report
+
+
+The NUMBER OF SIGNALS NOT COMPLETELY ROUTED for this design is: 0
+
+   The AVERAGE CONNECTION DELAY for this design is:        1.003
+   The MAXIMUM PIN DELAY IS:                               4.824
+   The AVERAGE CONNECTION DELAY on the 10 WORST NETS is:   3.902
+
+   Listing Pin Delays by value: (nsec)
+
+    d < 1.00   < d < 2.00  < d < 3.00  < d < 4.00  < d < 5.00  d >= 5.00
+   ---------   ---------   ---------   ---------   ---------   ---------
+         644         395          90          13           6           0
+
+Timing Score: 0
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+------------------------------------------------------------------------------------------------------
+  Constraint                                | Requested  | Actual     | Logic  | Absolute   |Number of  
+                                            |            |            | Levels | Slack      |errors     
+------------------------------------------------------------------------------------------------------
+  NET "clk_BUFGP/IBUFG" PERIOD = 20 ns HIGH | 20.000ns   | 13.221ns   | 3      | 6.779ns    | 0         
+   50%                                      |            |            |        |            |           
+------------------------------------------------------------------------------------------------------
+
+
+All constraints were met.
+Generating Pad Report.
+
+All signals are completely routed.
+
+Total REAL time to PAR completion: 37 secs 
+Total CPU time to PAR completion: 35 secs 
+
+Peak Memory Usage:  160 MB
+
+Placement: Completed - No errors found.
+Routing: Completed - No errors found.
+Timing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 0
+Number of info messages: 0
+
+Writing design to file Embedded_Filter_Assignment.ncd
+
+
+
+PAR done!

@@ -1,0 +1,6 @@
+verilog work "kcpsm3.v"
+verilog work "AUDI_LCD.v"
+verilog work "embedded_kcpsm3.v"
+verilog work "binary_to_bcd.v"
+verilog work "audi_rom.v"
+verilog work "audi.v"

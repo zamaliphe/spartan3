@@ -1,0 +1,4 @@
+vhdl work "D:/embedded_lab/test/adc_dac_fir_v1_test/kcpsm3.vhd"
+vhdl work "D:/embedded_lab/test/adc_dac_fir_v1_test/ADDA_CTR.VHD"
+verilog work "D:/embedded_lab/test/adc_dac_fir_v1_test/multiplier.v"
+verilog work "D:/embedded_lab/test/adc_dac_fir_v1_test/picoblaze_adc_dac_control.v"

@@ -1,0 +1,153 @@
+m255
+13
+cModel Technology
+dD:\embedded_lab\test\filterCheby_ideal\theja_systolicv3
+vdetailed_testbench
+Ich3Pm;kgL2=O:FSJDXjOG2
+V88]SMC]jL2iK46k?Rg;@=3
+w1243510152
+F./detailed_testbench.v
+L0 3
+OX;L;6.0d;29
+r1
+31
+o-work work -O0
+tGenerateLoopIterationMax 100000
+vmult
+I]=R5H02XE0QWV[X[Gj6;C1
+VSkXSRKZc?S@?dLDcn0mZ;1
+w1243435814
+F./mult.v
+L0 7
+OX;L;6.0d;29
+r1
+31
+o-work work -O0
+tGenerateLoopIterationMax 100000
+vmultALU
+IoMmUa11dC``LlT9[`OGn?3
+V4=RhS@1cJd0g`6Nl9zSG53
+w1242978152
+F./multALU.v
+L0 10
+OX;L;6.0d;29
+r1
+31
+o-work work -O0
+tGenerateLoopIterationMax 100000
+nmult@a@l@u
+vsystolic_PE1
+IiNon77LY@cPinLgoBjGNG0
+Vl69S2U__1oQZ`Gz7RCOHF2
+w1243508774
+F./systolic_PE1.v
+FC_row1.v
+L0 9
+OX;L;6.0d;29
+r1
+31
+o-work work -O0
+tGenerateLoopIterationMax 100000
+nsystolic_@p@e1
+vsystolic_PE2
+Ia>cI:Fa7V>o]gi=2G>^d93
+VMJ_bFf=<0V;W`j1;;TeaP0
+w1243507400
+F./systolic_PE2.v
+FC_row2.v
+L0 9
+OX;L;6.0d;29
+r1
+31
+o-work work -O0
+tGenerateLoopIterationMax 100000
+nsystolic_@p@e2
+vsystolic_PE3
+I[m@;[PJI_gCTmF9RD2NBD2
+V?HmD4n363_;DfTiN:dkh?2
+w1243508840
+F./systolic_PE3.v
+FC_row3.v
+L0 9
+OX;L;6.0d;29
+r1
+31
+o-work work -O0
+tGenerateLoopIterationMax 100000
+nsystolic_@p@e3
+vsystolic_PE4
+I2hz7V9bRi:b6bK@gdzTdK0
+VBDhLiY9lXZFMU1oNan`DX1
+w1243509006
+F./systolic_PE4.v
+FC_row4.v
+L0 9
+OX;L;6.0d;29
+r1
+31
+o-work work -O0
+tGenerateLoopIterationMax 100000
+nsystolic_@p@e4
+vsystolic_PE5
+IFnk>0UFg4AaUggVXXS_K11
+VOPaZCMS3NVdofiXAeUDBb1
+w1243509092
+F./systolic_PE5.v
+FC_row5.v
+L0 9
+OX;L;6.0d;29
+r1
+31
+o-work work -O0
+tGenerateLoopIterationMax 100000
+nsystolic_@p@e5
+vsystolic_PE6
+InFD[4]:MUC[Wd2c:_V<B=0
+VmP7[DW]0iP];5lBbI@5V10
+w1243509946
+F./systolic_PE6.v
+FC_row6.v
+L0 9
+OX;L;6.0d;29
+r1
+31
+o-work work -O0
+tGenerateLoopIterationMax 100000
+nsystolic_@p@e6
+vsystolic_PE7
+In[@:ldAcGG_n95F[PT=Io2
+VZ8?j0DmOBbfJ>hZQ1c0Ia1
+w1243509872
+F./systolic_PE7.v
+FC_row7.v
+L0 9
+OX;L;6.0d;29
+r1
+31
+o-work work -O0
+tGenerateLoopIterationMax 100000
+nsystolic_@p@e7
+vsystolic_PE8
+IMbFZnE@4@;F=`VcI]j1?;0
+VO9EJP>C;5GjU:1@9>6O@K1
+w1243508952
+F./systolic_PE8.v
+FC_row8.v
+L0 9
+OX;L;6.0d;29
+r1
+31
+o-work work -O0
+tGenerateLoopIterationMax 100000
+nsystolic_@p@e8
+vsystolic_wrapper
+Iz?LVQS7ba>]:n>RDThM[L1
+VJ?1VYSNU9[W?S8cZX?FSH3
+w1243508558
+F./systolic_wrapper.v
+L0 11
+OX;L;6.0d;29
+r1
+31
+o-work work -O0
+tGenerateLoopIterationMax 100000

@@ -1,0 +1,230 @@
+----------------------------------------------------------------------------------
+-- Company: 
+-- Engineer: 
+-- 
+-- Create Date:    09:17:56 02/27/2008 
+-- Design Name: 
+-- Module Name:    ADC_AMP - Behavioral 
+-- Project Name: 
+-- Target Devices: 
+-- Tool versions: 
+-- Description: 
+--
+-- Dependencies: 
+--
+-- Revision: 
+-- Revision 0.01 - File Created
+-- Additional Comments: 
+-- 
+----------------------------------------------------------------------------------
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+---- Uncomment the following library declaration if instantiating
+---- any Xilinx primitives in this code.
+--library UNISIM;
+--use UNISIM.VComponents.all;
+
+entity ADC is
+Port ( 	  
+			  AMP_SHDN : out std_logic;
+			  en : in std_logic;
+			  gain : in std_logic_vector(7 downto 0);
+			  clk : in  STD_LOGIC;
+           start_conv : in  STD_LOGIC;
+           SPI_MISO : in std_logic; --adc
+			  sample: out std_logic;
+			  CONV : out  STD_LOGIC;	--adc		  
+			  ADC1 : out std_logic_vector(13 downto 0);
+			  AMP_CS : out  STD_LOGIC;			  
+			  MOSI : out  STD_LOGIC;	-- amp
+           SCK : out  STD_LOGIC;
+			  SPI_SS_B: out std_logic;
+			 -- DAC_CS: out std_logic;
+			  FPGA_INIT_B: out std_logic
+		 
+			  );
+end ADC;
+
+architecture Behavioral of ADC is
+								
+	type state_type is (IDLE1,IDLE, START,START2,HI,HI_DUMMY,LO,LO_DUMMY,FINE,IDLE_AD, START_AD,HI_AD,LO_AD,FINE_AD);
+   signal state : state_type;	 
+	signal counter : std_logic_vector (5 downto 0);	
+	signal ADC2 : std_logic_vector (13 downto 0);
+	signal bit_count: std_logic_vector (4 downto 0);
+	signal gain_temp: std_logic_vector (7 downto 0);
+
+
+begin
+
+
+--DAC_CS <= '1';
+SPI_SS_B <= '0';
+FPGA_INIT_B <= '1';
+
+process(clk)
+begin
+
+	if clk'event and clk ='1' then
+	
+		case state is
+			when IDLE1 => if en = '1' then
+								state <= IDLE;
+							  else
+								state <= IDLE1;
+								AMP_SHDN <= '1';
+								AMP_CS <= '1';
+							  end if;
+							  
+			when IDLE =>
+					AMP_SHDN <= '0';
+					SCK <= '0';
+					AMP_CS <= '1';
+					MOSI <='0';
+					counter <= "000000";-- 0;
+					state <= START;															
+						
+			when START =>
+				state <= LO_DUMMY;	
+				bit_count <= "00000"; --:=0;
+				AMP_CS <= '0';       
+				gain_temp <= gain;
+				
+			when START2 =>
+				state <= HI;	
+				MOSI <= gain_temp(7);
+
+			when HI =>	
+				if counter = "000010" then--2 then
+					state <= HI_DUMMY;
+				else
+					SCK <= '1';						
+			      counter <= counter +1;
+					state <= HI;
+				end if;			
+
+			when HI_DUMMY =>
+					bit_count <= bit_count + 1; --:= bit_count + 1;
+					state <= LO;
+					counter <= "000000";--0;
+					SCK <= '1';	
+					gain_temp(7 downto 1) <= gain_temp(6 downto 0);
+					
+			when LO =>
+				if bit_count = "01000" then --8 then
+					state <= FINE;	
+				
+				elsif counter = "000010" then --2 then
+					MOSI <= gain_temp(7);
+					state <= LO_DUMMY;
+				else
+					SCK <= '0';
+					counter <= counter +1;
+					state <= LO;
+				end if;	
+					
+			when LO_DUMMY =>
+					
+					counter <="000000";
+					SCK <= '0';
+					state <= HI;		
+				
+			when FINE =>
+			
+					AMP_CS <='1';
+					SCK <= '0';
+					MOSI <= '0'; 
+					state <= IDLE_AD;
+		
+			when IDLE_AD =>
+					AMP_CS <= '1';
+					SCK <= '0';
+					CONV <= '0';
+					sample <='0';															
+					if en = '0' then
+						state <= IDLE1;
+					elsif start_conv = '1' then
+						state <= START_AD;	
+					else 
+						state <= IDLE_AD;
+					end if;	
+
+							
+			when START_AD =>
+					SCK <= '0';
+					CONV <= '1';
+					counter <= "000000";--0;
+					sample <='0';
+					state <= HI_AD;		
+				
+			when HI_AD =>	
+					SCK <= '1';
+					CONV <= '0';	
+					counter <= counter +1;	
+					sample <='0';
+					state <= LO_AD;
+				
+				
+			when LO_AD =>
+					SCK <= '0';
+					if counter =  "010100" then
+							ADC1(13)  <= SPI_MISO;
+					elsif counter = "010101" then
+							ADC1(12)  <= SPI_MISO;
+					elsif counter = "010110" then
+							ADC1(11)  <= SPI_MISO;
+					elsif counter = "010111" then
+							ADC1(10)  <= SPI_MISO;
+					elsif counter = "011000" then
+							ADC1(9)  <= SPI_MISO;
+					elsif counter = "011001" then
+							ADC1(8)  <= SPI_MISO;
+					elsif counter = "011010" then
+							ADC1(7)  <= SPI_MISO;
+					elsif counter = "011011" then
+							ADC1(6)  <= SPI_MISO;
+					elsif counter = "011100" then
+							ADC1(5)  <= SPI_MISO;
+					elsif counter = "011101" then
+							ADC1(4)  <= SPI_MISO;
+					elsif counter = "011110" then
+							ADC1(3)  <= SPI_MISO;
+					elsif counter = "011111" then
+							ADC1(2)  <= SPI_MISO;
+					elsif counter = "100000" then
+							ADC1(1)  <= SPI_MISO;
+					elsif counter = "100001" then
+							ADC1(0)  <= SPI_MISO;
+					else 
+							sample <='0';
+					end if;
+
+					if counter = "100010" then
+							state <= FINE_AD;	
+					else
+							state <= HI_AD;
+					end if; 
+		
+
+			when FINE_AD =>
+					state <= IDLE_AD;
+					counter <= "000000";
+					SCK <= '0';
+					CONV <= '0';
+					sample <= '1';
+					
+			when others =>		
+					SCK <= '0';
+					CONV <= '0';	
+					AMP_CS <= '1';
+					MOSI <='0';
+					state <= IDLE_AD;
+					
+		end case;
+	end if;
+end process;
+
+end Behavioral;

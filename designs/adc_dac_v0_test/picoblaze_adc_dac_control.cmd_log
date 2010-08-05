@@ -1,0 +1,37 @@
+xst -ise "D:/embedded_lab/test/adc_dac_v0_test/adc_dac_v0_test" -intstyle ise -ifn picoblaze_adc_dac_control.xst -ofn picoblaze_adc_dac_control.syr
+xst -ise "D:/embedded_lab/test/adc_dac_v0_test/adc_dac_v0_test" -intstyle ise -ifn picoblaze_adc_dac_control.xst -ofn picoblaze_adc_dac_control.syr
+xst -ise "D:/embedded_lab/test/adc_dac_v0_test/adc_dac_v0_test" -intstyle ise -ifn picoblaze_adc_dac_control.xst -ofn picoblaze_adc_dac_control.syr
+xst -ise "D:/embedded_lab/test/adc_dac_v0_test/adc_dac_v0_test" -intstyle ise -ifn picoblaze_adc_dac_control.xst -ofn picoblaze_adc_dac_control.syr
+xst -ise "D:/embedded_lab/test/adc_dac_v0_test/adc_dac_v0_test" -intstyle ise -ifn picoblaze_adc_dac_control.xst -ofn picoblaze_adc_dac_control.syr
+xst -ise "D:/embedded_lab/test/adc_dac_v0_test/adc_dac_v0_test" -intstyle ise -ifn picoblaze_adc_dac_control.xst -ofn picoblaze_adc_dac_control.syr
+xst -ise "D:/embedded_lab/test/adc_dac_v0_test/adc_dac_v0_test" -intstyle ise -ifn picoblaze_adc_dac_control.xst -ofn picoblaze_adc_dac_control.syr
+xst -ise "D:/embedded_lab/test/adc_dac_v0_test/adc_dac_v0_test" -intstyle ise -ifn picoblaze_adc_dac_control.xst -ofn picoblaze_adc_dac_control.syr
+xst -ise "D:/embedded_lab/test/adc_dac_v0_test/adc_dac_v0_test" -intstyle ise -ifn picoblaze_adc_dac_control.xst -ofn picoblaze_adc_dac_control.syr
+xst -ise "D:/embedded_lab/test/adc_dac_v0_test/adc_dac_v0_test" -intstyle ise -ifn picoblaze_adc_dac_control.xst -ofn picoblaze_adc_dac_control.syr
+xst -ise "D:/embedded_lab/test/adc_dac_v0_test/adc_dac_v0_test" -intstyle ise -ifn picoblaze_adc_dac_control.xst -ofn picoblaze_adc_dac_control.syr
+xst -ise "D:/embedded_lab/test/adc_dac_v0_test/adc_dac_v0_test" -intstyle ise -ifn picoblaze_adc_dac_control.xst -ofn picoblaze_adc_dac_control.syr
+xst -ise "D:/embedded_lab/test/adc_dac_v0_test/adc_dac_v0_test" -intstyle ise -ifn picoblaze_adc_dac_control.xst -ofn picoblaze_adc_dac_control.syr
+xst -ise "D:/embedded_lab/test/adc_dac_v0_test/adc_dac_v0_test" -intstyle ise -ifn picoblaze_adc_dac_control.xst -ofn picoblaze_adc_dac_control.syr
+xst -ise "D:/embedded_lab/test/adc_dac_v0_test/adc_dac_v0_test" -intstyle ise -ifn picoblaze_adc_dac_control.xst -ofn picoblaze_adc_dac_control.syr
+xst -ise "D:/embedded_lab/test/adc_dac_v0_test/adc_dac_v0_test" -intstyle ise -ifn picoblaze_adc_dac_control.xst -ofn picoblaze_adc_dac_control.syr
+xst -ise "D:/embedded_lab/test/adc_dac_v0_test/adc_dac_v0_test" -intstyle ise -ifn picoblaze_adc_dac_control.xst -ofn picoblaze_adc_dac_control.syr
+ngdbuild -ise "D:/embedded_lab/test/adc_dac_v0_test/adc_dac_v0_test" -intstyle ise -dd _ngo -nt timestamp -uc picoblaze_amp_adc_control.ucf -p xc3s500e-fg320-4 picoblaze_adc_dac_control.ngc picoblaze_adc_dac_control.ngd
+map -ise "D:/embedded_lab/test/adc_dac_v0_test/adc_dac_v0_test" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o picoblaze_adc_dac_control_map.ncd picoblaze_adc_dac_control.ngd picoblaze_adc_dac_control.pcf
+par -ise "D:/embedded_lab/test/adc_dac_v0_test/adc_dac_v0_test" -w -intstyle ise -ol std -t 1 picoblaze_adc_dac_control_map.ncd picoblaze_adc_dac_control.ncd picoblaze_adc_dac_control.pcf
+trce -ise "D:/embedded_lab/test/adc_dac_v0_test/adc_dac_v0_test" -intstyle ise -e 3 -l 3 -s 4 -xml picoblaze_adc_dac_control picoblaze_adc_dac_control.ncd -o picoblaze_adc_dac_control.twr picoblaze_adc_dac_control.pcf
+bitgen -ise "D:/embedded_lab/test/adc_dac_v0_test/adc_dac_v0_test" -intstyle ise -f picoblaze_adc_dac_control.ut picoblaze_adc_dac_control.ncd
+xst -ise "D:/embedded_lab/test/adc_dac_v0_test/adc_dac_v0_test" -intstyle ise -ifn picoblaze_adc_dac_control.xst -ofn picoblaze_adc_dac_control.syr
+ngdbuild -ise "D:/embedded_lab/test/adc_dac_v0_test/adc_dac_v0_test" -intstyle ise -dd _ngo -nt timestamp -uc picoblaze_amp_adc_control.ucf -p xc3s500e-fg320-4 picoblaze_adc_dac_control.ngc picoblaze_adc_dac_control.ngd
+xst -ise "D:/embedded_lab/test/adc_dac_v0_test/adc_dac_v0_test" -intstyle ise -ifn picoblaze_adc_dac_control.xst -ofn picoblaze_adc_dac_control.syr
+ngdbuild -ise "D:/embedded_lab/test/adc_dac_v0_test/adc_dac_v0_test" -intstyle ise -dd _ngo -nt timestamp -uc picoblaze_amp_adc_control.ucf -p xc3s500e-fg320-4 picoblaze_adc_dac_control.ngc picoblaze_adc_dac_control.ngd
+map -ise "D:/embedded_lab/test/adc_dac_v0_test/adc_dac_v0_test" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o picoblaze_adc_dac_control_map.ncd picoblaze_adc_dac_control.ngd picoblaze_adc_dac_control.pcf
+par -ise "D:/embedded_lab/test/adc_dac_v0_test/adc_dac_v0_test" -w -intstyle ise -ol std -t 1 picoblaze_adc_dac_control_map.ncd picoblaze_adc_dac_control.ncd picoblaze_adc_dac_control.pcf
+trce -ise "D:/embedded_lab/test/adc_dac_v0_test/adc_dac_v0_test" -intstyle ise -e 3 -l 3 -s 4 -xml picoblaze_adc_dac_control picoblaze_adc_dac_control.ncd -o picoblaze_adc_dac_control.twr picoblaze_adc_dac_control.pcf
+bitgen -ise "D:/embedded_lab/test/adc_dac_v0_test/adc_dac_v0_test" -intstyle ise -f picoblaze_adc_dac_control.ut picoblaze_adc_dac_control.ncd
+xst -ise "D:/embedded_lab/test/adc_dac_v0_test/adc_dac_v0_test" -intstyle ise -ifn picoblaze_adc_dac_control.xst -ofn picoblaze_adc_dac_control.syr
+xst -ise "D:/embedded_lab/test/adc_dac_v0_test/adc_dac_v0_test" -intstyle ise -ifn picoblaze_adc_dac_control.xst -ofn picoblaze_adc_dac_control.syr
+ngdbuild -ise "D:/embedded_lab/test/adc_dac_v0_test/adc_dac_v0_test" -intstyle ise -dd _ngo -nt timestamp -uc picoblaze_amp_adc_control.ucf -p xc3s500e-fg320-4 picoblaze_adc_dac_control.ngc picoblaze_adc_dac_control.ngd
+map -ise "D:/embedded_lab/test/adc_dac_v0_test/adc_dac_v0_test" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o picoblaze_adc_dac_control_map.ncd picoblaze_adc_dac_control.ngd picoblaze_adc_dac_control.pcf
+par -ise "D:/embedded_lab/test/adc_dac_v0_test/adc_dac_v0_test" -w -intstyle ise -ol std -t 1 picoblaze_adc_dac_control_map.ncd picoblaze_adc_dac_control.ncd picoblaze_adc_dac_control.pcf
+trce -ise "D:/embedded_lab/test/adc_dac_v0_test/adc_dac_v0_test" -intstyle ise -e 3 -l 3 -s 4 -xml picoblaze_adc_dac_control picoblaze_adc_dac_control.ncd -o picoblaze_adc_dac_control.twr picoblaze_adc_dac_control.pcf
+bitgen -ise "D:/embedded_lab/test/adc_dac_v0_test/adc_dac_v0_test" -intstyle ise -f picoblaze_adc_dac_control.ut picoblaze_adc_dac_control.ncd

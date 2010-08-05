@@ -1,0 +1,265 @@
+Release 8.1i Map I.24
+Xilinx Mapping Report File for Design 'Embedded_Filter_Assignment'
+
+Design Information
+------------------
+Command Line   : D:\Xilinx\bin\nt\map.exe -ise
+D:/Embedded_Filter_Assignment3/xilinx_implementation/xilinx_implementation.ise
+-intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o
+Embedded_Filter_Assignment_map.ncd Embedded_Filter_Assignment.ngd
+Embedded_Filter_Assignment.pcf 
+Target Device  : xc3s500e
+Target Package : fg320
+Target Speed   : -4
+Mapper Version : spartan3e -- $Revision: 1.34 $
+Mapped Date    : Wed Apr 08 13:54:39 2009
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    0
+Logic Utilization:
+  Number of Slice Flip Flops:         113 out of   9,312    1%
+  Number of 4 input LUTs:             129 out of   9,312    1%
+Logic Distribution:
+  Number of occupied Slices:                          124 out of   4,656    2%
+    Number of Slices containing only related logic:     124 out of     124  100%
+    Number of Slices containing unrelated logic:          0 out of     124    0%
+      *See NOTES below for an explanation of the effects of unrelated logic
+Total Number 4 input LUTs:            224 out of   9,312    2%
+  Number used as logic:                129
+  Number used as a route-thru:          27
+  Number used for Dual Port RAMs:       16
+    (Two LUTs used per Dual Port RAM)
+  Number used for 32x1 RAMs:            52
+    (Two LUTs used per 32x1 RAM)
+  Number of bonded IOBs:               42 out of     232   18%
+    IOB Flip Flops:                    23
+  Number of Block RAMs:                1 out of      20    5%
+  Number of GCLKs:                     1 out of      24    4%
+
+Total equivalent gate count for design:  75,621
+Additional JTAG gate count for IOBs:  2,016
+Peak Memory Usage:  153 MB
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group Summary
+Section 10 - Modular Design Summary
+Section 11 - Timing Report
+Section 12 - Configuration String Information
+Section 13 - Additional Device Resource Counts
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+
+Section 3 - Informational
+-------------------------
+INFO:MapLib:535 - The following Virtex BUFG(s) is/are being retargetted to
+   Virtex2 BUFGMUX(s) with input tied to I0 and Select pin tied to constant 0:
+   BUFGP symbol "clk_BUFGP" (output signal=clk_BUFGP)
+INFO:MapLib:159 - Net Timing constraints on signal clk are pushed forward
+   through input buffer.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs in the
+   schematic.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+   2 block(s) removed
+   4 block(s) optimized away
+   1 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+Loadless block "processor/read_strobe_flop" (SFF) removed.
+ The signal "processor/read_active" is loadless and has been removed.
+  Loadless block "processor/read_active_lut" (ROM) removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
+LUT1 		platformflash_oe_OBUF_rt
+LUT1 		platformflash_oe_OBUF_rt1
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | IOB Type         | Direction | IO Standard | Drive    | Slew | Reg (s)      | Resistor | IBUF/IFD  |
+|                                    |                  |           |             | Strength | Rate |              |          | Delay     |
++-----------------------------------------------------------------------------------------------------------------------------------------+
+| btn_east                           | IBUF             | INPUT     | LVTTL       |          |      |              | PULLDOWN | 0 / 0     |
+| btn_north                          | IBUF             | INPUT     | LVTTL       |          |      |              | PULLDOWN | 0 / 0     |
+| btn_south                          | IBUF             | INPUT     | LVTTL       |          |      |              | PULLDOWN | 0 / 0     |
+| btn_west                           | IBUF             | INPUT     | LVTTL       |          |      |              | PULLDOWN | 0 / 0     |
+| clk                                | IBUF             | INPUT     | LVTTL       |          |      |              |          | 0 / 0     |
+| lcd_d<4>                           | IOB              | BIDIR     | LVTTL       | 2        | SLOW | OFF1         |          | 0 / 0     |
+| lcd_d<5>                           | IOB              | BIDIR     | LVTTL       | 2        | SLOW | OFF1         |          | 0 / 0     |
+| lcd_d<6>                           | IOB              | BIDIR     | LVTTL       | 2        | SLOW | OFF1         |          | 0 / 0     |
+| lcd_d<7>                           | IOB              | BIDIR     | LVTTL       | 2        | SLOW | OFF1         |          | 0 / 0     |
+| lcd_e                              | IOB              | OUTPUT    | LVTTL       | 2        | SLOW | OFF1         |          | 0 / 0     |
+| lcd_rs                             | IOB              | OUTPUT    | LVTTL       | 2        | SLOW | OFF1         |          | 0 / 0     |
+| lcd_rw                             | IOB              | OUTPUT    | LVTTL       | 2        | SLOW |              |          | 0 / 0     |
+| led<0>                             | IOB              | OUTPUT    | LVTTL       | 4        | SLOW | OFF1         |          | 0 / 0     |
+| led<1>                             | IOB              | OUTPUT    | LVTTL       | 4        | SLOW | OFF1         |          | 0 / 0     |
+| led<2>                             | IOB              | OUTPUT    | LVTTL       | 4        | SLOW | OFF1         |          | 0 / 0     |
+| led<3>                             | IOB              | OUTPUT    | LVTTL       | 4        | SLOW | OFF1         |          | 0 / 0     |
+| led<4>                             | IOB              | OUTPUT    | LVTTL       | 4        | SLOW | OFF1         |          | 0 / 0     |
+| led<5>                             | IOB              | OUTPUT    | LVTTL       | 4        | SLOW | OFF1         |          | 0 / 0     |
+| led<6>                             | IOB              | OUTPUT    | LVTTL       | 4        | SLOW | OFF1         |          | 0 / 0     |
+| led<7>                             | IOB              | OUTPUT    | LVTTL       | 4        | SLOW | OFF1         |          | 0 / 0     |
+| platformflash_oe                   | IOB              | OUTPUT    | LVTTL       | 2        | SLOW |              |          | 0 / 0     |
+| simple_io<9>                       | IOB              | OUTPUT    | LVCMOS33    | 4        | SLOW |              |          | 0 / 0     |
+| simple_io<10>                      | IOB              | OUTPUT    | LVCMOS33    | 4        | SLOW |              |          | 0 / 0     |
+| simple_io<11>                      | IOB              | OUTPUT    | LVCMOS33    | 4        | SLOW |              |          | 0 / 0     |
+| simple_io<12>                      | IOB              | OUTPUT    | LVCMOS33    | 4        | SLOW | OFF1         |          | 0 / 0     |
+| spi_adc_conv                       | IOB              | OUTPUT    | LVCMOS33    | 8        | SLOW | OFF1         |          | 0 / 0     |
+| spi_amp_cs                         | IOB              | OUTPUT    | LVCMOS33    | 8        | SLOW | OFF1         |          | 0 / 0     |
+| spi_amp_sdo                        | IBUF             | INPUT     | LVCMOS33    |          |      |              |          | 0 / 0     |
+| spi_amp_shdn                       | IOB              | OUTPUT    | LVCMOS33    | 8        | SLOW | OFF1         |          | 0 / 0     |
+| spi_dac_clr                        | IOB              | OUTPUT    | LVCMOS33    | 8        | SLOW | OFF1         |          | 0 / 0     |
+| spi_dac_cs                         | IOB              | OUTPUT    | LVCMOS33    | 8        | SLOW | OFF1         |          | 0 / 0     |
+| spi_rom_cs                         | IOB              | OUTPUT    | LVCMOS33    | 8        | SLOW | OFF1         |          | 0 / 0     |
+| spi_sck                            | IOB              | OUTPUT    | LVCMOS33    | 8        | SLOW | OFF1         |          | 0 / 0     |
+| spi_sdi                            | IOB              | OUTPUT    | LVCMOS33    | 8        | SLOW | OFF1         |          | 0 / 0     |
+| spi_sdo                            | IBUF             | INPUT     | LVCMOS33    |          |      |              |          | 0 / 0     |
+| strataflash_ce                     | IOB              | OUTPUT    | LVTTL       | 2        | SLOW |              |          | 0 / 0     |
+| strataflash_oe                     | IOB              | OUTPUT    | LVTTL       | 2        | SLOW |              |          | 0 / 0     |
+| strataflash_we                     | IOB              | OUTPUT    | LVTTL       | 2        | SLOW |              |          | 0 / 0     |
+| switch<0>                          | IBUF             | INPUT     | LVTTL       |          |      |              | PULLUP   | 0 / 0     |
+| switch<1>                          | IBUF             | INPUT     | LVTTL       |          |      |              | PULLUP   | 0 / 0     |
+| switch<2>                          | IBUF             | INPUT     | LVTTL       |          |      |              | PULLUP   | 0 / 0     |
+| switch<3>                          | IBUF             | INPUT     | LVTTL       |          |      |              | PULLUP   | 0 / 0     |
++-----------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group Summary
+------------------------------
+No area groups were found in this design.
+
+Section 10 - Modular Design Summary
+-----------------------------------
+Modular Design not used for this design.
+
+Section 11 - Timing Report
+--------------------------
+This design was not run using timing mode.
+
+Section 12 - Configuration String Details
+--------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 13 - Additional Device Resource Counts
+----------------------------------------------
+Number of JTAG Gates for IOBs = 42
+Number of Equivalent Gates for Design = 75,621
+Number of RPM Macros = 0
+Number of Hard Macros = 0
+STARTUP_SPARTAN3E = 0
+PCILOGICSE = 0
+MULT18X18SIO = 0
+DCIRESETs = 0
+CAPTUREs = 0
+BSCANs = 0
+STARTUPs = 0
+DCMs = 0
+GCLKs = 1
+ICAPs = 0
+18X18 Multipliers = 0
+Block RAMs = 1
+IOB Master Pads = 0
+IOB Slave Pads = 0
+IOB ODDR2 = 0
+IOB IDDR2 = 0
+IOB Regular Flip Flops not driven by LUTs = 0
+IOB Regular Flip Flops = 23
+IOB Latches not driven by LUTs = 0
+IOB Latches = 0
+Unbonded IOBs = 0
+Bonded IOBs = 42
+XORs = 62
+CARRY_INITs = 41
+CARRY_SKIPs = 0
+CARRY_MUXes = 71
+Shift Registers = 0
+Static Shift Registers = 0
+Dynamic Shift Registers = 0
+16x1 ROMs = 0
+16x1 RAMs = 0
+32x1 RAMs = 26
+Dual Port RAMs = 8
+MUXFs = 43
+MULT_ANDs = 0
+4 input LUTs used as Route-Thrus = 27
+4 input LUTs = 129
+Slice Latches not driven by LUTs = 0
+Slice Latches = 0
+Slice Flip Flops not driven by LUTs = 75
+Slice Flip Flops = 113
+SliceMs = 34
+SliceLs = 90
+Slices = 124
+F6 Muxes = 0
+F5 Muxes = 9
+F8 Muxes = 0
+F7 Muxes = 0
+Number of LUT signals with 4 loads = 2
+Number of LUT signals with 3 loads = 0
+Number of LUT signals with 2 loads = 35
+Number of LUT signals with 1 load = 77
+NGM Average fanout of LUT = 2.37
+NGM Maximum fanout of LUT = 18
+NGM Average fanin for LUT = 3.1783
+Number of LUT symbols = 129

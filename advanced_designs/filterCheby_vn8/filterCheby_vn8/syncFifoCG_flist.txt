@@ -1,0 +1,13 @@
+# Output products list for <syncFifoCG>
+syncFifoCG.asy
+syncFifoCG.ngc
+syncFifoCG.sym
+syncFifoCG.v
+syncFifoCG.veo
+syncFifoCG.vhd
+syncFifoCG.vho
+syncFifoCG.xco
+syncFifoCG_fifo_generator_v4_3_xst_1.ngc_xst.xrpt
+syncFifoCG_fifo_generator_v4_3_xst_1_vhdl.prj
+syncFifoCG_flist.txt
+syncFifoCG_xmdf.tcl

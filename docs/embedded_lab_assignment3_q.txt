@@ -1,0 +1,5 @@
+In groups of 4
+Use Picoblaze to make a digital filter.
+Template code for Picoblaze to interact with the AD-DA
+cleanup the code and tell them what to insert and see
+post the question on the groups on monday

@@ -1,0 +1,28 @@
+m255
+13
+cModel Technology
+dD:\embedded_lab\test\mult_wallace
+vButterfly_Mult
+II`TK4Yi`J6Chhan]m0a4W3
+V?AO@BlhbL=klcZICRggz83
+w1237975358
+F./Butterfly_Mult.v
+L0 3
+OX;L;6.0d;29
+r1
+31
+o-work work -O0
+tGenerateLoopIterationMax 100000
+n@butterfly_@mult
+vtemp_MultTOP
+I[a]K2c8_olo6ODMN[5bEQ0
+V1eSHlf9^34gZjdW7TM1Rg1
+w1237975762
+F./temp_MultTOP.v
+L0 1
+OX;L;6.0d;29
+r1
+31
+o-work work -O0
+tGenerateLoopIterationMax 100000
+ntemp_@mult@t@o@p

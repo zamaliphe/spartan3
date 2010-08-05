@@ -1,0 +1,24 @@
+CommandLine-Map
+
+s
+CommandLine-Ngdbuild
+E:\Xilinx\10.1\ISE\bin\nt\unwrapped\ngdbuild.exe -ise D:/embedded_lab/test/filter_vn5_test/filter_vn5_test/filter_vn5_test.ise -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 filter.ngc filter.ngd
+s
+CommandLine-Par
+
+s
+CommandLine-Xst
+
+s
+Previous-NGD
+filter_prev_built.ngd
+s
+Previous-NGM
+
+s
+Previous-Packed-NCD
+
+s
+Previous-Routed-NCD
+
+s

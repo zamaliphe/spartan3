@@ -1,0 +1,6 @@
+EN adc_ctrl NULL D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd sub00/vhpl02 1237030350
+AR adc_ctrl low_level_definition D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd sub00/vhpl03 1237030351
+AR picoblaze_amp_adc_control behavioral D:/embedded_lab/test/adc_control_v0/adc_control_v0/picoblaze_amp_adc_control.vhd sub00/vhpl05 1237030353
+AR kcpsm3 low_level_definition D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd sub00/vhpl01 1237030349
+EN kcpsm3 NULL D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd sub00/vhpl00 1237030348
+EN picoblaze_amp_adc_control NULL D:/embedded_lab/test/adc_control_v0/adc_control_v0/picoblaze_amp_adc_control.vhd sub00/vhpl04 1237030352

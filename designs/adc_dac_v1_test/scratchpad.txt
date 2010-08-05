@@ -1,0 +1,28 @@
+					FETCH s2, ADC0_msb
+					FETCH s3, ADC0_lsb
+					SR0 s2                          ; shift 12-bit value right 4 places
+					SRA s3
+					SR0 s2
+					SRA s3
+					SR0 s2
+					SRA s3
+					SR0 s2
+					SRA s3
+					TEST s2, 08						;test sign bit of value
+                    JUMP NZ, neg_value_DAC
+					ADD s3, 8F                      ;32-bit addition [s7,s6,s5,s4]=[s7,s6,s5,s4]+[s9,s8,s3,s2]
+                    ADDCY s2, 0A
+					STORE s2, chan_A_msb            ;store value for D/A output
+					STORE s3, chan_A_lsb
+                    JUMP AAAAAAAAAAAAAA
+     neg_value_DAC: XOR s3, FF                      ;complement [s7,s6] to make positive
+                    XOR s2, FF
+                    ADD s3, 01
+                    ADDCY s2, 00
+					AND s2, 0F						; the first 4 bits should be zero.
+					FETCH s0, 0A
+					FETCH s1, 8F
+					SUB s1, s3
+					SUBCY s0, s2
+					STORE s0, chan_A_msb            ;store value for D/A output
+					STORE s1, chan_A_lsb

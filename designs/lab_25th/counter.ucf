@@ -1,0 +1,32 @@
+# Constraints 
+#
+NET "clk" PERIOD = 20.0ns HIGH 50%;
+#
+# I/O constraints for Spartan-3E Starter Kit (Rev.B)
+# soldered 50MHz Clock
+# 
+NET "clk" LOC = "C9" | IOSTANDARD = LVTTL;
+#
+#
+# Simple LEDs 
+# Require only 3.5mA. 
+#
+NET "count<0>" LOC = "F12" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 4;
+NET "count<1>" LOC = "E12" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 4;
+NET "count<2>" LOC = "E11" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 4;
+NET "count<3>" LOC = "F11" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 4;
+NET "count<4>" LOC = "C11" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 4;
+NET "count<5>" LOC = "D11" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 4;
+NET "count<6>" LOC = "E9"  | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 4;
+NET "count<7>" LOC = "F9"  | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 4;
+#
+#
+# Simple switches 
+#   Pull UP resistors used to stop floating condition during switching. 
+#
+NET "reset" LOC = "L13" | IOSTANDARD = LVTTL | PULLUP;
+#
+#
+#
+#
+#

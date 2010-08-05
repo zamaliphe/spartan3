@@ -1,0 +1,25 @@
+xst -ise "D:/embedded_lab/test/simple_counter/simple_counter/simple_counter" -intstyle ise -ifn simple_counter.xst -ofn simple_counter.syr
+ngdbuild -ise "D:/embedded_lab/test/simple_counter/simple_counter/simple_counter" -intstyle ise -dd _ngo -nt timestamp -uc D:/embedded_lab/test/simple_counter/simple_counter.ucf -p xc3s500e-fg320-4 simple_counter.ngc simple_counter.ngd
+map -ise "D:/embedded_lab/test/simple_counter/simple_counter/simple_counter" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o simple_counter_map.ncd simple_counter.ngd simple_counter.pcf
+par -ise "D:/embedded_lab/test/simple_counter/simple_counter/simple_counter" -w -intstyle ise -ol std -t 1 simple_counter_map.ncd simple_counter.ncd simple_counter.pcf
+xst -ise "D:/embedded_lab/test/simple_counter/simple_counter/simple_counter" -intstyle ise -ifn simple_counter.xst -ofn simple_counter.syr
+trce -ise "D:/embedded_lab/test/simple_counter/simple_counter/simple_counter" -intstyle ise -e 3 -l 3 -s 4 -xml simple_counter simple_counter.ncd -o simple_counter.twr simple_counter.pcf
+xst -ise "D:/embedded_lab/test/simple_counter/simple_counter/simple_counter" -intstyle ise -ifn simple_counter.xst -ofn simple_counter.syr
+ngdbuild -ise "D:/embedded_lab/test/simple_counter/simple_counter/simple_counter" -intstyle ise -dd _ngo -nt timestamp -uc D:/embedded_lab/test/simple_counter/simple_counter.ucf -p xc3s500e-fg320-4 simple_counter.ngc simple_counter.ngd
+map -ise "D:/embedded_lab/test/simple_counter/simple_counter/simple_counter" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o simple_counter_map.ncd simple_counter.ngd simple_counter.pcf
+par -ise "D:/embedded_lab/test/simple_counter/simple_counter/simple_counter" -w -intstyle ise -ol std -t 1 simple_counter_map.ncd simple_counter.ncd simple_counter.pcf
+trce -ise "D:/embedded_lab/test/simple_counter/simple_counter/simple_counter" -intstyle ise -e 3 -l 3 -s 4 -xml simple_counter simple_counter.ncd -o simple_counter.twr simple_counter.pcf
+bitgen -ise "D:/embedded_lab/test/simple_counter/simple_counter/simple_counter" -intstyle ise -f simple_counter.ut simple_counter.ncd
+xst -ise "D:/embedded_lab/test/simple_counter/simple_counter/simple_counter" -intstyle ise -ifn simple_counter.xst -ofn simple_counter.syr
+ngdbuild -ise "D:/embedded_lab/test/simple_counter/simple_counter/simple_counter" -intstyle ise -dd _ngo -nt timestamp -uc D:/embedded_lab/test/simple_counter/simple_counter.ucf -p xc3s500e-fg320-4 simple_counter.ngc simple_counter.ngd
+map -ise "D:/embedded_lab/test/simple_counter/simple_counter/simple_counter" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o simple_counter_map.ncd simple_counter.ngd simple_counter.pcf
+par -ise "D:/embedded_lab/test/simple_counter/simple_counter/simple_counter" -w -intstyle ise -ol std -t 1 simple_counter_map.ncd simple_counter.ncd simple_counter.pcf
+trce -ise "D:/embedded_lab/test/simple_counter/simple_counter/simple_counter" -intstyle ise -e 3 -l 3 -s 4 -xml simple_counter simple_counter.ncd -o simple_counter.twr simple_counter.pcf
+bitgen -ise "D:/embedded_lab/test/simple_counter/simple_counter/simple_counter" -intstyle ise -f simple_counter.ut simple_counter.ncd
+bitgen -ise "D:/embedded_lab/test/simple_counter/simple_counter/simple_counter" -intstyle ise -f simple_counter.ut simple_counter.ncd
+xst -ise "D:/embedded_lab/test/simple_counter/simple_counter/simple_counter" -intstyle ise -ifn simple_counter.xst -ofn simple_counter.syr
+ngdbuild -ise "D:/embedded_lab/test/simple_counter/simple_counter/simple_counter" -intstyle ise -dd _ngo -nt timestamp -uc D:/embedded_lab/test/simple_counter/simple_counter.ucf -p xc3s500e-fg320-4 simple_counter.ngc simple_counter.ngd
+map -ise "D:/embedded_lab/test/simple_counter/simple_counter/simple_counter" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o simple_counter_map.ncd simple_counter.ngd simple_counter.pcf
+par -ise "D:/embedded_lab/test/simple_counter/simple_counter/simple_counter" -w -intstyle ise -ol std -t 1 simple_counter_map.ncd simple_counter.ncd simple_counter.pcf
+trce -ise "D:/embedded_lab/test/simple_counter/simple_counter/simple_counter" -intstyle ise -e 3 -l 3 -s 4 -xml simple_counter simple_counter.ncd -o simple_counter.twr simple_counter.pcf
+bitgen -ise "D:/embedded_lab/test/simple_counter/simple_counter/simple_counter" -intstyle ise -f simple_counter.ut simple_counter.ncd

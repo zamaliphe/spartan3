@@ -1,0 +1,4 @@
+vhdl work "../kcpsm3.vhd"
+verilog work "./syncFifoCG.v"
+verilog work "../ADDA_CTR.V"
+verilog work "../filter.v"

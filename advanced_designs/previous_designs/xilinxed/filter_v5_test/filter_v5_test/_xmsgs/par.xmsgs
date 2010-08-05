@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="Par" num="276" delta="unknown" >The signal <arg fmt="%s" index="1">btn_north_IBUF</arg> has no load
+</msg>
+
+<msg type="warning" file="Par" num="276" delta="unknown" >The signal <arg fmt="%s" index="1">btn_south_IBUF</arg> has no load
+</msg>
+
+<msg type="warning" file="Par" num="276" delta="unknown" >The signal <arg fmt="%s" index="1">btn_east_IBUF</arg> has no load
+</msg>
+
+<msg type="warning" file="Par" num="276" delta="unknown" >The signal <arg fmt="%s" index="1">btn_west_IBUF</arg> has no load
+</msg>
+
+<msg type="warning" file="Par" num="276" delta="unknown" >The signal <arg fmt="%s" index="1">switch&lt;1&gt;_IBUF</arg> has no load
+</msg>
+
+<msg type="warning" file="Par" num="276" delta="unknown" >The signal <arg fmt="%s" index="1">switch&lt;2&gt;_IBUF</arg> has no load
+</msg>
+
+<msg type="warning" file="Par" num="276" delta="unknown" >The signal <arg fmt="%s" index="1">switch&lt;3&gt;_IBUF</arg> has no load
+</msg>
+
+<msg type="warning" file="Par" num="284" delta="unknown" >There are <arg fmt="%d" index="1">7</arg> sourceless or loadless signals in this design.
+
+</msg>
+
+</messages>

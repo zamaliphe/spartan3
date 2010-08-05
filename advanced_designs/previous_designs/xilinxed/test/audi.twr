@@ -1,0 +1,135 @@
+--------------------------------------------------------------------------------
+Release 10.1 Trace  (nt)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\10.1\ISE\bin\nt\unwrapped\trce.exe -ise
+C:/Documents and Settings/theja/My Documents/prj/test/test/test.ise -intstyle
+ise -e 3 -s 4 -xml audi audi.ncd -o audi.twr audi.pcf -ucf audi.ucf
+
+Design file:              audi.ncd
+Physical constraint file: audi.pcf
+Device,package,speed:     xc3s500e,fg320,-4 (PRODUCTION 1.27 2008-01-09)
+Report level:             error report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: TS_clk = PERIOD TIMEGRP "clk" 20 ns HIGH 50%;
+
+ 74605 paths analyzed, 1509 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum period is  15.331ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: OFFSET = IN 9 ns BEFORE COMP "clk";
+
+ 327 paths analyzed, 211 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum allowable offset is   7.617ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: OFFSET = OUT 9 ns AFTER COMP "clk";
+
+ 8 paths analyzed, 8 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+ Minimum allowable offset is   8.867ns.
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clk
+------------+------------+------------+------------------+--------+
+            |  Setup to  |  Hold to   |                  | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+------------+------------+------------+------------------+--------+
+flag        |    7.596(R)|   -0.589(R)|clk_BUFGP         |   0.000|
+reset       |    7.617(R)|   -0.736(R)|clk_BUFGP         |   0.000|
+start       |    6.884(R)|   -0.350(R)|clk_BUFGP         |   0.000|
+theta_in<0> |    1.123(R)|    0.309(R)|clk_BUFGP         |   0.000|
+theta_in<1> |    1.952(R)|    0.056(R)|clk_BUFGP         |   0.000|
+theta_in<2> |    2.137(R)|   -0.149(R)|clk_BUFGP         |   0.000|
+theta_in<3> |    1.787(R)|    0.094(R)|clk_BUFGP         |   0.000|
+------------+------------+------------+------------------+--------+
+
+Clock clk to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  | Clock  |
+Destination |   to PAD   |Internal Clock(s) | Phase  |
+------------+------------+------------------+--------+
+lcd<0>      |    8.844(R)|clk_BUFGP         |   0.000|
+lcd<1>      |    8.850(R)|clk_BUFGP         |   0.000|
+lcd<2>      |    8.853(R)|clk_BUFGP         |   0.000|
+lcd<3>      |    8.867(R)|clk_BUFGP         |   0.000|
+lcd<4>      |    8.864(R)|clk_BUFGP         |   0.000|
+lcd<5>      |    8.867(R)|clk_BUFGP         |   0.000|
+lcd<6>      |    8.863(R)|clk_BUFGP         |   0.000|
+lcd<7>      |    8.844(R)|clk_BUFGP         |   0.000|
+------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |   15.331|         |         |         |
+---------------+---------+---------+---------+---------+
+
+OFFSET = OUT 9 ns AFTER COMP "clk";
+Bus Skew: 0.023 ns; 
+-----------------------------------------------+-------------+-------------+
+PAD                                            | Delay (ns)  |Edge Skew (ns)|
+-----------------------------------------------+-------------+-------------+
+lcd<0>                                         |        8.844|        0.000|
+lcd<1>                                         |        8.850|        0.006|
+lcd<2>                                         |        8.853|        0.009|
+lcd<3>                                         |        8.867|        0.023|
+lcd<4>                                         |        8.864|        0.020|
+lcd<5>                                         |        8.867|        0.023|
+lcd<6>                                         |        8.863|        0.019|
+lcd<7>                                         |        8.844|        0.000|
+-----------------------------------------------+-------------+-------------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0
+
+Constraints cover 74940 paths, 0 nets, and 2758 connections
+
+Design statistics:
+   Minimum period:  15.331ns   (Maximum frequency:  65.227MHz)
+   Minimum input required time before clock:   7.617ns
+   Minimum output required time after clock:   8.867ns
+
+
+Analysis completed Thu Mar 12 17:47:17 2009 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 103 MB
+
+
+

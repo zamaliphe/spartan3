@@ -1,0 +1,329 @@
+Release 8.1i - xst I.24
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to ./xst/projnav.tmp
+CPU : 0.00 / 0.86 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Parameter xsthdpdir set to ./xst
+CPU : 0.00 / 0.86 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Reading design: counter.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) HDL Analysis
+  4) HDL Synthesis
+     4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+     5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Final Report
+     7.1) Device utilization summary
+     7.2) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "counter.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "counter"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : counter
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Multiplier Style                   : auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : NO
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Write Timing Constraints           : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+lso                                : counter.lso
+Read Cores                         : YES
+cross_clock_analysis               : NO
+verilog2001                        : YES
+safe_implementation                : No
+Optimize Instantiated Primitives   : NO
+use_clock_enable                   : Yes
+use_sync_set                       : Yes
+use_sync_reset                     : Yes
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "D:/embedded_lab/test/lab_31st/counter.v" in library work
+Module <counter> compiled
+No errors in compilation
+Analysis of file <"counter.prj"> succeeded.
+ 
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <counter>.
+Module <counter> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <counter>.
+    Related source file is "D:/embedded_lab/test/lab_31st/counter.v".
+    Found 8-bit up counter for signal <count>.
+    Found 26-bit comparator less for signal <$n0002> created at line 22.
+    Found 26-bit comparator greatequal for signal <$n0003> created at line 22.
+    Found 26-bit up counter for signal <internal_count>.
+    Summary:
+	inferred   2 Counter(s).
+	inferred   2 Comparator(s).
+Unit <counter> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 2
+ 26-bit up counter                                     : 1
+ 8-bit up counter                                      : 1
+# Comparators                                          : 2
+ 26-bit comparator greatequal                          : 1
+ 26-bit comparator less                                : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 2
+ 26-bit up counter                                     : 1
+ 8-bit up counter                                      : 1
+# Comparators                                          : 2
+ 26-bit comparator greatequal                          : 1
+ 26-bit comparator less                                : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1988 - Unit <counter>: instances <Mcompar__n0002>, <Mcompar__n0003> of unit <LPM_COMPARE_1> and unit <LPM_COMPARE_2> are dual, second instance is removed
+Loading device for application Rf_Device from file '3s500e.nph' in environment D:\Xilinx.
+
+Optimizing unit <counter> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block counter, actual ratio is 0.
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : counter.ngr
+Top Level Output File Name         : counter
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 10
+
+Cell Usage :
+# BELS                             : 110
+#      GND                         : 1
+#      INV                         : 5
+#      LUT1                        : 15
+#      LUT1_L                      : 14
+#      LUT2                        : 3
+#      LUT2_L                      : 2
+#      LUT3                        : 1
+#      LUT3_L                      : 1
+#      LUT4                        : 3
+#      LUT4_L                      : 4
+#      MUXCY                       : 35
+#      VCC                         : 1
+#      XORCY                       : 25
+# FlipFlops/Latches                : 34
+#      FDR                         : 26
+#      FDRE                        : 8
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 9
+#      IBUF                        : 1
+#      OBUF                        : 8
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                      35  out of   4656     0%  
+ Number of Slice Flip Flops:            34  out of   9312     0%  
+ Number of 4 input LUTs:                43  out of   9312     0%  
+ Number of bonded IOBs:                 10  out of    232     4%  
+ Number of GCLKs:                        1  out of     24     4%  
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 34    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 7.867ns (Maximum Frequency: 127.118MHz)
+   Minimum input arrival time before clock: 5.751ns
+   Maximum output required time after clock: 4.929ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 7.867ns (frequency: 127.118MHz)
+  Total number of paths / destination ports: 1033 / 68
+-------------------------------------------------------------------------
+Delay:               7.867ns (Levels of Logic = 12)
+  Source:            internal_count_7 (FF)
+  Destination:       internal_count_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: internal_count_7 to internal_count_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.591   1.052  internal_count_7 (internal_count_7)
+     LUT1_L:I0->LO         1   0.704   0.000  internal_count_7_rt1 (internal_count_7_rt1)
+     MUXCY:S->O            1   0.464   0.000  Mcompar__n0002_andcy (Mcompar__n0002_and_cyo)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar__n0002_norcy (Mcompar__n0002_nor_cyo)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar__n0002_andcy_rn_0 (Mcompar__n0002_and_cyo1)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar__n0002_norcy_rn_0 (Mcompar__n0002_nor_cyo1)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar__n0002_andcy_rn_1 (Mcompar__n0002_and_cyo2)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar__n0002_norcy_rn_1 (Mcompar__n0002_nor_cyo2)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar__n0002_andcy_rn_2 (Mcompar__n0002_and_cyo3)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar__n0002_andcy_rn_3 (Mcompar__n0002_and_cyo4)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar__n0002_norcy_rn_2 (Mcompar__n0002_nor_cyo3)
+     MUXCY:CI->O           9   0.147   1.203  Mcompar__n0002_andcy_rn_4 (Mcompar__n0002_and_cyo5)
+     LUT2:I1->O           26   0.704   1.819  _n00011 (_n0001)
+     FDR:R                     0.711          internal_count_0
+    ----------------------------------------
+    Total                      7.867ns (3.793ns logic, 4.074ns route)
+                                       (48.2% logic, 51.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 34 / 34
+-------------------------------------------------------------------------
+Offset:              5.751ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       internal_count_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: reset to internal_count_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             9   1.218   1.299  reset_IBUF (reset_IBUF)
+     LUT2:I0->O           26   0.704   1.819  _n00011 (_n0001)
+     FDR:R                     0.711          internal_count_0
+    ----------------------------------------
+    Total                      5.751ns (2.633ns logic, 3.118ns route)
+                                       (45.8% logic, 54.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              4.929ns (Levels of Logic = 1)
+  Source:            count_0 (FF)
+  Destination:       count<0> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: count_0 to count<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             7   0.591   1.066  count_0 (count_0)
+     OBUF:I->O                 3.272          count_0_OBUF (count<0>)
+    ----------------------------------------
+    Total                      4.929ns (3.863ns logic, 1.066ns route)
+                                       (78.4% logic, 21.6% route)
+
+=========================================================================
+CPU : 17.59 / 18.58 s | Elapsed : 17.00 / 18.00 s
+ 
+--> 
+
+Total memory usage is 127580 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

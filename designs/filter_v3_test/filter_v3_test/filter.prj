@@ -1,0 +1,4 @@
+vhdl work "D:/embedded_lab/test/filter_v3_test/kcpsm3.vhd"
+verilog work "D:/embedded_lab/test/filter_v3_test/multiplier.v"
+verilog work "D:/embedded_lab/test/filter_v3_test/ADDA_CTR.V"
+verilog work "D:/embedded_lab/test/filter_v3_test/filter.v"

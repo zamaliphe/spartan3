@@ -1,0 +1,17 @@
+Release 8.1i - par I.24
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+
+Tue Mar 17 12:06:21 2009
+
+There are 0 unrouted networks: 
+
+
+There are 7 sourceless or loadless networks: 
+
+   btn_east_IBUF
+   btn_north_IBUF
+   btn_south_IBUF
+   btn_west_IBUF
+   switch<1>_IBUF
+   switch<2>_IBUF
+   switch<3>_IBUF

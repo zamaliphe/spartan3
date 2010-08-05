@@ -1,0 +1,6 @@
+MO binary_to_bcd NULL binary_to_bcd.v vlg03/binary__to__bcd.bin 1236951010
+MO audi NULL audi.v vlg27/audi.bin 1236951010
+MO kcpsm3 NULL kcpsm3.v vlg19/kcpsm3.bin 1236951009
+MO embedded_kcpsm3 NULL embedded_kcpsm3.v vlg12/embedded__kcpsm3.bin 1236951010
+MO audi_lcd NULL AUDI_LCD.v vlg79/audi__lcd.bin 1236951010
+MO audi_rom NULL audi_rom.v vlg54/audi__rom.bin 1236951010

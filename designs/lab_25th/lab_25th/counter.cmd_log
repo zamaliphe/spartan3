@@ -1,0 +1,6 @@
+xst -ise "D:/embedded_lab/test/lab_25th/lab_25th/lab_25th" -intstyle ise -ifn counter.xst -ofn counter.syr
+ngdbuild -ise "D:/embedded_lab/test/lab_25th/lab_25th/lab_25th" -intstyle ise -dd _ngo -nt timestamp -uc D:/embedded_lab/test/lab_25th/counter.ucf -p xc3s500e-fg320-4 counter.ngc counter.ngd
+map -ise "D:/embedded_lab/test/lab_25th/lab_25th/lab_25th" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o counter_map.ncd counter.ngd counter.pcf
+par -ise "D:/embedded_lab/test/lab_25th/lab_25th/lab_25th" -w -intstyle ise -ol std -t 1 counter_map.ncd counter.ncd counter.pcf
+trce -ise "D:/embedded_lab/test/lab_25th/lab_25th/lab_25th" -intstyle ise -e 3 -l 3 -s 4 -xml counter counter.ncd -o counter.twr counter.pcf
+bitgen -ise "D:/embedded_lab/test/lab_25th/lab_25th/lab_25th" -intstyle ise -f counter.ut counter.ncd

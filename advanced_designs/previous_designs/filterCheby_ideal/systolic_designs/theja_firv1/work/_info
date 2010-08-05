@@ -1,0 +1,40 @@
+m255
+13
+cModel Technology
+dY:\theja\filter_ideal
+vdetailed_testbench
+Ia;gaLOhAc:B=74;DRfefg0
+VQdX<I>2B[BYWhK[f@JTM13
+dD:\embedded_lab\test\filterCheby_ideal\theja_firv1
+w1237529202
+F./detailed_testbench.v
+L0 2
+OX;L;6.0d;29
+r1
+31
+o-work work -O0
+tGenerateLoopIterationMax 100000
+vfilter_ideal
+ImXC;Yc=U5M5EUHGN3ikE_3
+VNSXXTddFJWPX:fOhlUGCX1
+dD:\embedded_lab\test\filterCheby_ideal\theja_firv1
+w1237637926
+F./filter_ideal.v
+L0 1
+OX;L;6.0d;29
+r1
+31
+o-work work -O0
+tGenerateLoopIterationMax 100000
+vmultiplier
+IG43b8l<eWCQi4`8L0l0BV2
+V@;3dh;3Q1hdIR`j6hAZBZ1
+dD:\embedded_lab\test\filterCheby_ideal\theja_firv1
+w1237221988
+F./multiplier.v
+L0 1
+OX;L;6.0d;29
+r1
+31
+o-work work -O0
+tGenerateLoopIterationMax 100000

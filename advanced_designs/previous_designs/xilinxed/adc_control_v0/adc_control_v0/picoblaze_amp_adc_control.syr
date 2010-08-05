@@ -1,0 +1,923 @@
+Release 8.1i - xst I.24
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to ./xst/projnav.tmp
+CPU : 0.00 / 1.06 s | Elapsed : 0.00 / 1.00 s
+ 
+--> Parameter xsthdpdir set to ./xst
+CPU : 0.00 / 1.06 s | Elapsed : 0.00 / 1.00 s
+ 
+--> Reading design: picoblaze_amp_adc_control.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) HDL Analysis
+  4) HDL Synthesis
+     4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+     5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Final Report
+     7.1) Device utilization summary
+     7.2) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "picoblaze_amp_adc_control.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "picoblaze_amp_adc_control"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : picoblaze_amp_adc_control
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Multiplier Style                   : auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : NO
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Write Timing Constraints           : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+lso                                : picoblaze_amp_adc_control.lso
+Read Cores                         : YES
+cross_clock_analysis               : NO
+verilog2001                        : YES
+safe_implementation                : No
+Optimize Instantiated Primitives   : NO
+use_clock_enable                   : Yes
+use_sync_set                       : Yes
+use_sync_reset                     : Yes
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" in Library work.
+Entity <kcpsm3> compiled.
+Entity <kcpsm3> (Architecture <low_level_definition>) compiled.
+Compiling vhdl file "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" in Library work.
+Entity <adc_ctrl> compiled.
+Entity <adc_ctrl> (Architecture <low_level_definition>) compiled.
+Compiling vhdl file "D:/embedded_lab/test/adc_control_v0/adc_control_v0/picoblaze_amp_adc_control.vhd" in Library work.
+Entity <picoblaze_amp_adc_control> compiled.
+Entity <picoblaze_amp_adc_control> (Architecture <Behavioral>) compiled.
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <picoblaze_amp_adc_control> (Architecture <Behavioral>).
+Entity <picoblaze_amp_adc_control> analyzed. Unit <picoblaze_amp_adc_control> generated.
+
+Analyzing Entity <kcpsm3> (Architecture <low_level_definition>).
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 289: Possible simulation mismatch on property <INIT> of instance <t_state_lut> set by attribute.
+    Set user-defined property "INIT =  1" for instance <t_state_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 332: Possible simulation mismatch on property <INIT> of instance <int_pulse_lut> set by attribute.
+    Set user-defined property "INIT =  0080" for instance <int_pulse_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 371: Possible simulation mismatch on property <INIT> of instance <int_update_lut> set by attribute.
+    Set user-defined property "INIT =  EAAA" for instance <int_update_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 381: Possible simulation mismatch on property <INIT> of instance <int_value_lut> set by attribute.
+    Set user-defined property "INIT =  04" for instance <int_value_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 403: Possible simulation mismatch on property <INIT> of instance <move_group_lut> set by attribute.
+    Set user-defined property "INIT =  7400" for instance <move_group_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 413: Possible simulation mismatch on property <INIT> of instance <condition_met_lut> set by attribute.
+    Set user-defined property "INIT =  5A3C" for instance <condition_met_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 423: Possible simulation mismatch on property <INIT> of instance <normal_count_lut> set by attribute.
+    Set user-defined property "INIT =  2F" for instance <normal_count_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 432: Possible simulation mismatch on property <INIT> of instance <call_type_lut> set by attribute.
+    Set user-defined property "INIT =  1000" for instance <call_type_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 442: Possible simulation mismatch on property <INIT> of instance <push_pop_lut> set by attribute.
+    Set user-defined property "INIT =  5400" for instance <push_pop_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 452: Possible simulation mismatch on property <INIT> of instance <valid_move_lut> set by attribute.
+    Set user-defined property "INIT =  D" for instance <valid_move_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 468: Possible simulation mismatch on property <INIT> of instance <flag_type_lut> set by attribute.
+    Set user-defined property "INIT =  41FC" for instance <flag_type_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 483: Possible simulation mismatch on property <INIT> of instance <flag_enable_lut> set by attribute.
+    Set user-defined property "INIT =  8" for instance <flag_enable_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 493: Possible simulation mismatch on property <INIT> of instance <low_zero_lut> set by attribute.
+    Set user-defined property "INIT =  0001" for instance <low_zero_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 503: Possible simulation mismatch on property <INIT> of instance <high_zero_lut> set by attribute.
+    Set user-defined property "INIT =  0001" for instance <high_zero_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 525: Possible simulation mismatch on property <INIT> of instance <sel_shadow_zero_lut> set by attribute.
+    Set user-defined property "INIT =  3F" for instance <sel_shadow_zero_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 554: Possible simulation mismatch on property <INIT> of instance <low_parity_lut> set by attribute.
+    Set user-defined property "INIT =  6996" for instance <low_parity_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 564: Possible simulation mismatch on property <INIT> of instance <high_parity_lut> set by attribute.
+    Set user-defined property "INIT =  6996" for instance <high_parity_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 587: Possible simulation mismatch on property <INIT> of instance <sel_parity_lut> set by attribute.
+    Set user-defined property "INIT =  F3FF" for instance <sel_parity_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 597: Possible simulation mismatch on property <INIT> of instance <sel_arith_carry_lut> set by attribute.
+    Set user-defined property "INIT =  F3" for instance <sel_arith_carry_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 606: Possible simulation mismatch on property <INIT> of instance <sel_shift_carry_lut> set by attribute.
+    Set user-defined property "INIT =  C" for instance <sel_shift_carry_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 614: Possible simulation mismatch on property <INIT> of instance <sel_shadow_carry_lut> set by attribute.
+    Set user-defined property "INIT =  3" for instance <sel_shadow_carry_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 682: Possible simulation mismatch on property <INIT> of instance <vector_select_mux0> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <vector_select_mux0> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 691: Possible simulation mismatch on property <INIT> of instance <value_select_mux0> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <value_select_mux0> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 682: Possible simulation mismatch on property <INIT> of instance <vector_select_mux1> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <vector_select_mux1> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 691: Possible simulation mismatch on property <INIT> of instance <value_select_mux1> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <value_select_mux1> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 682: Possible simulation mismatch on property <INIT> of instance <vector_select_mux2> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <vector_select_mux2> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 691: Possible simulation mismatch on property <INIT> of instance <value_select_mux2> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <value_select_mux2> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 682: Possible simulation mismatch on property <INIT> of instance <vector_select_mux3> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <vector_select_mux3> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 691: Possible simulation mismatch on property <INIT> of instance <value_select_mux3> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <value_select_mux3> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 682: Possible simulation mismatch on property <INIT> of instance <vector_select_mux4> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <vector_select_mux4> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 691: Possible simulation mismatch on property <INIT> of instance <value_select_mux4> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <value_select_mux4> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 682: Possible simulation mismatch on property <INIT> of instance <vector_select_mux5> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <vector_select_mux5> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 691: Possible simulation mismatch on property <INIT> of instance <value_select_mux5> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <value_select_mux5> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 682: Possible simulation mismatch on property <INIT> of instance <vector_select_mux6> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <vector_select_mux6> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 691: Possible simulation mismatch on property <INIT> of instance <value_select_mux6> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <value_select_mux6> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 682: Possible simulation mismatch on property <INIT> of instance <vector_select_mux7> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <vector_select_mux7> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 691: Possible simulation mismatch on property <INIT> of instance <value_select_mux7> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <value_select_mux7> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 682: Possible simulation mismatch on property <INIT> of instance <vector_select_mux8> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <vector_select_mux8> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 691: Possible simulation mismatch on property <INIT> of instance <value_select_mux8> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <value_select_mux8> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 682: Possible simulation mismatch on property <INIT> of instance <vector_select_mux9> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <vector_select_mux9> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 691: Possible simulation mismatch on property <INIT> of instance <value_select_mux9> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <value_select_mux9> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 794: Possible simulation mismatch on property <INIT> of instance <register_type_lut> set by attribute.
+    Set user-defined property "INIT =  0145" for instance <register_type_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 809: Possible simulation mismatch on property <INIT> of instance <register_enable_lut> set by attribute.
+    Set user-defined property "INIT =  8" for instance <register_enable_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 828: Possible simulation mismatch on property <INIT> of instance <register_bit00> set by attribute.
+    Set user-defined property "INIT =  0000" for instance <register_bit00> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 846: Possible simulation mismatch on property <INIT> of instance <operand_select_mux0> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <operand_select_mux0> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 828: Possible simulation mismatch on property <INIT> of instance <register_bit10> set by attribute.
+    Set user-defined property "INIT =  0000" for instance <register_bit10> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 846: Possible simulation mismatch on property <INIT> of instance <operand_select_mux1> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <operand_select_mux1> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 828: Possible simulation mismatch on property <INIT> of instance <register_bit20> set by attribute.
+    Set user-defined property "INIT =  0000" for instance <register_bit20> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 846: Possible simulation mismatch on property <INIT> of instance <operand_select_mux2> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <operand_select_mux2> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 828: Possible simulation mismatch on property <INIT> of instance <register_bit30> set by attribute.
+    Set user-defined property "INIT =  0000" for instance <register_bit30> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 846: Possible simulation mismatch on property <INIT> of instance <operand_select_mux3> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <operand_select_mux3> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 828: Possible simulation mismatch on property <INIT> of instance <register_bit40> set by attribute.
+    Set user-defined property "INIT =  0000" for instance <register_bit40> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 846: Possible simulation mismatch on property <INIT> of instance <operand_select_mux4> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <operand_select_mux4> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 828: Possible simulation mismatch on property <INIT> of instance <register_bit50> set by attribute.
+    Set user-defined property "INIT =  0000" for instance <register_bit50> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 846: Possible simulation mismatch on property <INIT> of instance <operand_select_mux5> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <operand_select_mux5> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 828: Possible simulation mismatch on property <INIT> of instance <register_bit60> set by attribute.
+    Set user-defined property "INIT =  0000" for instance <register_bit60> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 846: Possible simulation mismatch on property <INIT> of instance <operand_select_mux6> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <operand_select_mux6> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 828: Possible simulation mismatch on property <INIT> of instance <register_bit70> set by attribute.
+    Set user-defined property "INIT =  0000" for instance <register_bit70> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 846: Possible simulation mismatch on property <INIT> of instance <operand_select_mux7> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <operand_select_mux7> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 871: Possible simulation mismatch on property <INIT> of instance <memory_type_lut> set by attribute.
+    Set user-defined property "INIT =  0400" for instance <memory_type_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 886: Possible simulation mismatch on property <INIT> of instance <memory_enable_lut> set by attribute.
+    Set user-defined property "INIT =  8000" for instance <memory_enable_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 906: Possible simulation mismatch on property <INIT> of instance <memory_bit0> set by attribute.
+    Set user-defined property "INIT =  0000000000000000" for instance <memory_bit0> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 906: Possible simulation mismatch on property <INIT> of instance <memory_bit1> set by attribute.
+    Set user-defined property "INIT =  0000000000000000" for instance <memory_bit1> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 906: Possible simulation mismatch on property <INIT> of instance <memory_bit2> set by attribute.
+    Set user-defined property "INIT =  0000000000000000" for instance <memory_bit2> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 906: Possible simulation mismatch on property <INIT> of instance <memory_bit3> set by attribute.
+    Set user-defined property "INIT =  0000000000000000" for instance <memory_bit3> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 906: Possible simulation mismatch on property <INIT> of instance <memory_bit4> set by attribute.
+    Set user-defined property "INIT =  0000000000000000" for instance <memory_bit4> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 906: Possible simulation mismatch on property <INIT> of instance <memory_bit5> set by attribute.
+    Set user-defined property "INIT =  0000000000000000" for instance <memory_bit5> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 906: Possible simulation mismatch on property <INIT> of instance <memory_bit6> set by attribute.
+    Set user-defined property "INIT =  0000000000000000" for instance <memory_bit6> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 906: Possible simulation mismatch on property <INIT> of instance <memory_bit7> set by attribute.
+    Set user-defined property "INIT =  0000000000000000" for instance <memory_bit7> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 937: Possible simulation mismatch on property <INIT> of instance <sel_logical_lut> set by attribute.
+    Set user-defined property "INIT =  FFE2" for instance <sel_logical_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 956: Possible simulation mismatch on property <INIT> of instance <logical_lut0> set by attribute.
+    Set user-defined property "INIT =  6E8A" for instance <logical_lut0> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 956: Possible simulation mismatch on property <INIT> of instance <logical_lut1> set by attribute.
+    Set user-defined property "INIT =  6E8A" for instance <logical_lut1> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 956: Possible simulation mismatch on property <INIT> of instance <logical_lut2> set by attribute.
+    Set user-defined property "INIT =  6E8A" for instance <logical_lut2> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 956: Possible simulation mismatch on property <INIT> of instance <logical_lut3> set by attribute.
+    Set user-defined property "INIT =  6E8A" for instance <logical_lut3> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 956: Possible simulation mismatch on property <INIT> of instance <logical_lut4> set by attribute.
+    Set user-defined property "INIT =  6E8A" for instance <logical_lut4> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 956: Possible simulation mismatch on property <INIT> of instance <logical_lut5> set by attribute.
+    Set user-defined property "INIT =  6E8A" for instance <logical_lut5> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 956: Possible simulation mismatch on property <INIT> of instance <logical_lut6> set by attribute.
+    Set user-defined property "INIT =  6E8A" for instance <logical_lut6> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 956: Possible simulation mismatch on property <INIT> of instance <logical_lut7> set by attribute.
+    Set user-defined property "INIT =  6E8A" for instance <logical_lut7> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 989: Possible simulation mismatch on property <INIT> of instance <high_shift_in_lut> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <high_shift_in_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 998: Possible simulation mismatch on property <INIT> of instance <low_shift_in_lut> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <low_shift_in_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 1015: Possible simulation mismatch on property <INIT> of instance <shift_carry_lut> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <shift_carry_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 1041: Possible simulation mismatch on property <INIT> of instance <shift_mux_lut0> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <shift_mux_lut0> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 1061: Possible simulation mismatch on property <INIT> of instance <shift_mux_lut1> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <shift_mux_lut1> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 1061: Possible simulation mismatch on property <INIT> of instance <shift_mux_lut2> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <shift_mux_lut2> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 1061: Possible simulation mismatch on property <INIT> of instance <shift_mux_lut3> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <shift_mux_lut3> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 1061: Possible simulation mismatch on property <INIT> of instance <shift_mux_lut4> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <shift_mux_lut4> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 1061: Possible simulation mismatch on property <INIT> of instance <shift_mux_lut5> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <shift_mux_lut5> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 1061: Possible simulation mismatch on property <INIT> of instance <shift_mux_lut6> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <shift_mux_lut6> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 1081: Possible simulation mismatch on property <INIT> of instance <shift_mux_lut7> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <shift_mux_lut7> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 1109: Possible simulation mismatch on property <INIT> of instance <sel_arith_lut> set by attribute.
+    Set user-defined property "INIT =  1F" for instance <sel_arith_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 1136: Possible simulation mismatch on property <INIT> of instance <arith_carry_in_lut0> set by attribute.
+    Set user-defined property "INIT =  6C" for instance <arith_carry_in_lut0> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 1220: Possible simulation mismatch on property <INIT> of instance <arith_lut0> set by attribute.
+    Set user-defined property "INIT =  96" for instance <arith_lut0> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 1220: Possible simulation mismatch on property <INIT> of instance <arith_lut1> set by attribute.
+    Set user-defined property "INIT =  96" for instance <arith_lut1> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 1220: Possible simulation mismatch on property <INIT> of instance <arith_lut2> set by attribute.
+    Set user-defined property "INIT =  96" for instance <arith_lut2> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 1220: Possible simulation mismatch on property <INIT> of instance <arith_lut3> set by attribute.
+    Set user-defined property "INIT =  96" for instance <arith_lut3> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 1220: Possible simulation mismatch on property <INIT> of instance <arith_lut4> set by attribute.
+    Set user-defined property "INIT =  96" for instance <arith_lut4> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 1220: Possible simulation mismatch on property <INIT> of instance <arith_lut5> set by attribute.
+    Set user-defined property "INIT =  96" for instance <arith_lut5> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 1220: Possible simulation mismatch on property <INIT> of instance <arith_lut6> set by attribute.
+    Set user-defined property "INIT =  96" for instance <arith_lut6> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 1200: Possible simulation mismatch on property <INIT> of instance <arith_carry_out_lut7> set by attribute.
+    Set user-defined property "INIT =  2" for instance <arith_carry_out_lut7> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 1220: Possible simulation mismatch on property <INIT> of instance <arith_lut7> set by attribute.
+    Set user-defined property "INIT =  96" for instance <arith_lut7> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 1244: Possible simulation mismatch on property <INIT> of instance <input_fetch_type_lut> set by attribute.
+    Set user-defined property "INIT =  0002" for instance <input_fetch_type_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 1269: Possible simulation mismatch on property <INIT> of instance <or_lut0> set by attribute.
+    Set user-defined property "INIT =  FE" for instance <or_lut0> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 1278: Possible simulation mismatch on property <INIT> of instance <mux_lut0> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <mux_lut0> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 1269: Possible simulation mismatch on property <INIT> of instance <or_lut1> set by attribute.
+    Set user-defined property "INIT =  FE" for instance <or_lut1> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 1278: Possible simulation mismatch on property <INIT> of instance <mux_lut1> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <mux_lut1> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 1269: Possible simulation mismatch on property <INIT> of instance <or_lut2> set by attribute.
+    Set user-defined property "INIT =  FE" for instance <or_lut2> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 1278: Possible simulation mismatch on property <INIT> of instance <mux_lut2> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <mux_lut2> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 1269: Possible simulation mismatch on property <INIT> of instance <or_lut3> set by attribute.
+    Set user-defined property "INIT =  FE" for instance <or_lut3> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 1278: Possible simulation mismatch on property <INIT> of instance <mux_lut3> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <mux_lut3> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 1269: Possible simulation mismatch on property <INIT> of instance <or_lut4> set by attribute.
+    Set user-defined property "INIT =  FE" for instance <or_lut4> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 1278: Possible simulation mismatch on property <INIT> of instance <mux_lut4> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <mux_lut4> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 1269: Possible simulation mismatch on property <INIT> of instance <or_lut5> set by attribute.
+    Set user-defined property "INIT =  FE" for instance <or_lut5> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 1278: Possible simulation mismatch on property <INIT> of instance <mux_lut5> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <mux_lut5> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 1269: Possible simulation mismatch on property <INIT> of instance <or_lut6> set by attribute.
+    Set user-defined property "INIT =  FE" for instance <or_lut6> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 1278: Possible simulation mismatch on property <INIT> of instance <mux_lut6> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <mux_lut6> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 1269: Possible simulation mismatch on property <INIT> of instance <or_lut7> set by attribute.
+    Set user-defined property "INIT =  FE" for instance <or_lut7> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 1278: Possible simulation mismatch on property <INIT> of instance <mux_lut7> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <mux_lut7> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 1301: Possible simulation mismatch on property <INIT> of instance <io_decode_lut> set by attribute.
+    Set user-defined property "INIT =  0010" for instance <io_decode_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 1311: Possible simulation mismatch on property <INIT> of instance <write_active_lut> set by attribute.
+    Set user-defined property "INIT =  4000" for instance <write_active_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 1327: Possible simulation mismatch on property <INIT> of instance <read_active_lut> set by attribute.
+    Set user-defined property "INIT =  0100" for instance <read_active_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 1368: Possible simulation mismatch on property <INIT> of instance <stack_bit0> set by attribute.
+    Set user-defined property "INIT =  00000000" for instance <stack_bit0> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 1368: Possible simulation mismatch on property <INIT> of instance <stack_bit1> set by attribute.
+    Set user-defined property "INIT =  00000000" for instance <stack_bit1> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 1368: Possible simulation mismatch on property <INIT> of instance <stack_bit2> set by attribute.
+    Set user-defined property "INIT =  00000000" for instance <stack_bit2> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 1368: Possible simulation mismatch on property <INIT> of instance <stack_bit3> set by attribute.
+    Set user-defined property "INIT =  00000000" for instance <stack_bit3> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 1368: Possible simulation mismatch on property <INIT> of instance <stack_bit4> set by attribute.
+    Set user-defined property "INIT =  00000000" for instance <stack_bit4> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 1368: Possible simulation mismatch on property <INIT> of instance <stack_bit5> set by attribute.
+    Set user-defined property "INIT =  00000000" for instance <stack_bit5> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 1368: Possible simulation mismatch on property <INIT> of instance <stack_bit6> set by attribute.
+    Set user-defined property "INIT =  00000000" for instance <stack_bit6> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 1368: Possible simulation mismatch on property <INIT> of instance <stack_bit7> set by attribute.
+    Set user-defined property "INIT =  00000000" for instance <stack_bit7> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 1368: Possible simulation mismatch on property <INIT> of instance <stack_bit8> set by attribute.
+    Set user-defined property "INIT =  00000000" for instance <stack_bit8> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 1368: Possible simulation mismatch on property <INIT> of instance <stack_bit9> set by attribute.
+    Set user-defined property "INIT =  00000000" for instance <stack_bit9> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 1415: Possible simulation mismatch on property <INIT> of instance <count_lut0> set by attribute.
+    Set user-defined property "INIT =  6555" for instance <count_lut0> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 1448: Possible simulation mismatch on property <INIT> of instance <count_lut1> set by attribute.
+    Set user-defined property "INIT =  A999" for instance <count_lut1> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 1448: Possible simulation mismatch on property <INIT> of instance <count_lut2> set by attribute.
+    Set user-defined property "INIT =  A999" for instance <count_lut2> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 1448: Possible simulation mismatch on property <INIT> of instance <count_lut3> set by attribute.
+    Set user-defined property "INIT =  A999" for instance <count_lut3> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd" line 1482: Possible simulation mismatch on property <INIT> of instance <count_lut4> set by attribute.
+    Set user-defined property "INIT =  A999" for instance <count_lut4> in unit <kcpsm3>.
+Entity <kcpsm3> analyzed. Unit <kcpsm3> generated.
+
+Analyzing Entity <adc_ctrl> (Architecture <low_level_definition>).
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_00> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_01> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_02> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_03> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_04> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_05> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_06> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_07> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_08> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_09> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_0A> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_0B> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_0C> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_0D> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_0E> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_0F> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_10> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_11> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_12> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_13> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_14> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_15> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_16> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_17> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_18> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_19> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_1A> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_1B> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_1C> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_1D> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_1E> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_1F> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_20> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_21> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_22> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_23> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_24> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_25> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_26> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_27> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_28> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_29> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_2A> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_2B> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_2C> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_2D> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_2E> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_2F> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_30> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_31> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_32> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_33> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_34> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_35> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_36> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_37> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_38> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_39> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_3A> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_3B> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_3C> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_3D> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_3E> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INIT_3F> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INITP_00> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INITP_01> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INITP_02> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INITP_03> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INITP_04> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INITP_05> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INITP_06> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd" line 205: Possible simulation mismatch on property <INITP_07> of instance <ram_1024_x_18> set by attribute.
+    Set user-defined property "INIT_00 =  E0060000020C01B301B301B301B301B3016102110523014E0211051001FB011F" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_01 =  E0068001600650164FFF548D2E0454862E014E00C0010FFF4092E005E0040001" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_02 =  0520A700A600050600E4012700116301620001996000019960010211052CC080" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_03 =  640463016200007401D1052DA7008601E7FFE6FF403B052B54362780017F0211" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_04 =  505A440501FC0018505A440301F80030505A440201EC0077505A440101D800EF" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_05 =  A7068672A700A600050600E401FF009C505A440101FF0038505A440601FE000C" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_06 =  547242FF5472431F407201D1053E546C4200546C43E063016200017802110517" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_07 =  01D18530650801D18530650901D1052E01D18530650A01024014007401D1053C" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_08 =  C0016004C000409200075492400880016004C000A00001D1052001D185306507" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_09 =  01D1053D01D10547021105100122D20002060206020602066205E00400015492" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_0A =  01D1053254B5400240DF01D1052001D1052001D1053154AC4001600401D1052D" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_0B =  54C7400440DF01D1052001D1052001D1053554BE400340DF01D1052001D10520" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_0C =  40DF01D1052001D1053001D1053254D0400540DF01D1052001D1053001D10531" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_0D =  01AE01D1053001D1053001D1053140DF01D1052001D1053001D1053554D94006" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_0E =  0008010E0A0F198008FF50EC238008000400050006000700401454DF20054000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_0F =  F680F530D4205D01200154EECA010900080003000206B790B680B53094205CF5" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_10 =  03A002000700060015701460A0005504C0018801F480010A08070005A000F790" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_11 =  00AEA0005511C1010208030E07000606B5309420411906075916F530D420010D" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_12 =  5526C101C008E001020023404301C008E001C2040108C008E008011FA000C008" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_13 =  060023804301C008E001C008E0010122C008E010C008E010011FA000C008E008" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_14 =  01D10550A0000608070A0608070A0808090A0808090A5539C101090008000700" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_15 =  01D1056501D1057A01D1056101D1056C01D1054201D1056F01D1056301D10569" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_16 =  057401D1056E01D1056F01D1054301D1052001D1054301D1054401D10541A000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_17 =  0541A00001D1053D01D1054101D10556A00001D1056C01D1056F01D1057201D1" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_18 =  101012000194000E000E000E000E1100A00001D1053D01D1054401D1052F01D1" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_19 =  A00001D1156001D1152016100188A000803A80075997C00AA00011000194A00F" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_1A =  01A90314A00055AAC20101A40219A00055A5C10101A00128A00055A1C001000B" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_1B =  C440A4F8A000C440E40101A0C440E401A00055B4C40101AE0414A00055AFC301" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_1C =  C44004F001A401BE0406040604060407145001A001BEC408A4F01450A00001B8" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_1D =  04F001A401B8C4400406040604070407145001A001B8C440C40CA4F01450A000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_1E =  E401400201A0C440E40101A0C440E401450201A0C440E401C440040EA000C440" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_1F =  01BE01AE01BE043001AEA00001A4C4400404D500000E000E000E000EA5F0C440" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_20 =  01A901A901C2050101C2050C01C2050601C2052801A401BE042001A401BE01A9" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_21 =  E703E602E901E8000133A00001C2C5C0A50FA00001C2C580A50F52172510A000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_22 =  0000000000000000000000000000000000000000000000000000000080010F00" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_23 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_24 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_25 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_26 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_27 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_28 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_29 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_2A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_2B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_2C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_2D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_2E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_2F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_30 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_31 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_32 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_33 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_34 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_35 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_36 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_37 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_38 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_39 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_3A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_3B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_3C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_3D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_3E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_3F =  421B000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INITP_00 =  D34CD3FCDDF3743C55B0D0D0D0D0D0D003C50CDF16C0333293774CE88FFFF3CF" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INITP_01 =  5776A957A03400F4F333CCCDF3337CCCDF3337CCCDF3334CCCCCAA234F353B34" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INITP_02 =  2CCCB33333333332CCCCCCCCCAAAAB6A922088E8D892223A2DAA5ED4000B5B09" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INITP_03 =  FCEE0AA20E38388A3EAA3E028FAA3C0B8A38B72DCB72DCB4B30E5D8C0EA8B333" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INITP_04 =  00000000000000000000000000000000000000000000000CAAEC2C36FCCCCF3F" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INITP_05 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INITP_06 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INITP_07 =  C000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+Entity <adc_ctrl> analyzed. Unit <adc_ctrl> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <adc_ctrl>.
+    Related source file is "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_ctrl.vhd".
+WARNING:Xst:646 - Signal <shift> is assigned but never used.
+WARNING:Xst:646 - Signal <doa> is assigned but never used.
+WARNING:Xst:646 - Signal <drck2> is assigned but never used.
+WARNING:Xst:646 - Signal <reset> is assigned but never used.
+WARNING:Xst:653 - Signal <tdo2> is used but never assigned. Tied to value 0.
+WARNING:Xst:646 - Signal <capture> is assigned but never used.
+WARNING:Xst:646 - Signal <dopa<0>> is assigned but never used.
+WARNING:Xst:646 - Signal <sel2> is assigned but never used.
+Unit <adc_ctrl> synthesized.
+
+
+Synthesizing Unit <kcpsm3>.
+    Related source file is "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd".
+Unit <kcpsm3> synthesized.
+
+
+Synthesizing Unit <picoblaze_amp_adc_control>.
+    Related source file is "D:/embedded_lab/test/adc_control_v0/adc_control_v0/picoblaze_amp_adc_control.vhd".
+WARNING:Xst:646 - Signal <read_strobe> is assigned but never used.
+WARNING:Xst:646 - Signal <port_id<5:4>> is assigned but never used.
+    Register <spi_amp_cs> equivalent to <simple_io<10>> has been removed
+    Register <spi_adc_conv> equivalent to <simple_io<11>> has been removed
+    Found 1-bit register for signal <spi_sck>.
+    Found 1-bit register for signal <spi_sdi>.
+    Found 1-bit register for signal <spi_rom_cs>.
+    Found 1-bit register for signal <spi_dac_cs>.
+    Found 1-bit register for signal <spi_amp_shdn>.
+    Found 1-bit register for signal <spi_dac_clr>.
+    Found 2-bit register for signal <simple_io<11:10>>.
+    Found 8-bit register for signal <led>.
+    Found 4-bit tristate buffer for signal <lcd_d>.
+    Found 1-bit register for signal <lcd_rs>.
+    Found 1-bit register for signal <lcd_e>.
+    Found 8-bit 3-to-1 multiplexer for signal <$n0009> created at line 243.
+    Found 1-bit register for signal <event_1hz>.
+    Found 8-bit register for signal <in_port>.
+    Found 26-bit up counter for signal <int_count>.
+    Found 1-bit register for signal <interrupt>.
+    Found 1-bit register for signal <lcd_drive>.
+    Found 4-bit register for signal <lcd_output_data>.
+    Found 1-bit register for signal <lcd_rw_control>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  34 D-type flip-flop(s).
+	inferred   8 Multiplexer(s).
+	inferred   4 Tristate(s).
+Unit <picoblaze_amp_adc_control> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 1
+ 26-bit up counter                                     : 1
+# Registers                                            : 17
+ 1-bit register                                        : 14
+ 4-bit register                                        : 1
+ 8-bit register                                        : 2
+# Multiplexers                                         : 1
+ 8-bit 3-to-1 multiplexer                              : 1
+# Tristates                                            : 1
+ 4-bit tristate buffer                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 1
+ 26-bit up counter                                     : 1
+# Registers                                            : 118
+ Flip-Flops                                            : 118
+# Multiplexers                                         : 1
+ 8-bit 3-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Loading device for application Rf_Device from file '3s500e.nph' in environment D:\Xilinx.
+
+Optimizing unit <picoblaze_amp_adc_control> ...
+
+Optimizing unit <kcpsm3> ...
+
+Optimizing unit <adc_ctrl> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block picoblaze_amp_adc_control, actual ratio is 2.
+FlipFlop interrupt has been replicated 1 time(s) to handle iob=true attribute.
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : picoblaze_amp_adc_control.ngr
+Top Level Output File Name         : picoblaze_amp_adc_control
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 42
+
+Cell Usage :
+# BELS                             : 309
+#      GND                         : 1
+#      INV                         : 6
+#      LUT1                        : 24
+#      LUT1_L                      : 5
+#      LUT2                        : 11
+#      LUT2_L                      : 5
+#      LUT3                        : 70
+#      LUT3_L                      : 3
+#      LUT4                        : 33
+#      LUT4_L                      : 8
+#      MUXCY                       : 71
+#      MUXF5                       : 9
+#      VCC                         : 1
+#      XORCY                       : 62
+# FlipFlops/Latches                : 145
+#      FD                          : 36
+#      FDE                         : 26
+#      FDR                         : 61
+#      FDRE                        : 10
+#      FDRSE                       : 10
+#      FDS                         : 2
+# RAMS                             : 27
+#      RAM16X1D                    : 8
+#      RAM32X1S                    : 10
+#      RAM64X1S                    : 8
+#      RAMB16_S9_S18               : 1
+# Shift Registers                  : 8
+#      SRLC16E                     : 8
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 41
+#      IBUF                        : 10
+#      IOBUF                       : 4
+#      OBUF                        : 27
+# Others                           : 1
+#      BSCAN_VIRTEX2               : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                     128  out of   4656     2%  
+ Number of Slice Flip Flops:           144  out of   9312     1%  
+ Number of 4 input LUTs:               235  out of   9312     2%  
+    Number used as logic: 159
+    Number used as Shift registers: 8
+    Number used as RAMs: 68
+ Number of bonded IOBs:                 42  out of    232    18%  
+    IOB Flip Flops: 1
+ Number of BRAMs:                        1  out of     20     5%  
+ Number of GCLKs:                        2  out of     24     8%  
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 164   |
+program_rom/drck1                  | BUFG                   | 16    |
+program_rom/update                 | NONE                   | 1     |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 8.302ns (Maximum Frequency: 120.446MHz)
+   Minimum input arrival time before clock: 4.866ns
+   Maximum output required time after clock: 7.095ns
+   Maximum combinational path delay: 5.367ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 8.302ns (frequency: 120.446MHz)
+  Total number of paths / destination ports: 5307 / 494
+-------------------------------------------------------------------------
+Delay:               8.302ns (Levels of Logic = 13)
+  Source:            program_rom/ram_1024_x_18 (RAM)
+  Destination:       processor/register_bit9 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: program_rom/ram_1024_x_18 to processor/register_bit9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB16_S9_S18:CLKB->DOB14   27   0.012   1.999  program_rom/ram_1024_x_18 (instruction<14>)
+     LUT4:I0->O            1   0.704   0.836  processor/move_group_lut (processor/move_group)
+     LUT3:I2->O           11   0.704   1.319  processor/normal_count_lut (processor/normal_count)
+     LUT3:I0->O            1   0.704   0.000  processor/value_select_mux0 (processor/pc_value<0>)
+     MUXCY:S->O            1   0.464   0.000  processor/pc_value_muxcy0 (processor/pc_value_carry<0>)
+     MUXCY:CI->O           1   0.059   0.000  processor/pc_value_muxcy1 (processor/pc_value_carry<1>)
+     MUXCY:CI->O           1   0.059   0.000  processor/pc_value_muxcy2 (processor/pc_value_carry<2>)
+     MUXCY:CI->O           1   0.059   0.000  processor/pc_value_muxcy3 (processor/pc_value_carry<3>)
+     MUXCY:CI->O           1   0.059   0.000  processor/pc_value_muxcy4 (processor/pc_value_carry<4>)
+     MUXCY:CI->O           1   0.059   0.000  processor/pc_value_muxcy5 (processor/pc_value_carry<5>)
+     MUXCY:CI->O           1   0.059   0.000  processor/pc_value_muxcy6 (processor/pc_value_carry<6>)
+     MUXCY:CI->O           1   0.059   0.000  processor/pc_value_muxcy7 (processor/pc_value_carry<7>)
+     MUXCY:CI->O           0   0.059   0.000  processor/pc_value_muxcy8 (processor/pc_value_carry<8>)
+     XORCY:CI->O           1   0.780   0.000  processor/pc_value_xor9 (processor/inc_pc_value<9>)
+     FDRSE:D                   0.308          processor/register_bit9
+    ----------------------------------------
+    Total                      8.302ns (4.148ns logic, 4.154ns route)
+                                       (50.0% logic, 50.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'program_rom/drck1'
+  Clock period: 4.014ns (frequency: 249.128MHz)
+  Total number of paths / destination ports: 15 / 15
+-------------------------------------------------------------------------
+Delay:               4.014ns (Levels of Logic = 0)
+  Source:            program_rom/srlC1 (FF)
+  Destination:       program_rom/flop1 (FF)
+  Source Clock:      program_rom/drck1 rising
+  Destination Clock: program_rom/drck1 rising
+
+  Data Path: program_rom/srlC1 to program_rom/flop1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     SRLC16E:CLK->Q        2   3.706   0.000  program_rom/srlC1 (program_rom/jaddr<10>)
+     FD:D                      0.308          program_rom/flop1
+    ----------------------------------------
+    Total                      4.014ns (4.014ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 16 / 10
+-------------------------------------------------------------------------
+Offset:              4.866ns (Levels of Logic = 3)
+  Source:            spi_amp_sdo (PAD)
+  Destination:       in_port_6 (FF)
+  Destination Clock: clk rising
+
+  Data Path: spi_amp_sdo to in_port_6
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.218   1.052  spi_amp_sdo_IBUF (spi_amp_sdo_IBUF)
+     LUT3:I0->O            1   0.704   0.880  _n0009<6>1 (N16)
+     LUT3_L:I1->LO         1   0.704   0.000  _n0009<6>2 (_n0009<6>)
+     FD:D                      0.308          in_port_6
+    ----------------------------------------
+    Total                      4.866ns (2.934ns logic, 1.932ns route)
+                                       (60.3% logic, 39.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'program_rom/update'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.676ns (Levels of Logic = 0)
+  Source:            program_rom/v2_bscan:SEL1 (PAD)
+  Destination:       program_rom/ram_1024_x_18 (RAM)
+  Destination Clock: program_rom/update rising
+
+  Data Path: program_rom/v2_bscan:SEL1 to program_rom/ram_1024_x_18
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    BSCAN_VIRTEX2:SEL1     3   0.000   0.907  program_rom/v2_bscan (kcpsm3_reset)
+     RAMB16_S9_S18:ENA         0.769          program_rom/ram_1024_x_18
+    ----------------------------------------
+    Total                      1.676ns (0.769ns logic, 0.907ns route)
+                                       (45.9% logic, 54.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'program_rom/drck1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.801ns (Levels of Logic = 0)
+  Source:            program_rom/v2_bscan:TDI (PAD)
+  Destination:       program_rom/srlC1 (FF)
+  Destination Clock: program_rom/drck1 rising
+
+  Data Path: program_rom/v2_bscan:TDI to program_rom/srlC1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    BSCAN_VIRTEX2:TDI      1   0.000   0.801  program_rom/v2_bscan (program_rom/tdi)
+     SRLC16E:D                -0.129          program_rom/srlC1
+    ----------------------------------------
+    Total                      0.801ns (0.000ns logic, 0.801ns route)
+                                       (0.0% logic, 100.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 35 / 26
+-------------------------------------------------------------------------
+Offset:              7.095ns (Levels of Logic = 2)
+  Source:            lcd_rw_control (FF)
+  Destination:       lcd_d<4> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: lcd_rw_control to lcd_d<4>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              2   0.591   1.052  lcd_rw_control (lcd_rw_control)
+     LUT2:I0->O            4   0.704   0.917  _n0011_INV1 (_n0011_INV)
+     IOBUF:T->IO               3.831          lcd_d_6_IOBUF (lcd_d<6>)
+    ----------------------------------------
+    Total                      7.095ns (5.126ns logic, 1.969ns route)
+                                       (72.2% logic, 27.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'program_rom/drck1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.706ns (Levels of Logic = 0)
+  Source:            program_rom/srlC8 (FF)
+  Destination:       program_rom/v2_bscan:TDO1 (PAD)
+  Source Clock:      program_rom/drck1 rising
+
+  Data Path: program_rom/srlC8 to program_rom/v2_bscan:TDO1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     SRLC16E:CLK->Q15      0   3.706   0.000  program_rom/srlC8 (program_rom/tdo1)
+    BSCAN_VIRTEX2:TDO1         0.000          program_rom/v2_bscan
+    ----------------------------------------
+    Total                      3.706ns (3.706ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               5.367ns (Levels of Logic = 2)
+  Source:            spi_amp_sdo (PAD)
+  Destination:       simple_io<9> (PAD)
+
+  Data Path: spi_amp_sdo to simple_io<9>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.218   0.877  spi_amp_sdo_IBUF (spi_amp_sdo_IBUF)
+     OBUF:I->O                 3.272          simple_io_9_OBUF (simple_io<9>)
+    ----------------------------------------
+    Total                      5.367ns (4.490ns logic, 0.877ns route)
+                                       (83.7% logic, 16.3% route)
+
+=========================================================================
+CPU : 32.38 / 33.67 s | Elapsed : 33.00 / 34.00 s
+ 
+--> 
+
+Total memory usage is 143644 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  217 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

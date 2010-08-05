@@ -1,0 +1,3 @@
+vhdl work "D:/embedded_lab/test/adc_control_v0/kcpsm3.vhd"
+vhdl work "adc_ctrl.vhd"
+vhdl work "picoblaze_amp_adc_control.vhd"

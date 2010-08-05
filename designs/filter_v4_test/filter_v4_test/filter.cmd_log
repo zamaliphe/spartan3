@@ -1,0 +1,120 @@
+xst -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -ifn filter.xst -ofn filter.syr
+ngdbuild -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -dd _ngo -nt timestamp -uc D:/embedded_lab/test/filter_v4_test/picoblaze_adc_dac_control.ucf -p xc3s500e-fg320-4 filter.ngc filter.ngd
+map -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o filter_map.ncd filter.ngd filter.pcf
+par -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -w -intstyle ise -ol std -t 1 filter_map.ncd filter.ncd filter.pcf
+trce -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -e 3 -l 3 -s 4 -xml filter filter.ncd -o filter.twr filter.pcf
+bitgen -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -f filter.ut filter.ncd
+xst -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -ifn filter.xst -ofn filter.syr
+ngdbuild -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -dd _ngo -nt timestamp -uc D:/embedded_lab/test/filter_v4_test/picoblaze_adc_dac_control.ucf -p xc3s500e-fg320-4 filter.ngc filter.ngd
+map -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o filter_map.ncd filter.ngd filter.pcf
+par -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -w -intstyle ise -ol std -t 1 filter_map.ncd filter.ncd filter.pcf
+trce -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -e 3 -l 3 -s 4 -xml filter filter.ncd -o filter.twr filter.pcf
+bitgen -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -f filter.ut filter.ncd
+xst -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -ifn filter.xst -ofn filter.syr
+xst -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -ifn filter.xst -ofn filter.syr
+ngdbuild -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -dd _ngo -nt timestamp -uc D:/embedded_lab/test/filter_v4_test/picoblaze_adc_dac_control.ucf -p xc3s500e-fg320-4 filter.ngc filter.ngd
+map -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o filter_map.ncd filter.ngd filter.pcf
+par -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -w -intstyle ise -ol std -t 1 filter_map.ncd filter.ncd filter.pcf
+trce -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -e 3 -l 3 -s 4 -xml filter filter.ncd -o filter.twr filter.pcf
+bitgen -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -f filter.ut filter.ncd
+xst -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -ifn filter.xst -ofn filter.syr
+ngdbuild -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -dd _ngo -nt timestamp -uc D:/embedded_lab/test/filter_v4_test/picoblaze_adc_dac_control.ucf -p xc3s500e-fg320-4 filter.ngc filter.ngd
+map -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o filter_map.ncd filter.ngd filter.pcf
+par -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -w -intstyle ise -ol std -t 1 filter_map.ncd filter.ncd filter.pcf
+trce -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -e 3 -l 3 -s 4 -xml filter filter.ncd -o filter.twr filter.pcf
+bitgen -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -f filter.ut filter.ncd
+xst -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -ifn filter.xst -ofn filter.syr
+ngdbuild -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -dd _ngo -nt timestamp -uc D:/embedded_lab/test/filter_v4_test/picoblaze_adc_dac_control.ucf -p xc3s500e-fg320-4 filter.ngc filter.ngd
+map -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o filter_map.ncd filter.ngd filter.pcf
+par -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -w -intstyle ise -ol std -t 1 filter_map.ncd filter.ncd filter.pcf
+trce -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -e 3 -l 3 -s 4 -xml filter filter.ncd -o filter.twr filter.pcf
+bitgen -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -f filter.ut filter.ncd
+xst -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -ifn filter.xst -ofn filter.syr
+ngdbuild -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -dd _ngo -nt timestamp -uc D:/embedded_lab/test/filter_v4_test/picoblaze_adc_dac_control.ucf -p xc3s500e-fg320-4 filter.ngc filter.ngd
+map -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o filter_map.ncd filter.ngd filter.pcf
+par -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -w -intstyle ise -ol std -t 1 filter_map.ncd filter.ncd filter.pcf
+trce -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -e 3 -l 3 -s 4 -xml filter filter.ncd -o filter.twr filter.pcf
+bitgen -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -f filter.ut filter.ncd
+bitgen -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -f filter.ut filter.ncd
+xst -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -ifn filter.xst -ofn filter.syr
+xst -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -ifn filter.xst -ofn filter.syr
+ngdbuild -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -dd _ngo -nt timestamp -uc D:/embedded_lab/test/filter_v4_test/picoblaze_adc_dac_control.ucf -p xc3s500e-fg320-4 filter.ngc filter.ngd
+map -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o filter_map.ncd filter.ngd filter.pcf
+par -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -w -intstyle ise -ol std -t 1 filter_map.ncd filter.ncd filter.pcf
+trce -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -e 3 -l 3 -s 4 -xml filter filter.ncd -o filter.twr filter.pcf
+bitgen -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -f filter.ut filter.ncd
+xst -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -ifn filter.xst -ofn filter.syr
+ngdbuild -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -dd _ngo -nt timestamp -uc D:/embedded_lab/test/filter_v4_test/picoblaze_adc_dac_control.ucf -p xc3s500e-fg320-4 filter.ngc filter.ngd
+map -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o filter_map.ncd filter.ngd filter.pcf
+par -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -w -intstyle ise -ol std -t 1 filter_map.ncd filter.ncd filter.pcf
+trce -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -e 3 -l 3 -s 4 -xml filter filter.ncd -o filter.twr filter.pcf
+bitgen -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -f filter.ut filter.ncd
+xst -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -ifn filter.xst -ofn filter.syr
+xst -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -ifn filter.xst -ofn filter.syr
+ngdbuild -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -dd _ngo -nt timestamp -uc D:/embedded_lab/test/filter_v4_test/picoblaze_adc_dac_control.ucf -p xc3s500e-fg320-4 filter.ngc filter.ngd
+map -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o filter_map.ncd filter.ngd filter.pcf
+par -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -w -intstyle ise -ol std -t 1 filter_map.ncd filter.ncd filter.pcf
+trce -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -e 3 -l 3 -s 4 -xml filter filter.ncd -o filter.twr filter.pcf
+bitgen -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -f filter.ut filter.ncd
+xst -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -ifn filter.xst -ofn filter.syr
+ngdbuild -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -dd _ngo -nt timestamp -uc D:/embedded_lab/test/filter_v4_test/picoblaze_adc_dac_control.ucf -p xc3s500e-fg320-4 filter.ngc filter.ngd
+map -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o filter_map.ncd filter.ngd filter.pcf
+par -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -w -intstyle ise -ol std -t 1 filter_map.ncd filter.ncd filter.pcf
+trce -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -e 3 -l 3 -s 4 -xml filter filter.ncd -o filter.twr filter.pcf
+bitgen -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -f filter.ut filter.ncd
+xst -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -ifn filter.xst -ofn filter.syr
+xst -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -ifn filter.xst -ofn filter.syr
+xst -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -ifn filter.xst -ofn filter.syr
+xst -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -ifn filter.xst -ofn filter.syr
+xst -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -ifn filter.xst -ofn filter.syr
+ngdbuild -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -dd _ngo -nt timestamp -uc D:/embedded_lab/test/filter_v4_test/picoblaze_adc_dac_control.ucf -p xc3s500e-fg320-4 filter.ngc filter.ngd
+map -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o filter_map.ncd filter.ngd filter.pcf
+par -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -w -intstyle ise -ol std -t 1 filter_map.ncd filter.ncd filter.pcf
+trce -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -e 3 -l 3 -s 4 -xml filter filter.ncd -o filter.twr filter.pcf
+bitgen -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -f filter.ut filter.ncd
+xst -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -ifn filter.xst -ofn filter.syr
+xst -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -ifn filter.xst -ofn filter.syr
+ngdbuild -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -dd _ngo -nt timestamp -uc D:/embedded_lab/test/filter_v4_test/picoblaze_adc_dac_control.ucf -p xc3s500e-fg320-4 filter.ngc filter.ngd
+map -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o filter_map.ncd filter.ngd filter.pcf
+par -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -w -intstyle ise -ol std -t 1 filter_map.ncd filter.ncd filter.pcf
+trce -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -e 3 -l 3 -s 4 -xml filter filter.ncd -o filter.twr filter.pcf
+bitgen -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -f filter.ut filter.ncd
+xst -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -ifn filter.xst -ofn filter.syr
+xst -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -ifn filter.xst -ofn filter.syr
+ngdbuild -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -dd _ngo -nt timestamp -uc D:/embedded_lab/test/filter_v4_test/picoblaze_adc_dac_control.ucf -p xc3s500e-fg320-4 filter.ngc filter.ngd
+map -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o filter_map.ncd filter.ngd filter.pcf
+par -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -w -intstyle ise -ol std -t 1 filter_map.ncd filter.ncd filter.pcf
+trce -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -e 3 -l 3 -s 4 -xml filter filter.ncd -o filter.twr filter.pcf
+bitgen -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -f filter.ut filter.ncd
+xst -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -ifn filter.xst -ofn filter.syr
+ngdbuild -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -dd _ngo -nt timestamp -uc D:/embedded_lab/test/filter_v4_test/picoblaze_adc_dac_control.ucf -p xc3s500e-fg320-4 filter.ngc filter.ngd
+map -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o filter_map.ncd filter.ngd filter.pcf
+par -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -w -intstyle ise -ol std -t 1 filter_map.ncd filter.ncd filter.pcf
+trce -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -e 3 -l 3 -s 4 -xml filter filter.ncd -o filter.twr filter.pcf
+bitgen -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -f filter.ut filter.ncd
+xst -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -ifn filter.xst -ofn filter.syr
+xst -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -ifn filter.xst -ofn filter.syr
+ngdbuild -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -dd _ngo -nt timestamp -uc D:/embedded_lab/test/filter_v4_test/picoblaze_adc_dac_control.ucf -p xc3s500e-fg320-4 filter.ngc filter.ngd
+map -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o filter_map.ncd filter.ngd filter.pcf
+par -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -w -intstyle ise -ol std -t 1 filter_map.ncd filter.ncd filter.pcf
+trce -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -e 3 -l 3 -s 4 -xml filter filter.ncd -o filter.twr filter.pcf
+bitgen -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -f filter.ut filter.ncd
+xst -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -ifn filter.xst -ofn filter.syr
+ngdbuild -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -dd _ngo -nt timestamp -uc D:/embedded_lab/test/filter_v4_test/picoblaze_adc_dac_control.ucf -p xc3s500e-fg320-4 filter.ngc filter.ngd
+map -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o filter_map.ncd filter.ngd filter.pcf
+par -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -w -intstyle ise -ol std -t 1 filter_map.ncd filter.ncd filter.pcf
+trce -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -e 3 -l 3 -s 4 -xml filter filter.ncd -o filter.twr filter.pcf
+bitgen -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -f filter.ut filter.ncd
+xst -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -ifn filter.xst -ofn filter.syr
+xst -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -ifn filter.xst -ofn filter.syr
+ngdbuild -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -dd _ngo -nt timestamp -uc D:/embedded_lab/test/filter_v4_test/picoblaze_adc_dac_control.ucf -p xc3s500e-fg320-4 filter.ngc filter.ngd
+map -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o filter_map.ncd filter.ngd filter.pcf
+par -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -w -intstyle ise -ol std -t 1 filter_map.ncd filter.ncd filter.pcf
+trce -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -e 3 -l 3 -s 4 -xml filter filter.ncd -o filter.twr filter.pcf
+bitgen -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -f filter.ut filter.ncd
+xst -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -ifn filter.xst -ofn filter.syr
+ngdbuild -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -dd _ngo -nt timestamp -uc D:/embedded_lab/test/filter_v4_test/picoblaze_adc_dac_control.ucf -p xc3s500e-fg320-4 filter.ngc filter.ngd
+map -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o filter_map.ncd filter.ngd filter.pcf
+par -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -w -intstyle ise -ol std -t 1 filter_map.ncd filter.ncd filter.pcf
+trce -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -e 3 -l 3 -s 4 -xml filter filter.ncd -o filter.twr filter.pcf
+bitgen -ise "D:/embedded_lab/test/filter_v4_test/filter_v4_test/filter_v4_test" -intstyle ise -f filter.ut filter.ncd

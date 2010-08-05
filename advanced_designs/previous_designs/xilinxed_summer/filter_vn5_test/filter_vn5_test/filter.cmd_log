@@ -1,0 +1,20 @@
+xst -ise "D:/embedded_lab/test/filter_vn5_test/filter_vn5_test/filter_vn5_test.ise" -intstyle ise -ifn "D:/embedded_lab/test/filter_vn5_test/filter_vn5_test/filter.xst" -ofn "D:/embedded_lab/test/filter_vn5_test/filter_vn5_test/filter.syr"
+xst -ise "D:/embedded_lab/test/filter_vn5_test/filter_vn5_test/filter_vn5_test.ise" -intstyle ise -ifn "D:/embedded_lab/test/filter_vn5_test/filter_vn5_test/filter.xst" -ofn "D:/embedded_lab/test/filter_vn5_test/filter_vn5_test/filter.syr"
+ngdbuild -ise "D:/embedded_lab/test/filter_vn5_test/filter_vn5_test/filter_vn5_test.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc3s500e-fg320-4 "filter.ngc" filter.ngd
+map -ise "D:/embedded_lab/test/filter_vn5_test/filter_vn5_test/filter_vn5_test.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr off -k 4 -c 100 -o filter_map.ncd filter.ngd filter.pcf
+par -ise "D:/embedded_lab/test/filter_vn5_test/filter_vn5_test/filter_vn5_test.ise" -w -intstyle ise -ol std -t 1 filter_map.ncd filter.ncd filter.pcf
+trce -ise "D:/embedded_lab/test/filter_vn5_test/filter_vn5_test/filter_vn5_test.ise" -intstyle ise -e 3 -s 4 -xml filter filter.ncd -o filter.twr filter.pcf -ucf D:/embedded_lab/test/filter_vn5_test/filter.ucf
+bitgen -ise "D:/embedded_lab/test/filter_vn5_test/filter_vn5_test/filter_vn5_test.ise" -intstyle ise -f filter.ut filter.ncd
+xst -ise "D:/embedded_lab/test/filter_vn5_test/filter_vn5_test/filter_vn5_test.ise" -intstyle ise -ifn "D:/embedded_lab/test/filter_vn5_test/filter_vn5_test/filter.xst" -ofn "D:/embedded_lab/test/filter_vn5_test/filter_vn5_test/filter.syr"
+ngdbuild -ise "D:/embedded_lab/test/filter_vn5_test/filter_vn5_test/filter_vn5_test.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc3s500e-fg320-4 "filter.ngc" filter.ngd
+map -ise "D:/embedded_lab/test/filter_vn5_test/filter_vn5_test/filter_vn5_test.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr off -k 4 -c 100 -o filter_map.ncd filter.ngd filter.pcf
+par -ise "D:/embedded_lab/test/filter_vn5_test/filter_vn5_test/filter_vn5_test.ise" -w -intstyle ise -ol std -t 1 filter_map.ncd filter.ncd filter.pcf
+trce -ise "D:/embedded_lab/test/filter_vn5_test/filter_vn5_test/filter_vn5_test.ise" -intstyle ise -e 3 -s 4 -xml filter filter.ncd -o filter.twr filter.pcf -ucf D:/embedded_lab/test/filter_vn5_test/filter.ucf
+bitgen -ise "D:/embedded_lab/test/filter_vn5_test/filter_vn5_test/filter_vn5_test.ise" -intstyle ise -f filter.ut filter.ncd
+xst -ise "D:/embedded_lab/test/filter_vn5_test/filter_vn5_test/filter_vn5_test.ise" -intstyle ise -ifn "D:/embedded_lab/test/filter_vn5_test/filter_vn5_test/filter.xst" -ofn "D:/embedded_lab/test/filter_vn5_test/filter_vn5_test/filter.syr"
+xst -ise "D:/embedded_lab/test/filter_vn5_test/filter_vn5_test/filter_vn5_test.ise" -intstyle ise -ifn "D:/embedded_lab/test/filter_vn5_test/filter_vn5_test/filter.xst" -ofn "D:/embedded_lab/test/filter_vn5_test/filter_vn5_test/filter.syr"
+ngdbuild -ise "D:/embedded_lab/test/filter_vn5_test/filter_vn5_test/filter_vn5_test.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc3s500e-fg320-4 "filter.ngc" filter.ngd
+map -ise "D:/embedded_lab/test/filter_vn5_test/filter_vn5_test/filter_vn5_test.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr off -k 4 -c 100 -o filter_map.ncd filter.ngd filter.pcf
+par -ise "D:/embedded_lab/test/filter_vn5_test/filter_vn5_test/filter_vn5_test.ise" -w -intstyle ise -ol std -t 1 filter_map.ncd filter.ncd filter.pcf
+trce -ise "D:/embedded_lab/test/filter_vn5_test/filter_vn5_test/filter_vn5_test.ise" -intstyle ise -e 3 -s 4 -xml filter filter.ncd -o filter.twr filter.pcf -ucf D:/embedded_lab/test/filter_vn5_test/filter.ucf
+bitgen -ise "D:/embedded_lab/test/filter_vn5_test/filter_vn5_test/filter_vn5_test.ise" -intstyle ise -f filter.ut filter.ncd

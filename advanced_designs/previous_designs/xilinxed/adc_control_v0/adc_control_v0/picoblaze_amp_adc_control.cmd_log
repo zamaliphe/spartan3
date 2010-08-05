@@ -1,0 +1,6 @@
+xst -ise "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_control_v0" -intstyle ise -ifn picoblaze_amp_adc_control.xst -ofn picoblaze_amp_adc_control.syr
+ngdbuild -ise "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_control_v0" -intstyle ise -dd _ngo -nt timestamp -uc picoblaze_amp_adc_control.ucf -p xc3s500e-fg320-4 picoblaze_amp_adc_control.ngc picoblaze_amp_adc_control.ngd
+map -ise "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_control_v0" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o picoblaze_amp_adc_control_map.ncd picoblaze_amp_adc_control.ngd picoblaze_amp_adc_control.pcf
+par -ise "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_control_v0" -w -intstyle ise -ol std -t 1 picoblaze_amp_adc_control_map.ncd picoblaze_amp_adc_control.ncd picoblaze_amp_adc_control.pcf
+trce -ise "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_control_v0" -intstyle ise -e 3 -l 3 -s 4 -xml picoblaze_amp_adc_control picoblaze_amp_adc_control.ncd -o picoblaze_amp_adc_control.twr picoblaze_amp_adc_control.pcf
+bitgen -ise "D:/embedded_lab/test/adc_control_v0/adc_control_v0/adc_control_v0" -intstyle ise -f picoblaze_amp_adc_control.ut picoblaze_amp_adc_control.ncd

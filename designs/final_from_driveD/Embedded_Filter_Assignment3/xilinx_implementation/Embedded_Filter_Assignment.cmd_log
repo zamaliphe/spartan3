@@ -1,0 +1,6 @@
+xst -ise "D:/Embedded_Filter_Assignment3/xilinx_implementation/xilinx_implementation" -intstyle ise -ifn Embedded_Filter_Assignment.xst -ofn Embedded_Filter_Assignment.syr
+ngdbuild -ise "D:/Embedded_Filter_Assignment3/xilinx_implementation/xilinx_implementation" -intstyle ise -dd _ngo -nt timestamp -uc D:/Embedded_Filter_Assignment3/Embedded_Filter_Assignment.ucf -p xc3s500e-fg320-4 Embedded_Filter_Assignment.ngc Embedded_Filter_Assignment.ngd
+map -ise "D:/Embedded_Filter_Assignment3/xilinx_implementation/xilinx_implementation" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o Embedded_Filter_Assignment_map.ncd Embedded_Filter_Assignment.ngd Embedded_Filter_Assignment.pcf
+par -ise "D:/Embedded_Filter_Assignment3/xilinx_implementation/xilinx_implementation" -w -intstyle ise -ol std -t 1 Embedded_Filter_Assignment_map.ncd Embedded_Filter_Assignment.ncd Embedded_Filter_Assignment.pcf
+trce -ise "D:/Embedded_Filter_Assignment3/xilinx_implementation/xilinx_implementation" -intstyle ise -e 3 -l 3 -s 4 -xml Embedded_Filter_Assignment Embedded_Filter_Assignment.ncd -o Embedded_Filter_Assignment.twr Embedded_Filter_Assignment.pcf
+bitgen -ise "D:/Embedded_Filter_Assignment3/xilinx_implementation/xilinx_implementation" -intstyle ise -f Embedded_Filter_Assignment.ut Embedded_Filter_Assignment.ncd

@@ -1,0 +1,22 @@
+Release 8.1i ngdbuild I.24
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+
+Command Line: ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc audi.ucf -p
+xc3s500e-fg320-4 audi.ngc audi.ngd 
+
+Reading NGO file 'd:/embedded_lab/test/test2/audi.ngc' ...
+
+Applying constraints in "audi.ucf" to the design...
+
+Checking timing specifications ...
+Checking expanded design ...
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Total memory usage is 67776 kilobytes
+
+Writing NGD file "audi.ngd" ...
+
+Writing NGDBUILD log file "audi.bld"...

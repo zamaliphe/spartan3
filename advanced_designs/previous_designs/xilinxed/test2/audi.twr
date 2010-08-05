@@ -1,0 +1,123 @@
+--------------------------------------------------------------------------------
+Release 8.1i Trace I.24
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+
+D:\Xilinx\bin\nt\trce.exe -ise test2.ise -intstyle ise -e 3 -l 3 -s 4 -xml audi
+audi.ncd -o audi.twr audi.pcf
+
+
+Design file:              audi.ncd
+Physical constraint file: audi.pcf
+Device,speed:             xc3s500e,-4 (PRODUCTION 1.17 2005-11-04)
+Report level:             error report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths
+   option. All paths that are not constrained will be reported in the
+   unconstrained paths section(s) of the report.
+
+================================================================================
+Timing constraint: TS_clk = PERIOD TIMEGRP "clk" 20 ns HIGH 50%;
+
+ 74782 items analyzed, 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum period is  16.733ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: OFFSET = IN 9 ns BEFORE COMP "clk";
+
+ 351 items analyzed, 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum allowable offset is   8.948ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: OFFSET = OUT 9 ns AFTER COMP "clk";
+
+ 8 items analyzed, 0 timing errors detected.
+ Minimum allowable offset is   7.815ns.
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clk
+------------+------------+------------+------------------+--------+
+            |  Setup to  |  Hold to   |                  |  Clock |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) |  Phase |
+------------+------------+------------+------------------+--------+
+flag        |    7.576(R)|    0.442(R)|clk_BUFGP         |   0.000|
+reset       |    5.126(R)|   -0.288(R)|clk_BUFGP         |   0.000|
+start       |    8.948(R)|   -0.537(R)|clk_BUFGP         |   0.000|
+theta_in<0> |    4.875(R)|    0.560(R)|clk_BUFGP         |   0.000|
+theta_in<1> |    4.856(R)|    0.324(R)|clk_BUFGP         |   0.000|
+theta_in<2> |    4.864(R)|    0.526(R)|clk_BUFGP         |   0.000|
+theta_in<3> |    4.857(R)|    0.030(R)|clk_BUFGP         |   0.000|
+------------+------------+------------+------------------+--------+
+
+Clock clk to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  |  Clock |
+Destination | to PAD     |Internal Clock(s) |  Phase |
+------------+------------+------------------+--------+
+lcd<0>      |    7.789(R)|clk_BUFGP         |   0.000|
+lcd<1>      |    7.794(R)|clk_BUFGP         |   0.000|
+lcd<2>      |    7.794(R)|clk_BUFGP         |   0.000|
+lcd<3>      |    7.815(R)|clk_BUFGP         |   0.000|
+lcd<4>      |    7.813(R)|clk_BUFGP         |   0.000|
+lcd<5>      |    7.813(R)|clk_BUFGP         |   0.000|
+lcd<6>      |    7.808(R)|clk_BUFGP         |   0.000|
+lcd<7>      |    7.790(R)|clk_BUFGP         |   0.000|
+------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |   16.733|         |         |         |
+---------------+---------+---------+---------+---------+
+
+OFFSET = OUT 9 ns AFTER COMP "clk";
+Largest slack: 1.211 ns; Smallest slack: 1.185 ns; Relative Skew: 0.026 ns; 
+-----------------------------------------------+-------------+-------------+
+PAD                                            |    Slack    |Relative Skew|
+-----------------------------------------------+-------------+-------------+
+lcd<0>                                         |        1.211|        0.000|
+lcd<1>                                         |        1.206|        0.005|
+lcd<2>                                         |        1.206|        0.005|
+lcd<3>                                         |        1.185|        0.026|
+lcd<4>                                         |        1.187|        0.024|
+lcd<5>                                         |        1.187|        0.024|
+lcd<6>                                         |        1.192|        0.019|
+lcd<7>                                         |        1.210|        0.001|
+-----------------------------------------------+-------------+-------------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0
+
+Constraints cover 75141 paths, 0 nets, and 2769 connections
+
+Design statistics:
+   Minimum period:  16.733ns (Maximum frequency:  59.762MHz)
+   Minimum input required time before clock:   8.948ns
+   Minimum output required time after clock:   7.815ns
+
+
+Analysis completed Fri Mar 13 19:03:07 2009
+--------------------------------------------------------------------------------
+
+
+
+Peak Memory Usage: 131 MB

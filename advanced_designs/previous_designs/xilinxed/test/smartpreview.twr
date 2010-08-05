@@ -1,0 +1,19 @@
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+------------------------------------------------------------------------------------------------------
+  Constraint                                |  Check  | Worst Case |  Best Case | Timing |   Timing   
+                                            |         |    Slack   | Achievable | Errors |    Score   
+------------------------------------------------------------------------------------------------------
+* OFFSET = OUT 9 ns AFTER COMP "clk"        | MAXDELAY|    -0.390ns|     9.390ns|       2|         757
+------------------------------------------------------------------------------------------------------
+  OFFSET = IN 9 ns BEFORE COMP "clk"        | SETUP   |     1.383ns|     7.617ns|       0|           0
+------------------------------------------------------------------------------------------------------
+  TS_clk = PERIOD TIMEGRP "clk" 20 ns HIGH  | SETUP   |     4.669ns|    15.331ns|       0|           0
+  50%                                       | HOLD    |     0.757ns|            |       0|           0
+------------------------------------------------------------------------------------------------------
+
+
+1 constraint not met.
+
+

@@ -1,0 +1,991 @@
+Release 8.1i - xst I.24
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to ./xst/projnav.tmp
+CPU : 0.00 / 1.84 s | Elapsed : 0.00 / 2.00 s
+ 
+--> Parameter xsthdpdir set to ./xst
+CPU : 0.00 / 1.86 s | Elapsed : 0.00 / 2.00 s
+ 
+--> Reading design: filter.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) HDL Analysis
+  4) HDL Synthesis
+     4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+     5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Final Report
+     7.1) Device utilization summary
+     7.2) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "filter.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "filter"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : filter
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Multiplier Style                   : auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : NO
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Write Timing Constraints           : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+lso                                : filter.lso
+Read Cores                         : YES
+cross_clock_analysis               : NO
+verilog2001                        : YES
+safe_implementation                : No
+Optimize Instantiated Primitives   : NO
+use_clock_enable                   : Yes
+use_sync_set                       : Yes
+use_sync_reset                     : Yes
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "D:/embedded_lab/test/temp/kcpsm3.vhd" in Library work.
+Architecture low_level_definition of Entity kcpsm3 is up to date.
+Compiling verilog file "D:/embedded_lab/test/temp/multiplier.v" in library work
+Compiling verilog file "D:/embedded_lab/test/temp/ADDA_CTR.V" in library work
+Module <multiplier> compiled
+Compiling verilog file "D:/embedded_lab/test/temp/filter.v" in library work
+Module <adda_ctr> compiled
+Module <filter> compiled
+No errors in compilation
+Analysis of file <"filter.prj"> succeeded.
+ 
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <filter>.
+Module <filter> is correct for synthesis.
+ 
+Analyzing Entity <kcpsm3> (Architecture <low_level_definition>).
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 289: Possible simulation mismatch on property <INIT> of instance <t_state_lut> set by attribute.
+    Set user-defined property "INIT =  1" for instance <t_state_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 332: Possible simulation mismatch on property <INIT> of instance <int_pulse_lut> set by attribute.
+    Set user-defined property "INIT =  0080" for instance <int_pulse_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 371: Possible simulation mismatch on property <INIT> of instance <int_update_lut> set by attribute.
+    Set user-defined property "INIT =  EAAA" for instance <int_update_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 381: Possible simulation mismatch on property <INIT> of instance <int_value_lut> set by attribute.
+    Set user-defined property "INIT =  04" for instance <int_value_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 403: Possible simulation mismatch on property <INIT> of instance <move_group_lut> set by attribute.
+    Set user-defined property "INIT =  7400" for instance <move_group_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 413: Possible simulation mismatch on property <INIT> of instance <condition_met_lut> set by attribute.
+    Set user-defined property "INIT =  5A3C" for instance <condition_met_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 423: Possible simulation mismatch on property <INIT> of instance <normal_count_lut> set by attribute.
+    Set user-defined property "INIT =  2F" for instance <normal_count_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 432: Possible simulation mismatch on property <INIT> of instance <call_type_lut> set by attribute.
+    Set user-defined property "INIT =  1000" for instance <call_type_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 442: Possible simulation mismatch on property <INIT> of instance <push_pop_lut> set by attribute.
+    Set user-defined property "INIT =  5400" for instance <push_pop_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 452: Possible simulation mismatch on property <INIT> of instance <valid_move_lut> set by attribute.
+    Set user-defined property "INIT =  D" for instance <valid_move_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 468: Possible simulation mismatch on property <INIT> of instance <flag_type_lut> set by attribute.
+    Set user-defined property "INIT =  41FC" for instance <flag_type_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 483: Possible simulation mismatch on property <INIT> of instance <flag_enable_lut> set by attribute.
+    Set user-defined property "INIT =  8" for instance <flag_enable_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 493: Possible simulation mismatch on property <INIT> of instance <low_zero_lut> set by attribute.
+    Set user-defined property "INIT =  0001" for instance <low_zero_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 503: Possible simulation mismatch on property <INIT> of instance <high_zero_lut> set by attribute.
+    Set user-defined property "INIT =  0001" for instance <high_zero_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 525: Possible simulation mismatch on property <INIT> of instance <sel_shadow_zero_lut> set by attribute.
+    Set user-defined property "INIT =  3F" for instance <sel_shadow_zero_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 554: Possible simulation mismatch on property <INIT> of instance <low_parity_lut> set by attribute.
+    Set user-defined property "INIT =  6996" for instance <low_parity_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 564: Possible simulation mismatch on property <INIT> of instance <high_parity_lut> set by attribute.
+    Set user-defined property "INIT =  6996" for instance <high_parity_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 587: Possible simulation mismatch on property <INIT> of instance <sel_parity_lut> set by attribute.
+    Set user-defined property "INIT =  F3FF" for instance <sel_parity_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 597: Possible simulation mismatch on property <INIT> of instance <sel_arith_carry_lut> set by attribute.
+    Set user-defined property "INIT =  F3" for instance <sel_arith_carry_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 606: Possible simulation mismatch on property <INIT> of instance <sel_shift_carry_lut> set by attribute.
+    Set user-defined property "INIT =  C" for instance <sel_shift_carry_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 614: Possible simulation mismatch on property <INIT> of instance <sel_shadow_carry_lut> set by attribute.
+    Set user-defined property "INIT =  3" for instance <sel_shadow_carry_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 682: Possible simulation mismatch on property <INIT> of instance <vector_select_mux0> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <vector_select_mux0> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 691: Possible simulation mismatch on property <INIT> of instance <value_select_mux0> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <value_select_mux0> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 682: Possible simulation mismatch on property <INIT> of instance <vector_select_mux1> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <vector_select_mux1> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 691: Possible simulation mismatch on property <INIT> of instance <value_select_mux1> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <value_select_mux1> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 682: Possible simulation mismatch on property <INIT> of instance <vector_select_mux2> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <vector_select_mux2> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 691: Possible simulation mismatch on property <INIT> of instance <value_select_mux2> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <value_select_mux2> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 682: Possible simulation mismatch on property <INIT> of instance <vector_select_mux3> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <vector_select_mux3> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 691: Possible simulation mismatch on property <INIT> of instance <value_select_mux3> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <value_select_mux3> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 682: Possible simulation mismatch on property <INIT> of instance <vector_select_mux4> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <vector_select_mux4> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 691: Possible simulation mismatch on property <INIT> of instance <value_select_mux4> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <value_select_mux4> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 682: Possible simulation mismatch on property <INIT> of instance <vector_select_mux5> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <vector_select_mux5> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 691: Possible simulation mismatch on property <INIT> of instance <value_select_mux5> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <value_select_mux5> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 682: Possible simulation mismatch on property <INIT> of instance <vector_select_mux6> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <vector_select_mux6> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 691: Possible simulation mismatch on property <INIT> of instance <value_select_mux6> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <value_select_mux6> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 682: Possible simulation mismatch on property <INIT> of instance <vector_select_mux7> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <vector_select_mux7> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 691: Possible simulation mismatch on property <INIT> of instance <value_select_mux7> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <value_select_mux7> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 682: Possible simulation mismatch on property <INIT> of instance <vector_select_mux8> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <vector_select_mux8> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 691: Possible simulation mismatch on property <INIT> of instance <value_select_mux8> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <value_select_mux8> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 682: Possible simulation mismatch on property <INIT> of instance <vector_select_mux9> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <vector_select_mux9> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 691: Possible simulation mismatch on property <INIT> of instance <value_select_mux9> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <value_select_mux9> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 794: Possible simulation mismatch on property <INIT> of instance <register_type_lut> set by attribute.
+    Set user-defined property "INIT =  0145" for instance <register_type_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 809: Possible simulation mismatch on property <INIT> of instance <register_enable_lut> set by attribute.
+    Set user-defined property "INIT =  8" for instance <register_enable_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 828: Possible simulation mismatch on property <INIT> of instance <register_bit00> set by attribute.
+    Set user-defined property "INIT =  0000" for instance <register_bit00> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 846: Possible simulation mismatch on property <INIT> of instance <operand_select_mux0> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <operand_select_mux0> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 828: Possible simulation mismatch on property <INIT> of instance <register_bit10> set by attribute.
+    Set user-defined property "INIT =  0000" for instance <register_bit10> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 846: Possible simulation mismatch on property <INIT> of instance <operand_select_mux1> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <operand_select_mux1> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 828: Possible simulation mismatch on property <INIT> of instance <register_bit20> set by attribute.
+    Set user-defined property "INIT =  0000" for instance <register_bit20> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 846: Possible simulation mismatch on property <INIT> of instance <operand_select_mux2> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <operand_select_mux2> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 828: Possible simulation mismatch on property <INIT> of instance <register_bit30> set by attribute.
+    Set user-defined property "INIT =  0000" for instance <register_bit30> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 846: Possible simulation mismatch on property <INIT> of instance <operand_select_mux3> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <operand_select_mux3> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 828: Possible simulation mismatch on property <INIT> of instance <register_bit40> set by attribute.
+    Set user-defined property "INIT =  0000" for instance <register_bit40> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 846: Possible simulation mismatch on property <INIT> of instance <operand_select_mux4> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <operand_select_mux4> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 828: Possible simulation mismatch on property <INIT> of instance <register_bit50> set by attribute.
+    Set user-defined property "INIT =  0000" for instance <register_bit50> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 846: Possible simulation mismatch on property <INIT> of instance <operand_select_mux5> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <operand_select_mux5> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 828: Possible simulation mismatch on property <INIT> of instance <register_bit60> set by attribute.
+    Set user-defined property "INIT =  0000" for instance <register_bit60> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 846: Possible simulation mismatch on property <INIT> of instance <operand_select_mux6> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <operand_select_mux6> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 828: Possible simulation mismatch on property <INIT> of instance <register_bit70> set by attribute.
+    Set user-defined property "INIT =  0000" for instance <register_bit70> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 846: Possible simulation mismatch on property <INIT> of instance <operand_select_mux7> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <operand_select_mux7> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 871: Possible simulation mismatch on property <INIT> of instance <memory_type_lut> set by attribute.
+    Set user-defined property "INIT =  0400" for instance <memory_type_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 886: Possible simulation mismatch on property <INIT> of instance <memory_enable_lut> set by attribute.
+    Set user-defined property "INIT =  8000" for instance <memory_enable_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 906: Possible simulation mismatch on property <INIT> of instance <memory_bit0> set by attribute.
+    Set user-defined property "INIT =  0000000000000000" for instance <memory_bit0> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 906: Possible simulation mismatch on property <INIT> of instance <memory_bit1> set by attribute.
+    Set user-defined property "INIT =  0000000000000000" for instance <memory_bit1> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 906: Possible simulation mismatch on property <INIT> of instance <memory_bit2> set by attribute.
+    Set user-defined property "INIT =  0000000000000000" for instance <memory_bit2> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 906: Possible simulation mismatch on property <INIT> of instance <memory_bit3> set by attribute.
+    Set user-defined property "INIT =  0000000000000000" for instance <memory_bit3> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 906: Possible simulation mismatch on property <INIT> of instance <memory_bit4> set by attribute.
+    Set user-defined property "INIT =  0000000000000000" for instance <memory_bit4> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 906: Possible simulation mismatch on property <INIT> of instance <memory_bit5> set by attribute.
+    Set user-defined property "INIT =  0000000000000000" for instance <memory_bit5> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 906: Possible simulation mismatch on property <INIT> of instance <memory_bit6> set by attribute.
+    Set user-defined property "INIT =  0000000000000000" for instance <memory_bit6> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 906: Possible simulation mismatch on property <INIT> of instance <memory_bit7> set by attribute.
+    Set user-defined property "INIT =  0000000000000000" for instance <memory_bit7> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 937: Possible simulation mismatch on property <INIT> of instance <sel_logical_lut> set by attribute.
+    Set user-defined property "INIT =  FFE2" for instance <sel_logical_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 956: Possible simulation mismatch on property <INIT> of instance <logical_lut0> set by attribute.
+    Set user-defined property "INIT =  6E8A" for instance <logical_lut0> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 956: Possible simulation mismatch on property <INIT> of instance <logical_lut1> set by attribute.
+    Set user-defined property "INIT =  6E8A" for instance <logical_lut1> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 956: Possible simulation mismatch on property <INIT> of instance <logical_lut2> set by attribute.
+    Set user-defined property "INIT =  6E8A" for instance <logical_lut2> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 956: Possible simulation mismatch on property <INIT> of instance <logical_lut3> set by attribute.
+    Set user-defined property "INIT =  6E8A" for instance <logical_lut3> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 956: Possible simulation mismatch on property <INIT> of instance <logical_lut4> set by attribute.
+    Set user-defined property "INIT =  6E8A" for instance <logical_lut4> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 956: Possible simulation mismatch on property <INIT> of instance <logical_lut5> set by attribute.
+    Set user-defined property "INIT =  6E8A" for instance <logical_lut5> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 956: Possible simulation mismatch on property <INIT> of instance <logical_lut6> set by attribute.
+    Set user-defined property "INIT =  6E8A" for instance <logical_lut6> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 956: Possible simulation mismatch on property <INIT> of instance <logical_lut7> set by attribute.
+    Set user-defined property "INIT =  6E8A" for instance <logical_lut7> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 989: Possible simulation mismatch on property <INIT> of instance <high_shift_in_lut> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <high_shift_in_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 998: Possible simulation mismatch on property <INIT> of instance <low_shift_in_lut> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <low_shift_in_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 1015: Possible simulation mismatch on property <INIT> of instance <shift_carry_lut> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <shift_carry_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 1041: Possible simulation mismatch on property <INIT> of instance <shift_mux_lut0> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <shift_mux_lut0> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 1061: Possible simulation mismatch on property <INIT> of instance <shift_mux_lut1> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <shift_mux_lut1> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 1061: Possible simulation mismatch on property <INIT> of instance <shift_mux_lut2> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <shift_mux_lut2> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 1061: Possible simulation mismatch on property <INIT> of instance <shift_mux_lut3> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <shift_mux_lut3> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 1061: Possible simulation mismatch on property <INIT> of instance <shift_mux_lut4> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <shift_mux_lut4> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 1061: Possible simulation mismatch on property <INIT> of instance <shift_mux_lut5> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <shift_mux_lut5> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 1061: Possible simulation mismatch on property <INIT> of instance <shift_mux_lut6> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <shift_mux_lut6> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 1081: Possible simulation mismatch on property <INIT> of instance <shift_mux_lut7> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <shift_mux_lut7> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 1109: Possible simulation mismatch on property <INIT> of instance <sel_arith_lut> set by attribute.
+    Set user-defined property "INIT =  1F" for instance <sel_arith_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 1136: Possible simulation mismatch on property <INIT> of instance <arith_carry_in_lut0> set by attribute.
+    Set user-defined property "INIT =  6C" for instance <arith_carry_in_lut0> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 1220: Possible simulation mismatch on property <INIT> of instance <arith_lut0> set by attribute.
+    Set user-defined property "INIT =  96" for instance <arith_lut0> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 1220: Possible simulation mismatch on property <INIT> of instance <arith_lut1> set by attribute.
+    Set user-defined property "INIT =  96" for instance <arith_lut1> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 1220: Possible simulation mismatch on property <INIT> of instance <arith_lut2> set by attribute.
+    Set user-defined property "INIT =  96" for instance <arith_lut2> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 1220: Possible simulation mismatch on property <INIT> of instance <arith_lut3> set by attribute.
+    Set user-defined property "INIT =  96" for instance <arith_lut3> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 1220: Possible simulation mismatch on property <INIT> of instance <arith_lut4> set by attribute.
+    Set user-defined property "INIT =  96" for instance <arith_lut4> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 1220: Possible simulation mismatch on property <INIT> of instance <arith_lut5> set by attribute.
+    Set user-defined property "INIT =  96" for instance <arith_lut5> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 1220: Possible simulation mismatch on property <INIT> of instance <arith_lut6> set by attribute.
+    Set user-defined property "INIT =  96" for instance <arith_lut6> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 1200: Possible simulation mismatch on property <INIT> of instance <arith_carry_out_lut7> set by attribute.
+    Set user-defined property "INIT =  2" for instance <arith_carry_out_lut7> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 1220: Possible simulation mismatch on property <INIT> of instance <arith_lut7> set by attribute.
+    Set user-defined property "INIT =  96" for instance <arith_lut7> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 1244: Possible simulation mismatch on property <INIT> of instance <input_fetch_type_lut> set by attribute.
+    Set user-defined property "INIT =  0002" for instance <input_fetch_type_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 1269: Possible simulation mismatch on property <INIT> of instance <or_lut0> set by attribute.
+    Set user-defined property "INIT =  FE" for instance <or_lut0> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 1278: Possible simulation mismatch on property <INIT> of instance <mux_lut0> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <mux_lut0> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 1269: Possible simulation mismatch on property <INIT> of instance <or_lut1> set by attribute.
+    Set user-defined property "INIT =  FE" for instance <or_lut1> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 1278: Possible simulation mismatch on property <INIT> of instance <mux_lut1> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <mux_lut1> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 1269: Possible simulation mismatch on property <INIT> of instance <or_lut2> set by attribute.
+    Set user-defined property "INIT =  FE" for instance <or_lut2> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 1278: Possible simulation mismatch on property <INIT> of instance <mux_lut2> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <mux_lut2> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 1269: Possible simulation mismatch on property <INIT> of instance <or_lut3> set by attribute.
+    Set user-defined property "INIT =  FE" for instance <or_lut3> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 1278: Possible simulation mismatch on property <INIT> of instance <mux_lut3> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <mux_lut3> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 1269: Possible simulation mismatch on property <INIT> of instance <or_lut4> set by attribute.
+    Set user-defined property "INIT =  FE" for instance <or_lut4> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 1278: Possible simulation mismatch on property <INIT> of instance <mux_lut4> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <mux_lut4> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 1269: Possible simulation mismatch on property <INIT> of instance <or_lut5> set by attribute.
+    Set user-defined property "INIT =  FE" for instance <or_lut5> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 1278: Possible simulation mismatch on property <INIT> of instance <mux_lut5> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <mux_lut5> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 1269: Possible simulation mismatch on property <INIT> of instance <or_lut6> set by attribute.
+    Set user-defined property "INIT =  FE" for instance <or_lut6> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 1278: Possible simulation mismatch on property <INIT> of instance <mux_lut6> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <mux_lut6> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 1269: Possible simulation mismatch on property <INIT> of instance <or_lut7> set by attribute.
+    Set user-defined property "INIT =  FE" for instance <or_lut7> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 1278: Possible simulation mismatch on property <INIT> of instance <mux_lut7> set by attribute.
+    Set user-defined property "INIT =  E4" for instance <mux_lut7> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 1301: Possible simulation mismatch on property <INIT> of instance <io_decode_lut> set by attribute.
+    Set user-defined property "INIT =  0010" for instance <io_decode_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 1311: Possible simulation mismatch on property <INIT> of instance <write_active_lut> set by attribute.
+    Set user-defined property "INIT =  4000" for instance <write_active_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 1327: Possible simulation mismatch on property <INIT> of instance <read_active_lut> set by attribute.
+    Set user-defined property "INIT =  0100" for instance <read_active_lut> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 1368: Possible simulation mismatch on property <INIT> of instance <stack_bit0> set by attribute.
+    Set user-defined property "INIT =  00000000" for instance <stack_bit0> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 1368: Possible simulation mismatch on property <INIT> of instance <stack_bit1> set by attribute.
+    Set user-defined property "INIT =  00000000" for instance <stack_bit1> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 1368: Possible simulation mismatch on property <INIT> of instance <stack_bit2> set by attribute.
+    Set user-defined property "INIT =  00000000" for instance <stack_bit2> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 1368: Possible simulation mismatch on property <INIT> of instance <stack_bit3> set by attribute.
+    Set user-defined property "INIT =  00000000" for instance <stack_bit3> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 1368: Possible simulation mismatch on property <INIT> of instance <stack_bit4> set by attribute.
+    Set user-defined property "INIT =  00000000" for instance <stack_bit4> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 1368: Possible simulation mismatch on property <INIT> of instance <stack_bit5> set by attribute.
+    Set user-defined property "INIT =  00000000" for instance <stack_bit5> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 1368: Possible simulation mismatch on property <INIT> of instance <stack_bit6> set by attribute.
+    Set user-defined property "INIT =  00000000" for instance <stack_bit6> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 1368: Possible simulation mismatch on property <INIT> of instance <stack_bit7> set by attribute.
+    Set user-defined property "INIT =  00000000" for instance <stack_bit7> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 1368: Possible simulation mismatch on property <INIT> of instance <stack_bit8> set by attribute.
+    Set user-defined property "INIT =  00000000" for instance <stack_bit8> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 1368: Possible simulation mismatch on property <INIT> of instance <stack_bit9> set by attribute.
+    Set user-defined property "INIT =  00000000" for instance <stack_bit9> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 1415: Possible simulation mismatch on property <INIT> of instance <count_lut0> set by attribute.
+    Set user-defined property "INIT =  6555" for instance <count_lut0> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 1448: Possible simulation mismatch on property <INIT> of instance <count_lut1> set by attribute.
+    Set user-defined property "INIT =  A999" for instance <count_lut1> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 1448: Possible simulation mismatch on property <INIT> of instance <count_lut2> set by attribute.
+    Set user-defined property "INIT =  A999" for instance <count_lut2> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 1448: Possible simulation mismatch on property <INIT> of instance <count_lut3> set by attribute.
+    Set user-defined property "INIT =  A999" for instance <count_lut3> in unit <kcpsm3>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/kcpsm3.vhd" line 1482: Possible simulation mismatch on property <INIT> of instance <count_lut4> set by attribute.
+    Set user-defined property "INIT =  A999" for instance <count_lut4> in unit <kcpsm3>.
+Entity <kcpsm3> analyzed. Unit <kcpsm3> generated.
+
+Analyzing module <adda_ctr>.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_00> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_01> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_02> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_03> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_04> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_05> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_06> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_07> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_08> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_09> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_0A> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_0B> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_0C> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_0D> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_0E> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_0F> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_10> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_11> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_12> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_13> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_14> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_15> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_16> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_17> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_18> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_19> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_1A> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_1B> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_1C> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_1D> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_1E> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_1F> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_20> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_21> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_22> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_23> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_24> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_25> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_26> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_27> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_28> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_29> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_2A> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_2B> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_2C> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_2D> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_2E> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_2F> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_30> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_31> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_32> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_33> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_34> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_35> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_36> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_37> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_38> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_39> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_3A> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_3B> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_3C> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_3D> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_3E> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INIT_3F> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INITP_00> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INITP_01> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INITP_02> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INITP_03> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INITP_04> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INITP_05> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INITP_06> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "D:/embedded_lab/test/temp/ADDA_CTR.V" line 30: Possible simulation mismatch on property <INITP_07> of instance <ram_1024_x_18> set by attribute.
+Module <adda_ctr> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  00000" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "SRVAL =  00000" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "WRITE_MODE =  WRITE_FIRST" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_00 =  E0060000025B0202020202020202020201B002600523019D02600510024A0140" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_01 =  50194FFF54AE2E0454A72E014E00C0010FFF40B3E005E00400010197E00EE00C" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_02 =  05060105012700116301620001E8600001E860010260052CC080E00680016006" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_03 =  00950220052DA7008601E7FFE6FF403E052B5439278001CE02600520A700A600" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_04 =  0018505D440301F80030505D440201EC0077505D440101D800EF640463016200" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_05 =  A6000506010501FF009C505D440101FF0038505D440601FE000C505D440501FC" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_06 =  431F40750220053E546F4200546F43E06301620001C702600517A7068672A700" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_07 =  018F000A548522800308020A0308020A6300620100950220053C547542FF5475" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_08 =  E10CE00EB0209130018F000AA203A2008301E2FFE3FF4090E10CE00EF020D130" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_09 =  853065080220853065090220052E02208530650A01234017017B6A0C6B0E0C00" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_0A =  6004C00040B3000754B3400880016004C000A000022005200220853065070220" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_0B =  053D02200547026005100143D20002060206020602066205E004000154B3C001" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_0C =  053254D64002410002200520022005200220053154CD400160040220052D0220" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_0D =  4004410002200520022005200220053554DF4003410002200520022005200220" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_0E =  02200520022005300220053254F14005410002200520022005300220053154E8" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_0F =  022005300220053002200531410002200520022005300220053554FA40064100" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_10 =  010E0A0F198008FF510D238008000400050006000700401755002005400001FD" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_11 =  F530D4205D222001550FCA010900080003000206B790B680B53094205D160008" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_12 =  02000700060015701460A0005525C0018801F480012B08070005A000F790F680" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_13 =  A0005532C1010208030E07000606B5309420413A06075937F530D420010D03A0" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_14 =  C101C008E001020023404301C008E001C2040108C008E0080140A000C00800AE" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_15 =  23804301C008E001C008E0010122C008E010C008E0100140A000C008E0085547" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_16 =  0108A0000608070A0608070A0808090A0808090A555AC1010900080007000600" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_17 =  016F0200C008E0200140A0005570C101C008020023804301E001C008E001C204" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_18 =  016F12B00B000A060B000A060B000A060B000A061820016FC230A20F12C01920" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_19 =  056902200550A000C008E080C008E0800140A000C008E0201620016F12A01720" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_1A =  A000022005650220057A022005610220056C022005420220056F022005630220" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_1B =  022005740220056E0220056F0220054302200520022005430220054402200541" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_1C =  02200541A0000220053D0220054102200556A0000220056C0220056F02200572" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_1D =  A00F1010120001E3000E000E000E000E1100A0000220053D022005440220052F" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_1E =  000BA0000220156002201520161001D7A000803A800759E6C00AA000110001E3" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_1F =  C30101F80314A00055F9C20101F30219A00055F4C10101EF0128A00055F0C001" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_20 =  0207C440A4F8A000C440E40101EFC440E401A0005603C40101FD0432A00055FE" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_21 =  A000C44004F001F3020D0406040604060407145001EF020DC408A4F01450A000" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_22 =  C44004F001F30207C4400406040604070407145001EF0207C440C40CA4F01450" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_23 =  C440E401400201EFC440E40101EFC440E401450201EFC440E401C440040EA000" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_24 =  01F8020D01FD020D043001FDA00001F3C4400404D500000E000E000E000EA5F0" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_25 =  A00001F801F8021105010211050C021105060211052801F3020D042001F3020D" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_26 =  0F00E703E602E901E8000154A0000211C5C0A50FA0000211C580A50F52662510" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_27 =  0000000000000000000000000000000000000000000000000000000000008001" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_28 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_29 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_2A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_2B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_2C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_2D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_2E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_2F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_30 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_31 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_32 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_33 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_34 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_35 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_36 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_37 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_38 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_39 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_3A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_3B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_3C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_3D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_3E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_3F =  426A000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INITP_00 =  0DAA0F377CDD0F156C34343434343400F14337C5B00CCCA4DDD33A3A8FFFF3CF" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INITP_01 =  CCCF3337CCCDF3337CCCDF3337CCCD333332A88D3CD4ECD34D334FC0A50143A5" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INITP_02 =  C8EDA4222AAAADAA488223A3624888E8B6A97B50002D6C255DDAA55E80D003D3" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INITP_03 =  72DCB72D2CC3976303AA2CCCCB332CCCCCCCCCCCB33333333288E830CAAAA300" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INITP_04 =  000000032ABB0B0DBF3333CFFF3B82A8838E0E228FAA8F80A3EA8F02E28E2DCB" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INITP_05 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INITP_06 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INITP_07 =  C000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_00 =  E0060000025B0202020202020202020201B002600523019D02600510024A0140" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_01 =  50194FFF54AE2E0454A72E014E00C0010FFF40B3E005E00400010197E00EE00C" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_02 =  05060105012700116301620001E8600001E860010260052CC080E00680016006" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_03 =  00950220052DA7008601E7FFE6FF403E052B5439278001CE02600520A700A600" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_04 =  0018505D440301F80030505D440201EC0077505D440101D800EF640463016200" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_05 =  A6000506010501FF009C505D440101FF0038505D440601FE000C505D440501FC" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_06 =  431F40750220053E546F4200546F43E06301620001C702600517A7068672A700" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_07 =  018F000A548522800308020A0308020A6300620100950220053C547542FF5475" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_08 =  E10CE00EB0209130018F000AA203A2008301E2FFE3FF4090E10CE00EF020D130" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_09 =  853065080220853065090220052E02208530650A01234017017B6A0C6B0E0C00" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_0A =  6004C00040B3000754B3400880016004C000A000022005200220853065070220" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_0B =  053D02200547026005100143D20002060206020602066205E004000154B3C001" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_0C =  053254D64002410002200520022005200220053154CD400160040220052D0220" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_0D =  4004410002200520022005200220053554DF4003410002200520022005200220" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_0E =  02200520022005300220053254F14005410002200520022005300220053154E8" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_0F =  022005300220053002200531410002200520022005300220053554FA40064100" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_10 =  010E0A0F198008FF510D238008000400050006000700401755002005400001FD" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_11 =  F530D4205D222001550FCA010900080003000206B790B680B53094205D160008" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_12 =  02000700060015701460A0005525C0018801F480012B08070005A000F790F680" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_13 =  A0005532C1010208030E07000606B5309420413A06075937F530D420010D03A0" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_14 =  C101C008E001020023404301C008E001C2040108C008E0080140A000C00800AE" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_15 =  23804301C008E001C008E0010122C008E010C008E0100140A000C008E0085547" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_16 =  0108A0000608070A0608070A0808090A0808090A555AC1010900080007000600" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_17 =  016F0200C008E0200140A0005570C101C008020023804301E001C008E001C204" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_18 =  016F12B00B000A060B000A060B000A060B000A061820016FC230A20F12C01920" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_19 =  056902200550A000C008E080C008E0800140A000C008E0201620016F12A01720" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_1A =  A000022005650220057A022005610220056C022005420220056F022005630220" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_1B =  022005740220056E0220056F0220054302200520022005430220054402200541" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_1C =  02200541A0000220053D0220054102200556A0000220056C0220056F02200572" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_1D =  A00F1010120001E3000E000E000E000E1100A0000220053D022005440220052F" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_1E =  000BA0000220156002201520161001D7A000803A800759E6C00AA000110001E3" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_1F =  C30101F80314A00055F9C20101F30219A00055F4C10101EF0128A00055F0C001" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_20 =  0207C440A4F8A000C440E40101EFC440E401A0005603C40101FD0432A00055FE" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_21 =  A000C44004F001F3020D0406040604060407145001EF020DC408A4F01450A000" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_22 =  C44004F001F30207C4400406040604070407145001EF0207C440C40CA4F01450" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_23 =  C440E401400201EFC440E40101EFC440E401450201EFC440E401C440040EA000" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_24 =  01F8020D01FD020D043001FDA00001F3C4400404D500000E000E000E000EA5F0" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_25 =  A00001F801F8021105010211050C021105060211052801F3020D042001F3020D" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_26 =  0F00E703E602E901E8000154A0000211C5C0A50FA0000211C580A50F52662510" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_27 =  0000000000000000000000000000000000000000000000000000000000008001" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_28 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_29 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_2A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_2B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_2C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_2D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_2E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_2F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_30 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_31 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_32 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_33 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_34 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_35 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_36 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_37 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_38 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_39 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_3A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_3B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_3C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_3D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_3E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INIT_3F =  426A000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INITP_00 =  0DAA0F377CDD0F156C34343434343400F14337C5B00CCCA4DDD33A3A8FFFF3CF" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INITP_01 =  CCCF3337CCCDF3337CCCDF3337CCCD333332A88D3CD4ECD34D334FC0A50143A5" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INITP_02 =  C8EDA4222AAAADAA488223A3624888E8B6A97B50002D6C255DDAA55E80D003D3" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INITP_03 =  72DCB72D2CC3976303AA2CCCCB332CCCCCCCCCCCB33333333288E830CAAAA300" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INITP_04 =  000000032ABB0B0DBF3333CFFF3B82A8838E0E228FAA8F80A3EA8F02E28E2DCB" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INITP_05 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INITP_06 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adda_ctr>.
+    Set user-defined property "INITP_07 =  C000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adda_ctr>.
+Analyzing module <multiplier>.
+Module <multiplier> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+INFO:Xst:1304 - Contents of register <flaga> in unit <filter> never changes during circuit operation. The register is replaced by logic.
+INFO:Xst:1304 - Contents of register <interreg<1>> in unit <filter> never changes during circuit operation. The register is replaced by logic.
+INFO:Xst:1304 - Contents of register <interreg<2>> in unit <filter> never changes during circuit operation. The register is replaced by logic.
+INFO:Xst:1304 - Contents of register <interreg<3>> in unit <filter> never changes during circuit operation. The register is replaced by logic.
+INFO:Xst:1304 - Contents of register <interreg<4>> in unit <filter> never changes during circuit operation. The register is replaced by logic.
+INFO:Xst:1304 - Contents of register <interreg<5>> in unit <filter> never changes during circuit operation. The register is replaced by logic.
+INFO:Xst:1304 - Contents of register <interreg<6>> in unit <filter> never changes during circuit operation. The register is replaced by logic.
+INFO:Xst:1304 - Contents of register <interreg<7>> in unit <filter> never changes during circuit operation. The register is replaced by logic.
+INFO:Xst:1304 - Contents of register <interreg<8>> in unit <filter> never changes during circuit operation. The register is replaced by logic.
+INFO:Xst:1304 - Contents of register <interreg<9>> in unit <filter> never changes during circuit operation. The register is replaced by logic.
+INFO:Xst:1304 - Contents of register <interreg<10>> in unit <filter> never changes during circuit operation. The register is replaced by logic.
+INFO:Xst:1304 - Contents of register <interreg<11>> in unit <filter> never changes during circuit operation. The register is replaced by logic.
+INFO:Xst:1304 - Contents of register <interreg<12>> in unit <filter> never changes during circuit operation. The register is replaced by logic.
+INFO:Xst:1304 - Contents of register <interreg<13>> in unit <filter> never changes during circuit operation. The register is replaced by logic.
+INFO:Xst:1304 - Contents of register <interreg<14>> in unit <filter> never changes during circuit operation. The register is replaced by logic.
+INFO:Xst:1304 - Contents of register <interreg<15>> in unit <filter> never changes during circuit operation. The register is replaced by logic.
+INFO:Xst:1304 - Contents of register <interreg<16>> in unit <filter> never changes during circuit operation. The register is replaced by logic.
+INFO:Xst:1304 - Contents of register <interreg<17>> in unit <filter> never changes during circuit operation. The register is replaced by logic.
+INFO:Xst:1304 - Contents of register <interreg<18>> in unit <filter> never changes during circuit operation. The register is replaced by logic.
+INFO:Xst:1304 - Contents of register <interreg<19>> in unit <filter> never changes during circuit operation. The register is replaced by logic.
+INFO:Xst:1304 - Contents of register <interreg<20>> in unit <filter> never changes during circuit operation. The register is replaced by logic.
+INFO:Xst:1304 - Contents of register <interreg<21>> in unit <filter> never changes during circuit operation. The register is replaced by logic.
+INFO:Xst:1304 - Contents of register <interreg<22>> in unit <filter> never changes during circuit operation. The register is replaced by logic.
+INFO:Xst:1304 - Contents of register <interreg<23>> in unit <filter> never changes during circuit operation. The register is replaced by logic.
+INFO:Xst:1304 - Contents of register <interreg<24>> in unit <filter> never changes during circuit operation. The register is replaced by logic.
+INFO:Xst:1304 - Contents of register <interreg<25>> in unit <filter> never changes during circuit operation. The register is replaced by logic.
+INFO:Xst:1304 - Contents of register <interreg<26>> in unit <filter> never changes during circuit operation. The register is replaced by logic.
+INFO:Xst:1304 - Contents of register <interreg<27>> in unit <filter> never changes during circuit operation. The register is replaced by logic.
+INFO:Xst:1304 - Contents of register <interreg<28>> in unit <filter> never changes during circuit operation. The register is replaced by logic.
+INFO:Xst:1304 - Contents of register <interreg<29>> in unit <filter> never changes during circuit operation. The register is replaced by logic.
+INFO:Xst:1304 - Contents of register <interreg<30>> in unit <filter> never changes during circuit operation. The register is replaced by logic.
+INFO:Xst:1304 - Contents of register <interreg<31>> in unit <filter> never changes during circuit operation. The register is replaced by logic.
+INFO:Xst:1304 - Contents of register <interreg<32>> in unit <filter> never changes during circuit operation. The register is replaced by logic.
+
+Synthesizing Unit <multiplier>.
+    Related source file is "D:/embedded_lab/test/temp/multiplier.v".
+WARNING:Xst:646 - Signal <xProductFull<15:0>> is assigned but never used.
+    Found 16x16-bit multiplier for signal <xProductFull>.
+    Summary:
+	inferred   1 Multiplier(s).
+Unit <multiplier> synthesized.
+
+
+Synthesizing Unit <adda_ctr>.
+    Related source file is "D:/embedded_lab/test/temp/ADDA_CTR.V".
+Unit <adda_ctr> synthesized.
+
+
+Synthesizing Unit <kcpsm3>.
+    Related source file is "D:/embedded_lab/test/temp/kcpsm3.vhd".
+Unit <kcpsm3> synthesized.
+
+
+Synthesizing Unit <filter>.
+    Related source file is "D:/embedded_lab/test/temp/filter.v".
+WARNING:Xst:646 - Signal <interreg> is assigned but never used.
+WARNING:Xst:646 - Signal <read_strobe> is assigned but never used.
+WARNING:Xst:646 - Signal <port_id<5:4>> is assigned but never used.
+WARNING:Xst:653 - Signal <kcpsm3_reset> is used but never assigned. Tied to value 0.
+WARNING:Xst:646 - Signal <intermediate> is assigned but never used.
+WARNING:Xst:646 - Signal <flaga> is assigned but never used.
+WARNING:Xst:646 - Signal <yout> is assigned but never used.
+    Found 1-bit register for signal <spi_amp_cs>.
+    Found 1-bit register for signal <spi_dac_clr>.
+    Found 4-bit tristate buffer for signal <lcd_d>.
+    Found 1-bit register for signal <lcd_e>.
+    Found 1-bit register for signal <spi_adc_conv>.
+    Found 1-bit register for signal <spi_dac_cs>.
+    Found 1-bit register for signal <lcd_rs>.
+    Found 1-bit register for signal <spi_amp_shdn>.
+    Found 1-bit register for signal <spi_sck>.
+    Found 1-bit register for signal <spi_sdi>.
+    Found 1-bit register for signal <spi_rom_cs>.
+    Found 8-bit register for signal <led>.
+    Found 8-bit 3-to-1 multiplexer for signal <$n0009> created at line 311.
+    Found 1-bit register for signal <event_1hz>.
+    Found 1-bit register for signal <flagb>.
+    Found 8-bit register for signal <in_port>.
+    Found 26-bit up counter for signal <int_count>.
+    Found 1-bit register for signal <interrupt>.
+    Found 1-bit register for signal <lcd_drive>.
+    Found 4-bit register for signal <lcd_output_data>.
+    Found 1-bit register for signal <lcd_rw_control>.
+    Found 16-bit register for signal <xin>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  43 D-type flip-flop(s).
+	inferred   8 Multiplexer(s).
+	inferred   4 Tristate(s).
+Unit <filter> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 33
+ 16x16-bit multiplier                                  : 33
+# Counters                                             : 1
+ 26-bit up counter                                     : 1
+# Registers                                            : 34
+ 1-bit register                                        : 31
+ 4-bit register                                        : 1
+ 8-bit register                                        : 2
+# Multiplexers                                         : 1
+ 8-bit 3-to-1 multiplexer                              : 1
+# Tristates                                            : 1
+ 4-bit tristate buffer                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 33
+ 16x16-bit multiplier                                  : 33
+# Counters                                             : 1
+ 26-bit up counter                                     : 1
+# Registers                                            : 127
+ Flip-Flops                                            : 127
+# Multiplexers                                         : 1
+ 8-bit 3-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1989 - Unit <filter>: instances <m00>, <m32> of unit <multiplier> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <filter>: instances <m01>, <m06> of unit <multiplier> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <filter>: instances <m01>, <m11> of unit <multiplier> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <filter>: instances <m01>, <m21> of unit <multiplier> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <filter>: instances <m01>, <m26> of unit <multiplier> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <filter>: instances <m01>, <m31> of unit <multiplier> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <filter>: instances <m02>, <m30> of unit <multiplier> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <filter>: instances <m03>, <m29> of unit <multiplier> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <filter>: instances <m04>, <m28> of unit <multiplier> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <filter>: instances <m05>, <m27> of unit <multiplier> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <filter>: instances <m07>, <m25> of unit <multiplier> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <filter>: instances <m08>, <m24> of unit <multiplier> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <filter>: instances <m09>, <m23> of unit <multiplier> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <filter>: instances <m10>, <m22> of unit <multiplier> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <filter>: instances <m12>, <m20> of unit <multiplier> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <filter>: instances <m13>, <m19> of unit <multiplier> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <filter>: instances <m14>, <m18> of unit <multiplier> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <filter>: instances <m15>, <m17> of unit <multiplier> are equivalent, second instance is removed
+WARNING:Xst:1291 - FF/Latch <flagb> is unconnected in block <filter>.
+WARNING:Xst:1291 - FF/Latch <xin_15> is unconnected in block <filter>.
+WARNING:Xst:1291 - FF/Latch <xin_14> is unconnected in block <filter>.
+WARNING:Xst:1291 - FF/Latch <xin_13> is unconnected in block <filter>.
+WARNING:Xst:1291 - FF/Latch <xin_12> is unconnected in block <filter>.
+WARNING:Xst:1291 - FF/Latch <xin_11> is unconnected in block <filter>.
+WARNING:Xst:1291 - FF/Latch <xin_10> is unconnected in block <filter>.
+WARNING:Xst:1291 - FF/Latch <xin_7> is unconnected in block <filter>.
+WARNING:Xst:1291 - FF/Latch <xin_9> is unconnected in block <filter>.
+WARNING:Xst:1291 - FF/Latch <xin_8> is unconnected in block <filter>.
+WARNING:Xst:1291 - FF/Latch <xin_6> is unconnected in block <filter>.
+WARNING:Xst:1291 - FF/Latch <xin_5> is unconnected in block <filter>.
+WARNING:Xst:1291 - FF/Latch <xin_4> is unconnected in block <filter>.
+WARNING:Xst:1291 - FF/Latch <xin_3> is unconnected in block <filter>.
+WARNING:Xst:1291 - FF/Latch <xin_2> is unconnected in block <filter>.
+WARNING:Xst:1291 - FF/Latch <xin_1> is unconnected in block <filter>.
+WARNING:Xst:1291 - FF/Latch <xin_0> is unconnected in block <filter>.
+Loading device for application Rf_Device from file '3s500e.nph' in environment D:\Xilinx.
+
+Optimizing unit <filter> ...
+
+Optimizing unit <kcpsm3> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block filter, actual ratio is 2.
+FlipFlop interrupt has been replicated 1 time(s) to handle iob=true attribute.
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : filter.ngr
+Top Level Output File Name         : filter
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 42
+
+Cell Usage :
+# BELS                             : 311
+#      GND                         : 1
+#      INV                         : 6
+#      LUT1                        : 24
+#      LUT1_L                      : 5
+#      LUT2                        : 10
+#      LUT2_L                      : 1
+#      LUT3                        : 73
+#      LUT3_L                      : 7
+#      LUT4                        : 33
+#      LUT4_L                      : 8
+#      MUXCY                       : 71
+#      MUXF5                       : 9
+#      VCC                         : 1
+#      XORCY                       : 62
+# FlipFlops/Latches                : 137
+#      FD                          : 24
+#      FDE                         : 27
+#      FDR                         : 56
+#      FDRE                        : 16
+#      FDRSE                       : 10
+#      FDS                         : 2
+#      FDSE                        : 2
+# RAMS                             : 27
+#      RAM16X1D                    : 8
+#      RAM32X1S                    : 10
+#      RAM64X1S                    : 8
+#      RAMB16_S18                  : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 41
+#      IBUF                        : 10
+#      IOBUF                       : 4
+#      OBUF                        : 27
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                     126  out of   4656     2%  
+ Number of Slice Flip Flops:           136  out of   9312     1%  
+ Number of 4 input LUTs:               229  out of   9312     2%  
+    Number used as logic: 161
+    Number used as RAMs: 68
+ Number of bonded IOBs:                 42  out of    232    18%  
+    IOB Flip Flops: 1
+ Number of BRAMs:                        1  out of     20     5%  
+ Number of GCLKs:                        1  out of     24     4%  
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 163   |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 8.283ns (Maximum Frequency: 120.734MHz)
+   Minimum input arrival time before clock: 5.815ns
+   Maximum output required time after clock: 7.095ns
+   Maximum combinational path delay: 5.367ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 8.283ns (frequency: 120.734MHz)
+  Total number of paths / destination ports: 2258 / 389
+-------------------------------------------------------------------------
+Delay:               8.283ns (Levels of Logic = 11)
+  Source:            processor/register_bit00 (RAM)
+  Destination:       processor/arith_carry_flop7 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: processor/register_bit00 to processor/arith_carry_flop7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAM16X1D:WCLK->DPO    1   1.901   0.836  processor/register_bit00 (processor/sy<0>)
+     LUT3:I2->O           74   0.704   2.173  processor/operand_select_mux0 (port_id<0>)
+     LUT3:I1->O            1   0.704   0.000  processor/arith_lut0 (processor/half_arith<0>)
+     MUXCY:S->O            1   0.464   0.000  processor/arith_muxcy0 (processor/arith_internal_carry<0>)
+     MUXCY:CI->O           1   0.059   0.000  processor/arith_muxcy1 (processor/arith_internal_carry<1>)
+     MUXCY:CI->O           1   0.059   0.000  processor/arith_muxcy2 (processor/arith_internal_carry<2>)
+     MUXCY:CI->O           1   0.059   0.000  processor/arith_muxcy3 (processor/arith_internal_carry<3>)
+     MUXCY:CI->O           1   0.059   0.000  processor/arith_muxcy4 (processor/arith_internal_carry<4>)
+     MUXCY:CI->O           1   0.059   0.000  processor/arith_muxcy5 (processor/arith_internal_carry<5>)
+     MUXCY:CI->O           1   0.059   0.000  processor/arith_muxcy6 (processor/arith_internal_carry<6>)
+     MUXCY:CI->O           0   0.059   0.000  processor/arith_muxcy7 (processor/arith_internal_carry<7>)
+     XORCY:CI->O           1   0.780   0.000  processor/arith_carry_out_xor7 (processor/arith_carry_out)
+     FDR:D                     0.308          processor/arith_carry_flop7
+    ----------------------------------------
+    Total                      8.283ns (5.274ns logic, 3.009ns route)
+                                       (63.7% logic, 36.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 75 / 69
+-------------------------------------------------------------------------
+Offset:              5.815ns (Levels of Logic = 2)
+  Source:            switch<0> (PAD)
+  Destination:       int_count_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: switch<0> to int_count_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            15   1.218   1.363  switch_0_IBUF (switch_0_IBUF)
+     LUT2:I0->O           26   0.704   1.819  _n00041 (_n0004)
+     FDR:R                     0.711          int_count_0
+    ----------------------------------------
+    Total                      5.815ns (2.633ns logic, 3.182ns route)
+                                       (45.3% logic, 54.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 35 / 26
+-------------------------------------------------------------------------
+Offset:              7.095ns (Levels of Logic = 2)
+  Source:            lcd_rw_control (FF)
+  Destination:       lcd_d<4> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: lcd_rw_control to lcd_d<4>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              2   0.591   1.052  lcd_rw_control (lcd_rw_control)
+     LUT2:I0->O            4   0.704   0.917  _n0012_INV1 (_n0012_INV)
+     IOBUF:T->IO               3.831          lcd_d_6_IOBUF (lcd_d<6>)
+    ----------------------------------------
+    Total                      7.095ns (5.126ns logic, 1.969ns route)
+                                       (72.2% logic, 27.8% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               5.367ns (Levels of Logic = 2)
+  Source:            spi_amp_sdo (PAD)
+  Destination:       simple_io<9> (PAD)
+
+  Data Path: spi_amp_sdo to simple_io<9>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.218   0.877  spi_amp_sdo_IBUF (spi_amp_sdo_IBUF)
+     OBUF:I->O                 3.272          simple_io_9_OBUF (simple_io<9>)
+    ----------------------------------------
+    Total                      5.367ns (4.490ns logic, 0.877ns route)
+                                       (83.7% logic, 16.3% route)
+
+=========================================================================
+CPU : 36.39 / 38.55 s | Elapsed : 36.00 / 38.00 s
+ 
+--> 
+
+Total memory usage is 144668 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  250 (   0 filtered)
+Number of infos    :   33 (   0 filtered)
+

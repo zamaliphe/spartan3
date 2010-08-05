@@ -1,0 +1,50 @@
+m255
+13
+cModel Technology
+dD:\embedded_lab\test\mults_check\test_booth_mult2
+valu
+I:gIQMl7NWQT]6^^?R_WnK3
+V@FYHJ@fa5gjMcZ>YKZ[9L0
+w1154878730
+F./alu.v
+L0 10
+OX;L;6.0d;29
+r1
+31
+o-work work -O0
+tGenerateLoopIterationMax 100000
+vmult
+IGXG<d59oWj[3P3R;H>m_W1
+V3k9n:U9ngGKEmi17Oio:40
+w1154878666
+F./mult.v
+L0 4
+OX;L;6.0d;29
+r1
+31
+o-work work -O0
+tGenerateLoopIterationMax 100000
+vmult_TOP2
+I@_a4:?<:j_9EKOil2Z>fl0
+Vbcfo58E<_oCI;=MQ;1B>81
+w1154878666
+F./mult_TOP2.v
+L0 3
+OX;L;6.0d;29
+r1
+31
+o-work work -O0
+tGenerateLoopIterationMax 100000
+nmult_@t@o@p2
+vmult_TOP3
+IUJFo@HC;4`K7N^Fh0k:I63
+V1?mhHFge@?V<0z0h_]7JE1
+w1238564336
+F./mult_TOP3.v
+L0 6
+OX;L;6.0d;29
+r1
+31
+o-work work -O0
+tGenerateLoopIterationMax 100000
+nmult_@t@o@p3

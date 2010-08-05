@@ -1,0 +1,1263 @@
+Release 8.1i - xst I.24
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to ./xst/projnav.tmp
+CPU : 0.00 / 1.23 s | Elapsed : 0.00 / 1.00 s
+ 
+--> Parameter xsthdpdir set to ./xst
+CPU : 0.00 / 1.23 s | Elapsed : 0.00 / 1.00 s
+ 
+--> Reading design: audi.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) HDL Analysis
+  4) HDL Synthesis
+     4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+     5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Final Report
+     7.1) Device utilization summary
+     7.2) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "audi.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "audi"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : audi
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Multiplier Style                   : auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : NO
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Write Timing Constraints           : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+lso                                : audi.lso
+Read Cores                         : YES
+cross_clock_analysis               : NO
+verilog2001                        : YES
+safe_implementation                : No
+Optimize Instantiated Primitives   : NO
+use_clock_enable                   : Yes
+use_sync_set                       : Yes
+use_sync_reset                     : Yes
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "kcpsm3.v" in library work
+Compiling verilog file "AUDI_LCD.v" in library work
+Module <kcpsm3> compiled
+Compiling verilog file "embedded_kcpsm3.v" in library work
+Module <audi_lcd> compiled
+Compiling verilog file "binary_to_bcd.v" in library work
+Module <embedded_kcpsm3> compiled
+Compiling verilog file "audi_rom.v" in library work
+Module <binary_to_bcd> compiled
+Compiling verilog file "audi.v" in library work
+Module <audi_rom> compiled
+Module <audi> compiled
+No errors in compilation
+Analysis of file <"audi.prj"> succeeded.
+ 
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <audi>.
+Module <audi> is correct for synthesis.
+ 
+Analyzing module <embedded_kcpsm3>.
+Module <embedded_kcpsm3> is correct for synthesis.
+ 
+Analyzing module <kcpsm3>.
+WARNING:Xst:2185 - "kcpsm3.v" line 402: Possible simulation mismatch on property <INIT> of instance <t_state_lut> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 444: Possible simulation mismatch on property <INIT> of instance <int_pulse_lut> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 444: Possible simulation mismatch on property <INIT> of instance <int_update_lut> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <int_value_lut> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 444: Possible simulation mismatch on property <INIT> of instance <move_group_lut> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 444: Possible simulation mismatch on property <INIT> of instance <condition_met_lut> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <normal_count_lut> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 444: Possible simulation mismatch on property <INIT> of instance <call_type_lut> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 444: Possible simulation mismatch on property <INIT> of instance <push_pop_lut> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 564: Possible simulation mismatch on property <INIT> of instance <valid_move_lut> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 444: Possible simulation mismatch on property <INIT> of instance <flag_type_lut> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 564: Possible simulation mismatch on property <INIT> of instance <flag_enable_lut> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 444: Possible simulation mismatch on property <INIT> of instance <low_zero_lut> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 444: Possible simulation mismatch on property <INIT> of instance <high_zero_lut> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <sel_shadow_zero_lut> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 444: Possible simulation mismatch on property <INIT> of instance <low_parity_lut> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 444: Possible simulation mismatch on property <INIT> of instance <high_parity_lut> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 444: Possible simulation mismatch on property <INIT> of instance <sel_parity_lut> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <sel_arith_carry_lut> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 564: Possible simulation mismatch on property <INIT> of instance <sel_shift_carry_lut> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 564: Possible simulation mismatch on property <INIT> of instance <sel_shadow_carry_lut> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <vector_select_mux_0> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <value_select_mux_0> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <vector_select_mux_1> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <value_select_mux_1> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <vector_select_mux_2> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <value_select_mux_2> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <vector_select_mux_3> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <value_select_mux_3> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <vector_select_mux_4> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <value_select_mux_4> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <vector_select_mux_5> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <value_select_mux_5> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <vector_select_mux_6> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <value_select_mux_6> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <vector_select_mux_7> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <value_select_mux_7> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <vector_select_mux_8> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <value_select_mux_8> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <vector_select_mux_9> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <value_select_mux_9> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 444: Possible simulation mismatch on property <INIT> of instance <register_type_lut> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 564: Possible simulation mismatch on property <INIT> of instance <register_enable_lut> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 1295: Possible simulation mismatch on property <INIT> of instance <reg_loop_register_bit_0> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <operand_select_mux_0> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 1295: Possible simulation mismatch on property <INIT> of instance <reg_loop_register_bit_1> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <operand_select_mux_1> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 1295: Possible simulation mismatch on property <INIT> of instance <reg_loop_register_bit_2> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <operand_select_mux_2> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 1295: Possible simulation mismatch on property <INIT> of instance <reg_loop_register_bit_3> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <operand_select_mux_3> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 1295: Possible simulation mismatch on property <INIT> of instance <reg_loop_register_bit_4> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <operand_select_mux_4> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 1295: Possible simulation mismatch on property <INIT> of instance <reg_loop_register_bit_5> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <operand_select_mux_5> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 1295: Possible simulation mismatch on property <INIT> of instance <reg_loop_register_bit_6> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <operand_select_mux_6> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 1295: Possible simulation mismatch on property <INIT> of instance <reg_loop_register_bit_7> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <operand_select_mux_7> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 444: Possible simulation mismatch on property <INIT> of instance <memory_type_lut> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 444: Possible simulation mismatch on property <INIT> of instance <memory_enable_lut> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 1552: Possible simulation mismatch on property <INIT> of instance <memory_bit_0> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 1552: Possible simulation mismatch on property <INIT> of instance <memory_bit_1> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 1552: Possible simulation mismatch on property <INIT> of instance <memory_bit_2> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 1552: Possible simulation mismatch on property <INIT> of instance <memory_bit_3> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 1552: Possible simulation mismatch on property <INIT> of instance <memory_bit_4> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 1552: Possible simulation mismatch on property <INIT> of instance <memory_bit_5> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 1552: Possible simulation mismatch on property <INIT> of instance <memory_bit_6> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 1552: Possible simulation mismatch on property <INIT> of instance <memory_bit_7> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 444: Possible simulation mismatch on property <INIT> of instance <sel_logical_lut> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 444: Possible simulation mismatch on property <INIT> of instance <logical_lut_0> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 444: Possible simulation mismatch on property <INIT> of instance <logical_lut_1> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 444: Possible simulation mismatch on property <INIT> of instance <logical_lut_2> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 444: Possible simulation mismatch on property <INIT> of instance <logical_lut_3> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 444: Possible simulation mismatch on property <INIT> of instance <logical_lut_4> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 444: Possible simulation mismatch on property <INIT> of instance <logical_lut_5> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 444: Possible simulation mismatch on property <INIT> of instance <logical_lut_6> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 444: Possible simulation mismatch on property <INIT> of instance <logical_lut_7> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <high_shift_in_lut> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <low_shift_in_lut> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <shift_carry_lut> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <shift_mux_lut_0> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <shift_mux_lut_1> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <shift_mux_lut_2> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <shift_mux_lut_3> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <shift_mux_lut_4> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <shift_mux_lut_5> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <shift_mux_lut_6> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <shift_mux_lut_7> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <sel_arith_lut> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <arith_carry_in_lut> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <arith_lut_0> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <arith_lut_1> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <arith_lut_2> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <arith_lut_3> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <arith_lut_4> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <arith_lut_5> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <arith_lut_6> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 402: Possible simulation mismatch on property <INIT> of instance <arith_carry_out_lut> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <arith_lut_7> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 444: Possible simulation mismatch on property <INIT> of instance <input_fetch_type_lut> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <or_lut_0> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <mux_lut_0> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <or_lut_1> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <mux_lut_1> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <or_lut_2> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <mux_lut_2> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <or_lut_3> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <mux_lut_3> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <or_lut_4> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <mux_lut_4> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <or_lut_5> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <mux_lut_5> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <or_lut_6> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <mux_lut_6> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <or_lut_7> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 493: Possible simulation mismatch on property <INIT> of instance <mux_lut_7> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 444: Possible simulation mismatch on property <INIT> of instance <io_decode_lut> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 444: Possible simulation mismatch on property <INIT> of instance <write_active_lut> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 444: Possible simulation mismatch on property <INIT> of instance <read_active_lut> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 2581: Possible simulation mismatch on property <INIT> of instance <stack_bit_0> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 2581: Possible simulation mismatch on property <INIT> of instance <stack_bit_1> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 2581: Possible simulation mismatch on property <INIT> of instance <stack_bit_2> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 2581: Possible simulation mismatch on property <INIT> of instance <stack_bit_3> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 2581: Possible simulation mismatch on property <INIT> of instance <stack_bit_4> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 2581: Possible simulation mismatch on property <INIT> of instance <stack_bit_5> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 2581: Possible simulation mismatch on property <INIT> of instance <stack_bit_6> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 2581: Possible simulation mismatch on property <INIT> of instance <stack_bit_7> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 2581: Possible simulation mismatch on property <INIT> of instance <stack_bit_8> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 2581: Possible simulation mismatch on property <INIT> of instance <stack_bit_9> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 444: Possible simulation mismatch on property <INIT> of instance <count_lut_0> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 444: Possible simulation mismatch on property <INIT> of instance <count_lut_1> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 444: Possible simulation mismatch on property <INIT> of instance <count_lut_2> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 444: Possible simulation mismatch on property <INIT> of instance <count_lut_3> set by attribute.
+WARNING:Xst:2185 - "kcpsm3.v" line 444: Possible simulation mismatch on property <INIT> of instance <count_lut_4> set by attribute.
+Module <kcpsm3> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <toggle_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  1" for instance <reset_flop1> in unit <kcpsm3>.
+    Set user-defined property "INIT =  1" for instance <reset_flop2> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <int_capture_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <int_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <ack_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <shadow_carry_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <shadow_zero_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <int_enable_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <flag_write_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <zero_flag_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <carry_flag_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <pc_loop_register_bit_0> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <pc_loop_register_bit_1> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <pc_loop_register_bit_2> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <pc_loop_register_bit_3> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <pc_loop_register_bit_4> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <pc_loop_register_bit_5> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <pc_loop_register_bit_6> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <pc_loop_register_bit_7> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <pc_loop_register_bit_8> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <pc_loop_register_bit_9> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <register_write_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <memory_write_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <store_flop_0> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <store_flop_1> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <store_flop_2> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <store_flop_3> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <store_flop_4> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <store_flop_5> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <store_flop_6> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <store_flop_7> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <logical_flop_0> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <logical_flop_1> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <logical_flop_2> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <logical_flop_3> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <logical_flop_4> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <logical_flop_5> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <logical_flop_6> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <logical_flop_7> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <pipeline_bit> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <shift_flop_0> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <shift_flop_1> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <shift_flop_2> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <shift_flop_3> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <shift_flop_4> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <shift_flop_5> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <shift_flop_6> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <shift_flop_7> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <arith_flop_0> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <arith_flop_1> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <arith_flop_2> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <arith_flop_3> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <arith_flop_4> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <arith_flop_5> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <arith_flop_6> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <arith_flop_7> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <arith_carry_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <sel_group_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <write_strobe_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <read_strobe_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <stack_flop_0> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <stack_flop_1> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <stack_flop_2> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <stack_flop_3> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <stack_flop_4> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <stack_flop_5> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <stack_flop_6> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <stack_flop_7> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <stack_flop_8> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <stack_flop_9> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <stack_count_loop_register_bit_0> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <stack_count_loop_register_bit_1> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <stack_count_loop_register_bit_2> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <stack_count_loop_register_bit_3> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <stack_count_loop_register_bit_4> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  1" for instance <t_state_lut> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  0080" for instance <int_pulse_lut> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  EAAA" for instance <int_update_lut> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  04" for instance <int_value_lut> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  7400" for instance <move_group_lut> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  5A3C" for instance <condition_met_lut> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  2F" for instance <normal_count_lut> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  1000" for instance <call_type_lut> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  5400" for instance <push_pop_lut> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  D" for instance <valid_move_lut> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  41FC" for instance <flag_type_lut> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  8" for instance <flag_enable_lut> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  0001" for instance <low_zero_lut> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  0001" for instance <high_zero_lut> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  3F" for instance <sel_shadow_zero_lut> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  6996" for instance <low_parity_lut> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  6996" for instance <high_parity_lut> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  F3FF" for instance <sel_parity_lut> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  F3" for instance <sel_arith_carry_lut> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  C" for instance <sel_shift_carry_lut> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  3" for instance <sel_shadow_carry_lut> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  E4" for instance <vector_select_mux_0> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  E4" for instance <value_select_mux_0> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  E4" for instance <vector_select_mux_1> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  E4" for instance <value_select_mux_1> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  E4" for instance <vector_select_mux_2> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  E4" for instance <value_select_mux_2> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  E4" for instance <vector_select_mux_3> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  E4" for instance <value_select_mux_3> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  E4" for instance <vector_select_mux_4> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  E4" for instance <value_select_mux_4> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  E4" for instance <vector_select_mux_5> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  E4" for instance <value_select_mux_5> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  E4" for instance <vector_select_mux_6> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  E4" for instance <value_select_mux_6> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  E4" for instance <vector_select_mux_7> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  E4" for instance <value_select_mux_7> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  E4" for instance <vector_select_mux_8> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  E4" for instance <value_select_mux_8> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  E4" for instance <vector_select_mux_9> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  E4" for instance <value_select_mux_9> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  0145" for instance <register_type_lut> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  8" for instance <register_enable_lut> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  0000" for instance <reg_loop_register_bit_0> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  E4" for instance <operand_select_mux_0> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  0000" for instance <reg_loop_register_bit_1> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  E4" for instance <operand_select_mux_1> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  0000" for instance <reg_loop_register_bit_2> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  E4" for instance <operand_select_mux_2> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  0000" for instance <reg_loop_register_bit_3> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  E4" for instance <operand_select_mux_3> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  0000" for instance <reg_loop_register_bit_4> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  E4" for instance <operand_select_mux_4> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  0000" for instance <reg_loop_register_bit_5> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  E4" for instance <operand_select_mux_5> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  0000" for instance <reg_loop_register_bit_6> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  E4" for instance <operand_select_mux_6> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  0000" for instance <reg_loop_register_bit_7> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  E4" for instance <operand_select_mux_7> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  0400" for instance <memory_type_lut> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  8000" for instance <memory_enable_lut> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  0000000000000000" for instance <memory_bit_0> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  0000000000000000" for instance <memory_bit_1> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  0000000000000000" for instance <memory_bit_2> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  0000000000000000" for instance <memory_bit_3> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  0000000000000000" for instance <memory_bit_4> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  0000000000000000" for instance <memory_bit_5> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  0000000000000000" for instance <memory_bit_6> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  0000000000000000" for instance <memory_bit_7> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  FFE2" for instance <sel_logical_lut> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  6E8A" for instance <logical_lut_0> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  6E8A" for instance <logical_lut_1> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  6E8A" for instance <logical_lut_2> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  6E8A" for instance <logical_lut_3> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  6E8A" for instance <logical_lut_4> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  6E8A" for instance <logical_lut_5> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  6E8A" for instance <logical_lut_6> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  6E8A" for instance <logical_lut_7> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  E4" for instance <high_shift_in_lut> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  E4" for instance <low_shift_in_lut> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  E4" for instance <shift_carry_lut> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  E4" for instance <shift_mux_lut_0> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  E4" for instance <shift_mux_lut_1> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  E4" for instance <shift_mux_lut_2> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  E4" for instance <shift_mux_lut_3> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  E4" for instance <shift_mux_lut_4> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  E4" for instance <shift_mux_lut_5> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  E4" for instance <shift_mux_lut_6> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  E4" for instance <shift_mux_lut_7> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  1F" for instance <sel_arith_lut> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  6C" for instance <arith_carry_in_lut> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  96" for instance <arith_lut_0> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  96" for instance <arith_lut_1> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  96" for instance <arith_lut_2> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  96" for instance <arith_lut_3> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  96" for instance <arith_lut_4> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  96" for instance <arith_lut_5> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  96" for instance <arith_lut_6> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  2" for instance <arith_carry_out_lut> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  96" for instance <arith_lut_7> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  0002" for instance <input_fetch_type_lut> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  FE" for instance <or_lut_0> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  E4" for instance <mux_lut_0> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  FE" for instance <or_lut_1> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  E4" for instance <mux_lut_1> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  FE" for instance <or_lut_2> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  E4" for instance <mux_lut_2> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  FE" for instance <or_lut_3> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  E4" for instance <mux_lut_3> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  FE" for instance <or_lut_4> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  E4" for instance <mux_lut_4> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  FE" for instance <or_lut_5> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  E4" for instance <mux_lut_5> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  FE" for instance <or_lut_6> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  E4" for instance <mux_lut_6> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  FE" for instance <or_lut_7> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  E4" for instance <mux_lut_7> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  0010" for instance <io_decode_lut> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  4000" for instance <write_active_lut> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  0100" for instance <read_active_lut> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  00000000" for instance <stack_bit_0> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  00000000" for instance <stack_bit_1> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  00000000" for instance <stack_bit_2> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  00000000" for instance <stack_bit_3> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  00000000" for instance <stack_bit_4> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  00000000" for instance <stack_bit_5> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  00000000" for instance <stack_bit_6> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  00000000" for instance <stack_bit_7> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  00000000" for instance <stack_bit_8> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  00000000" for instance <stack_bit_9> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  6555" for instance <count_lut_0> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  A999" for instance <count_lut_1> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  A999" for instance <count_lut_2> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  A999" for instance <count_lut_3> in unit <kcpsm3>.
+WARNING:Xst:37 - Unknown property "xc_props".
+    Set user-defined property "INIT =  A999" for instance <count_lut_4> in unit <kcpsm3>.
+Analyzing module <audi_lcd>.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_00> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_01> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_02> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_03> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_04> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_05> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_06> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_07> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_08> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_09> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_0A> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_0B> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_0C> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_0D> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_0E> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_0F> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_10> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_11> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_12> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_13> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_14> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_15> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_16> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_17> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_18> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_19> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_1A> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_1B> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_1C> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_1D> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_1E> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_1F> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_20> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_21> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_22> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_23> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_24> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_25> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_26> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_27> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_28> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_29> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_2A> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_2B> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_2C> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_2D> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_2E> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_2F> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_30> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_31> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_32> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_33> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_34> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_35> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_36> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_37> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_38> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_39> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_3A> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_3B> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_3C> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_3D> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_3E> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INIT_3F> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INITP_00> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INITP_01> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INITP_02> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INITP_03> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INITP_04> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INITP_05> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INITP_06> of instance <ram_1024_x_18> set by attribute.
+WARNING:Xst:2185 - "AUDI_LCD.v" line 30: Possible simulation mismatch on property <INITP_07> of instance <ram_1024_x_18> set by attribute.
+Module <audi_lcd> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  00000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "SRVAL =  00000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "WRITE_MODE =  WRITE_FIRST" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_00 =  054500AC055400AC054E00AC05454007C001008E000900CE008E003F00BDC000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_01 =  A00000AC054500AC054C00AC054700AC054E00AC054100AC052D00AC055200AC" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_02 =  00AC052D00AC054500AC054D00AC054F00AC054300AC054C00AC054500AC0557" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_03 =  0543A00000AC054200AC054100AC054C00AC055300AC054500AC055400AC0552" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_04 =  00AC054C00AC0541006D00AC054300AC054900AC054400AC055200AC054F00AC" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_05 =  053D00AC054100AC055400AC054500AC054800AC0554A00000AC054F00AC0547" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_06 =  A00000AC05A0A00000AC052E00AC053D00AC054E00AC054900AC0553A00000AC" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_07 =  0128A000547CC001000BA00000AC052E00AC053D00AC055300AC054F00AC0543" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_08 =  00890432A000548AC30100840314A0005485C201007F0219A0005480C101007B" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_09 =  C408A4F01450A0000093C440A4F8A000C440E401007BC440E401A000548FC401" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_0A =  C440C40CA4F01450A000C44004F0007F009904060406040604071450007B0099" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_0B =  009904300089A000C44004F0007F0093C44004060406040704071450007B0093" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_0C =  009D0501009D050C009D0506009D0528007F00990420007F0099008400990089" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_0D =  450200AC053D00AC05E0009D0580008900CEC000A000009D0518A00000840084" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_0E =  009D05C700AC450200AC450200AC45020062009D058700AC05DF00AC450200AC" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_0F =  00000000000000000000000000000000800100AC450200AC450200AC45020070" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_10 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_11 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_12 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_13 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_14 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_15 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_16 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_17 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_18 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_19 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_1A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_1B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_1C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_1D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_1E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_1F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_20 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_21 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_22 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_23 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_24 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_25 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_26 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_27 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_28 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_29 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_2A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_2B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_2C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_2D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_2E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_2F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_30 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_31 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_32 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_33 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_34 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_35 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_36 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_37 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_38 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_39 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_3A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_3B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_3C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_3D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_3E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_3F =  40D6000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INITP_00 =  2D2CCCCCB2CCCCCB333332CCCCF333332CCCCCCCCCCCCCCCB33333333333FFFF" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INITP_01 =  0000F333CCCCF3333333FB2FCCCCF3FFCE8FAA8F80A3EA8F02E28E2DCB72DCB7" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INITP_02 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INITP_03 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INITP_04 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INITP_05 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INITP_06 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INITP_07 =  C000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_00 =  054500AC055400AC054E00AC05454007C001008E000900CE008E003F00BDC000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_01 =  A00000AC054500AC054C00AC054700AC054E00AC054100AC052D00AC055200AC" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_02 =  00AC052D00AC054500AC054D00AC054F00AC054300AC054C00AC054500AC0557" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_03 =  0543A00000AC054200AC054100AC054C00AC055300AC054500AC055400AC0552" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_04 =  00AC054C00AC0541006D00AC054300AC054900AC054400AC055200AC054F00AC" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_05 =  053D00AC054100AC055400AC054500AC054800AC0554A00000AC054F00AC0547" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_06 =  A00000AC05A0A00000AC052E00AC053D00AC054E00AC054900AC0553A00000AC" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_07 =  0128A000547CC001000BA00000AC052E00AC053D00AC055300AC054F00AC0543" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_08 =  00890432A000548AC30100840314A0005485C201007F0219A0005480C101007B" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_09 =  C408A4F01450A0000093C440A4F8A000C440E401007BC440E401A000548FC401" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_0A =  C440C40CA4F01450A000C44004F0007F009904060406040604071450007B0099" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_0B =  009904300089A000C44004F0007F0093C44004060406040704071450007B0093" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_0C =  009D0501009D050C009D0506009D0528007F00990420007F0099008400990089" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_0D =  450200AC053D00AC05E0009D0580008900CEC000A000009D0518A00000840084" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_0E =  009D05C700AC450200AC450200AC45020062009D058700AC05DF00AC450200AC" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_0F =  00000000000000000000000000000000800100AC450200AC450200AC45020070" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_10 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_11 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_12 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_13 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_14 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_15 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_16 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_17 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_18 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_19 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_1A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_1B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_1C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_1D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_1E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_1F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_20 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_21 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_22 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_23 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_24 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_25 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_26 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_27 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_28 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_29 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_2A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_2B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_2C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_2D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_2E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_2F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_30 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_31 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_32 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_33 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_34 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_35 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_36 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_37 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_38 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_39 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_3A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_3B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_3C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_3D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_3E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INIT_3F =  40D6000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INITP_00 =  2D2CCCCCB2CCCCCB333332CCCCF333332CCCCCCCCCCCCCCCB33333333333FFFF" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INITP_01 =  0000F333CCCCF3333333FB2FCCCCF3FFCE8FAA8F80A3EA8F02E28E2DCB72DCB7" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INITP_02 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INITP_03 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INITP_04 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INITP_05 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INITP_06 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+    Set user-defined property "INITP_07 =  C000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <audi_lcd>.
+Analyzing module <audi_rom>.
+	M1 = 32'sb00000000000000000000000000001100
+	M2 = 32'sb00000000000000000000000000000100
+Module <audi_rom> is correct for synthesis.
+ 
+Analyzing module <binary_to_bcd>.
+	BITS_IN_PP = 32'sb00000000000000000000000000001010
+	BCD_DIGITS_OUT_PP = 32'sb00000000000000000000000000000011
+	BIT_COUNT_WIDTH_PP = 32'sb00000000000000000000000000000100
+	Calling function <bcd_asl>.
+Module <binary_to_bcd> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+INFO:Xst:1304 - Contents of register <rom_oe> in unit <audi> never changes during circuit operation. The register is replaced by logic.
+
+Synthesizing Unit <audi_lcd>.
+    Related source file is "AUDI_LCD.v".
+Unit <audi_lcd> synthesized.
+
+
+Synthesizing Unit <kcpsm3>.
+    Related source file is "kcpsm3.v".
+Unit <kcpsm3> synthesized.
+
+
+Synthesizing Unit <binary_to_bcd>.
+    Related source file is "binary_to_bcd.v".
+    Found 12-bit register for signal <dat_bcd_o>.
+    Found 4-bit comparator greater for signal <$n0007> created at line 108.
+    Found 4-bit comparator greater for signal <$n0008> created at line 108.
+    Found 4-bit comparator greater for signal <$n0009> created at line 108.
+    Found 4-bit subtractor for signal <$old_bcd_asl/1/digit_less_2>.
+    Found 4-bit subtractor for signal <$old_bcd_asl/1/digit_less_3>.
+    Found 4-bit subtractor for signal <$old_bcd_asl/1/digit_less_5>.
+    Found 12-bit register for signal <bcd_reg>.
+    Found 10-bit register for signal <bin_reg>.
+    Found 4-bit up counter for signal <bit_count>.
+    Found 1-bit register for signal <busy_bit>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  35 D-type flip-flop(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred   3 Comparator(s).
+Unit <binary_to_bcd> synthesized.
+
+
+Synthesizing Unit <audi_rom>.
+    Related source file is "audi_rom.v".
+WARNING:Xst:647 - Input <c_rom_read_en> is never used.
+WARNING:Xst:647 - Input <c_rom_ce> is never used.
+    Found 10x12-bit ROM for signal <$n0000>.
+WARNING:Xst:737 - Found 12-bit latch for signal <rom_mem_reg>.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefuly review if it was in your intentions to describe such a latch.
+    Summary:
+	inferred   1 ROM(s).
+Unit <audi_rom> synthesized.
+
+
+Synthesizing Unit <embedded_kcpsm3>.
+    Related source file is "embedded_kcpsm3.v".
+Unit <embedded_kcpsm3> synthesized.
+
+
+Synthesizing Unit <audi>.
+    Related source file is "audi.v".
+WARNING:Xst:1780 - Signal <done> is never used or assigned.
+WARNING:Xst:646 - Signal <diff<10:0>> is assigned but never used.
+    Found 4x1-bit ROM for signal <$n0022>.
+    Found 8-bit register for signal <lcd>.
+    Found 1-bit 4-to-1 multiplexer for signal <$n0014>.
+    Found 4-bit 4-to-1 multiplexer for signal <$n0017>.
+    Found 8-bit 4-to-1 multiplexer for signal <$n0026>.
+    Found 12-bit shifter logical right for signal <$n0032> created at line 88.
+    Found 12-bit shifter logical right for signal <$n0033> created at line 86.
+    Found 8-bit adder for signal <$n0034>.
+    Found 4-bit adder for signal <$n0035> created at line 232.
+    Found 12-bit 4-to-1 multiplexer for signal <$n0036>.
+    Found 12-bit 4-to-1 multiplexer for signal <$n0037>.
+    Found 8-bit 8-to-1 multiplexer for signal <$n0043>.
+    Found 4-bit comparator less for signal <$n0054> created at line 190.
+    Found 12-bit comparator not equal for signal <$n0055> created at line 190.
+    Found 4-bit comparator greatequal for signal <$n0056> created at line 183.
+    Found 12-bit comparator equal for signal <$n0057> created at line 183.
+    Found 12-bit addsub for signal <anglecovered>.
+    Found 12-bit register for signal <anglecoveredr>.
+    Found 4-bit up counter for signal <countr>.
+    Found 12-bit addsub for signal <cvalue>.
+    Found 12-bit register for signal <cvaluer>.
+    Found 12-bit subtractor for signal <diff>.
+    Found 1-bit register for signal <ex>.
+    Found 1-bit register for signal <flagr>.
+    Found 8-bit register for signal <in_port>.
+    Found 1-bit register for signal <inter>.
+    Found 1-bit register for signal <inter_ackr>.
+    Found 1-bit register for signal <re>.
+    Found 4-bit up counter for signal <read_count>.
+    Found 1-bit register for signal <startr>.
+    Found 12-bit addsub for signal <svalue>.
+    Found 12-bit register for signal <svaluer>.
+    Found 4-bit register for signal <sync>.
+    Found 8-bit adder for signal <theta>.
+    Found 4-bit register for signal <theta_1>.
+    Found 4-bit register for signal <theta_10>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   2 Counter(s).
+	inferred  58 D-type flip-flop(s).
+	inferred   7 Adder/Subtractor(s).
+	inferred   4 Comparator(s).
+	inferred  45 Multiplexer(s).
+	inferred   2 Combinational logic shifter(s).
+Unit <audi> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 2
+ 10x12-bit ROM                                         : 1
+ 4x1-bit ROM                                           : 1
+# Adders/Subtractors                                   : 13
+ 12-bit addsub                                         : 3
+ 12-bit subtractor                                     : 1
+ 4-bit adder                                           : 1
+ 4-bit subtractor                                      : 6
+ 8-bit adder                                           : 2
+# Counters                                             : 4
+ 4-bit up counter                                      : 4
+# Registers                                            : 22
+ 1-bit register                                        : 8
+ 10-bit register                                       : 2
+ 12-bit register                                       : 7
+ 4-bit register                                        : 3
+ 8-bit register                                        : 2
+# Latches                                              : 1
+ 12-bit latch                                          : 1
+# Comparators                                          : 10
+ 12-bit comparator equal                               : 1
+ 12-bit comparator not equal                           : 1
+ 4-bit comparator greatequal                           : 1
+ 4-bit comparator greater                              : 6
+ 4-bit comparator less                                 : 1
+# Multiplexers                                         : 6
+ 1-bit 4-to-1 multiplexer                              : 1
+ 12-bit 4-to-1 multiplexer                             : 2
+ 4-bit 4-to-1 multiplexer                              : 1
+ 8-bit 4-to-1 multiplexer                              : 1
+ 8-bit 8-to-1 multiplexer                              : 1
+# Logic shifters                                       : 2
+ 12-bit shifter logical right                          : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 2
+ 10x12-bit ROM                                         : 1
+ 4x1-bit ROM                                           : 1
+# Adders/Subtractors                                   : 13
+ 12-bit addsub                                         : 3
+ 12-bit subtractor                                     : 1
+ 4-bit adder                                           : 1
+ 4-bit subtractor                                      : 6
+ 8-bit adder                                           : 2
+# Counters                                             : 4
+ 4-bit up counter                                      : 4
+# Registers                                            : 181
+ Flip-Flops                                            : 181
+# Latches                                              : 1
+ 12-bit latch                                          : 1
+# Comparators                                          : 10
+ 12-bit comparator equal                               : 1
+ 12-bit comparator not equal                           : 1
+ 4-bit comparator greatequal                           : 1
+ 4-bit comparator greater                              : 6
+ 4-bit comparator less                                 : 1
+# Multiplexers                                         : 6
+ 1-bit 4-to-1 multiplexer                              : 1
+ 12-bit 4-to-1 multiplexer                             : 2
+ 4-bit 4-to-1 multiplexer                              : 1
+ 8-bit 4-to-1 multiplexer                              : 1
+ 8-bit 8-to-1 multiplexer                              : 1
+# Logic shifters                                       : 2
+ 12-bit shifter logical right                          : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1988 - Unit <audi>: instances <Mcompar__n0054>, <Mcompar__n0056> of unit <LPM_COMPARE_2> and unit <LPM_COMPARE_4> are dual, second instance is removed
+WARNING:Xst:1988 - Unit <audi>: instances <Mcompar__n0055>, <Mcompar__n0057> of unit <LPM_COMPARE_3> and unit <LPM_COMPARE_5> are dual, second instance is removed
+Loading device for application Rf_Device from file '3s500e.nph' in environment D:\Xilinx.
+WARNING:Xst:1710 - FF/Latch  <ar/rom_mem_reg_11> (without init value) has a constant value of 0 in block <audi>.
+WARNING:Xst:1710 - FF/Latch  <ar/rom_mem_reg_10> (without init value) has a constant value of 0 in block <audi>.
+
+Optimizing unit <audi> ...
+WARNING:Xst:1710 - FF/Latch  <in_port_6> (without init value) has a constant value of 0 in block <audi>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <in_port_7> (without init value) has a constant value of 0 in block <audi>.
+
+Optimizing unit <binary_to_bcd> ...
+
+Optimizing unit <kcpsm3> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block audi, actual ratio is 7.
+FlipFlop countr_2 has been replicated 1 time(s)
+FlipFlop theta_10_1 has been replicated 1 time(s)
+FlipFlop theta_1_3 has been replicated 1 time(s)
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : audi.ngr
+Top Level Output File Name         : audi
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 20
+
+Cell Usage :
+# BELS                             : 745
+#      GND                         : 1
+#      INV                         : 15
+#      LUT1                        : 4
+#      LUT2                        : 20
+#      LUT2_D                      : 1
+#      LUT2_L                      : 5
+#      LUT3                        : 139
+#      LUT3_D                      : 5
+#      LUT3_L                      : 70
+#      LUT4                        : 199
+#      LUT4_D                      : 14
+#      LUT4_L                      : 74
+#      MUXCY                       : 89
+#      MUXF5                       : 30
+#      MUXF6                       : 4
+#      VCC                         : 1
+#      XORCY                       : 74
+# FlipFlops/Latches                : 243
+#      FD                          : 24
+#      FDE                         : 78
+#      FDR                         : 30
+#      FDRE                        : 74
+#      FDRSE                       : 17
+#      FDS                         : 2
+#      FDSE                        : 8
+#      LD                          : 10
+# RAMS                             : 27
+#      RAM16X1D                    : 8
+#      RAM32X1S                    : 10
+#      RAM64X1S                    : 8
+#      RAMB16_S18                  : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 19
+#      IBUF                        : 7
+#      OBUF                        : 12
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                     327  out of   4656     7%  
+ Number of Slice Flip Flops:           243  out of   9312     2%  
+ Number of 4 input LUTs:               599  out of   9312     6%  
+    Number used as logic: 531
+    Number used as RAMs: 68
+ Number of bonded IOBs:                 20  out of    232     8%  
+ Number of BRAMs:                        1  out of     20     5%  
+ Number of GCLKs:                        1  out of     24     4%  
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+--------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)    | Load  |
+-----------------------------------+--------------------------+-------+
+clk                                | BUFGP                    | 259   |
+ar/_n0001(ar/_n00011:O)            | NONE(*)(ar/rom_mem_reg_2)| 10    |
+-----------------------------------+--------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 16.037ns (Maximum Frequency: 62.355MHz)
+   Minimum input arrival time before clock: 9.481ns
+   Maximum output required time after clock: 4.664ns
+   Maximum combinational path delay: 5.407ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 16.037ns (frequency: 62.355MHz)
+  Total number of paths / destination ports: 69927 / 601
+-------------------------------------------------------------------------
+Delay:               16.037ns (Levels of Logic = 20)
+  Source:            theta_10_0 (FF)
+  Destination:       cvaluer_10 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: theta_10_0 to cvaluer_10
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            18   0.591   1.452  theta_10_0 (theta_10_0)
+     LUT4_D:I2->O         10   0.704   1.169  Ker221 (N221)
+     LUT3:I2->O            2   0.704   0.881  audi_theta<5>_xor1_SW0 (N618)
+     LUT4:I3->O            1   0.704   0.801  audi_theta<5>_xor1 (theta<5>)
+     MUXCY:DI->O           1   0.768   0.000  audicy_rn_8 (audi_cyo9)
+     MUXCY:CI->O           0   0.059   0.000  audicy_rn_9 (audi_cyo10)
+     XORCY:CI->O          39   0.780   1.893  audi_diff<11>_xor (diff<11>)
+     INV:I->O              1   0.704   0.801  _n00301_INV_0 (_n0030)
+     MUXCY:CI->O           1   0.059   0.000  audi_cvalue<0>cy (audi_cvalue<0>_cyo)
+     MUXCY:CI->O           1   0.059   0.000  audi_cvalue<1>cy (audi_cvalue<1>_cyo)
+     MUXCY:CI->O           1   0.059   0.000  audi_cvalue<2>cy (audi_cvalue<2>_cyo)
+     MUXCY:CI->O           1   0.059   0.000  audi_cvalue<3>cy (audi_cvalue<3>_cyo)
+     MUXCY:CI->O           1   0.059   0.000  audi_cvalue<4>cy (audi_cvalue<4>_cyo)
+     MUXCY:CI->O           1   0.059   0.000  audi_cvalue<5>cy (audi_cvalue<5>_cyo)
+     MUXCY:CI->O           1   0.059   0.000  audi_cvalue<6>cy (audi_cvalue<6>_cyo)
+     MUXCY:CI->O           1   0.059   0.000  audi_cvalue<7>cy (audi_cvalue<7>_cyo)
+     MUXCY:CI->O           1   0.059   0.000  audi_cvalue<8>cy (audi_cvalue<8>_cyo)
+     MUXCY:CI->O           1   0.059   0.000  audi_cvalue<9>cy (audi_cvalue<9>_cyo)
+     XORCY:CI->O           1   0.780   0.836  audi_cvalue<10>_xor (cvalue<10>)
+     LUT4_L:I2->LO         1   0.704   0.104  _n0008<10>30 (N748)
+     LUT4_L:I3->LO         1   0.704   0.000  _n0008<10>36 (_n0008<10>)
+     FDRE:D                    0.308          cvaluer_10
+    ----------------------------------------
+    Total                     16.037ns (8.100ns logic, 7.937ns route)
+                                       (50.5% logic, 49.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 351 / 206
+-------------------------------------------------------------------------
+Offset:              9.481ns (Levels of Logic = 5)
+  Source:            start (PAD)
+  Destination:       svaluer_9 (FF)
+  Destination Clock: clk rising
+
+  Data Path: start to svaluer_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            29   1.218   2.011  start_IBUF (start_IBUF)
+     LUT2:I0->O           29   0.704   1.871  _n00231 (_n0023)
+     LUT4:I2->O           12   0.704   1.153  Ker49 (N491)
+     LUT4_L:I2->LO         1   0.704   0.104  _n0009<9>_SW0 (N5211)
+     LUT4_L:I3->LO         1   0.704   0.000  _n0009<9> (_n0009<9>)
+     FDRE:D                    0.308          svaluer_9
+    ----------------------------------------
+    Total                      9.481ns (4.342ns logic, 5.139ns route)
+                                       (45.8% logic, 54.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              4.664ns (Levels of Logic = 1)
+  Source:            lcd_7 (FF)
+  Destination:       lcd<7> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: lcd_7 to lcd<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.591   0.801  lcd_7 (lcd_7)
+     OBUF:I->O                 3.272          lcd_7_OBUF (lcd<7>)
+    ----------------------------------------
+    Total                      4.664ns (3.863ns logic, 0.801ns route)
+                                       (82.8% logic, 17.2% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Delay:               5.407ns (Levels of Logic = 2)
+  Source:            theta_in<3> (PAD)
+  Destination:       switch<3> (PAD)
+
+  Data Path: theta_in<3> to switch<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   1.218   0.917  theta_in_3_IBUF (switch_3_OBUF)
+     OBUF:I->O                 3.272          switch_3_OBUF (switch<3>)
+    ----------------------------------------
+    Total                      5.407ns (4.490ns logic, 0.917ns route)
+                                       (83.0% logic, 17.0% route)
+
+=========================================================================
+CPU : 48.98 / 50.44 s | Elapsed : 49.00 / 50.00 s
+ 
+--> 
+
+Total memory usage is 145692 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  353 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
+

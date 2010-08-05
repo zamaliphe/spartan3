@@ -1,0 +1,6 @@
+CommandLine
+E:\Xilinx\10.1\ISE\bin\nt\unwrapped\xst.exe -ise D:/embedded_lab/test/filter_vn6_test/filter_vn6_test/filter_vn6_test.ise -intstyle ise -ifn D:/embedded_lab/test/filter_vn6_test/filter_vn6_test/filter.xst -ofn D:/embedded_lab/test/filter_vn6_test/filter_vn6_test/filter.syr -finalclean 1
+s
+FormatString
+xst [-ifn <InputFile>] [-ofn <OutputFile>] [-ise <iseProjectFile>] [--quiet] [-intstyle <Style>] [--deb <DebugLevel>] [--finalclean <Clean>] [--PcubeFlow] [--globOptFlow] [--XstNtrc]
+s

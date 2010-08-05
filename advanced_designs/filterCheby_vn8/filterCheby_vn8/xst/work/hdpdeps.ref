@@ -1,0 +1,9 @@
+V3 23
+FL D:/embedded_lab/test/filterCheby_vn8/kcpsm3.vhd 2005/07/20.08:50:38 K.31
+EN work/kcpsm3 1243935195 FL D:/embedded_lab/test/filterCheby_vn8/kcpsm3.vhd \
+      PB ieee/std_logic_1164 1200023565 PB ieee/std_logic_arith 1200023566 \
+      PB ieee/STD_LOGIC_UNSIGNED 1200023567 LB unisim PH unisim/VCOMPONENTS 1200023571
+AR work/kcpsm3/low_level_definition 1243935196 \
+      FL D:/embedded_lab/test/filterCheby_vn8/kcpsm3.vhd EN work/kcpsm3 1243935195 \
+      CP LUT1 CP FDR CP FDS CP LUT4 CP FD CP FDE CP LUT3 CP FDRE CP LUT2 CP MUXCY CP XORCY \
+      CP INV CP string CP label CP FDRSE CP RAM16X1D CP RAM64X1S CP MUXF5 CP RAM32X1S

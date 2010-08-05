@@ -1,0 +1,4 @@
+MO picoblaze_adc_dac_control NULL D:/embedded_lab/test/adc_dac_v1_test/picoblaze_adc_dac_control.v vlg1F/picoblaze__adc__dac__control.bin 1237184650
+AR kcpsm3 low_level_definition D:/embedded_lab/test/adc_dac_v1_test/kcpsm3.vhd sub00/vhpl01 1237184651
+EN kcpsm3 NULL D:/embedded_lab/test/adc_dac_v1_test/kcpsm3.vhd sub00/vhpl00 1237184650
+MO adda_ctr NULL D:/embedded_lab/test/adc_dac_v1_test/ADDA_CTR.V vlg5A/adda__ctr.bin 1237184650

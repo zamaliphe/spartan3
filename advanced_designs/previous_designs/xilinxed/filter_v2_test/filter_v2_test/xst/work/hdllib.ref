@@ -1,0 +1,5 @@
+AR kcpsm3 low_level_definition D:/embedded_lab/test/filter_v2_test/kcpsm3.vhd sub00/vhpl03 1237547595
+AR adda_ctr low_level_definition D:/embedded_lab/test/filter_v2_test/ADDA_CTR.VHD sub00/vhpl01 1237533245
+EN kcpsm3 NULL D:/embedded_lab/test/filter_v2_test/kcpsm3.vhd sub00/vhpl02 1237547594
+MO filter NULL D:/embedded_lab/test/filter_v2_test/filter.v vlg72/filter.bin 1237547594
+MO adda_ctr NULL D:/embedded_lab/test/filter_v2_test/ADDA_CTR.V vlg5A/adda__ctr.bin 1237547594

@@ -1,0 +1,29 @@
+Release 8.1i ngdbuild I.24
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+
+Command Line: ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc
+D:/embedded_lab/test/adc_dac_v2_test/picoblaze_adc_dac_control.ucf -p
+xc3s500e-fg320-4 picoblaze_adc_dac_control.ngc picoblaze_adc_dac_control.ngd 
+
+Reading NGO file
+'D:/embedded_lab/test/adc_dac_v2_test/adc_dac_v2_test/picoblaze_adc_dac_control.
+ngc' ...
+
+Applying constraints in
+"D:/embedded_lab/test/adc_dac_v2_test/picoblaze_adc_dac_control.ucf" to the
+design...
+
+Checking timing specifications ...
+Checking expanded design ...
+WARNING:NgdBuild:443 - SFF primitive 'processor/read_strobe_flop' has
+   unconnected output pin
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   1
+
+Total memory usage is 66752 kilobytes
+
+Writing NGD file "picoblaze_adc_dac_control.ngd" ...
+
+Writing NGDBUILD log file "picoblaze_adc_dac_control.bld"...

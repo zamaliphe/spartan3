@@ -1,0 +1,531 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Cordic tutorial</title>
+<style type="text/css">
+<!--
+body {
+	background-color: #FFFFFF;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 40px;
+	margin-bottom: 40px;
+}
+.style44 {
+	font-family: "Square721 Ex BT";
+	font-size: 24px;
+}
+.style57 {
+	color: #FFFFFF;
+	font-weight: bold;
+}
+.style65 {font-size: 16px}
+.style74 {color: #FFFFFF}
+.style80 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+}
+.style93 {color: #FFFFFF; font-size: 18px;}
+.style94 {font-family: Arial, Helvetica, sans-serif; font-size: 18px; color: #FFFFFF;}
+.style95 {font-size: 18px; font-family: Arial, Helvetica, sans-serif;}
+.style96 {font-family: Arial, Helvetica, sans-serif}
+.style99 {font-family: Verdana, Arial, Helvetica, sans-serif}
+.style101 {font-family: Corbel; font-size: 16px; }
+.style102 {font-family: Corbel}
+.style106 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 18px;
+}
+.style108 {font-family: Corbel; font-size: 18px; }
+.style112 {
+	font-family: Corbel;
+	font-size: 18px;
+	color: #000000;
+}
+.style113 {font-family: "Times New Roman", Times, serif}
+.style114 {color: #0000FF}
+-->
+</style></head><body>
+<table border="0" cellpadding="0" cellspacing="0" width="1003" height="13664">
+  <tbody><tr>
+    <td bordercolor="#FFFFFF" bgcolor="#184618" width="135" height="77"><img src="help_files/barg3.jpg" width="135" height="35"></td>
+    <td bordercolor="#FFFFFF" bgcolor="#184618" width="868"><div align="center">
+      <p class="style44" align="left"><span class="style57"><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FPGA PRIMER<br>
+       <span class="style65">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Cordic
+Implementation<br>
+       </span></span><br>
+      </p>
+    </div></td>
+  </tr>
+  <tr>
+    <td bordercolor="#FFFFFF" bgcolor="#184618" height="42"><p class="style94" align="right">PRE-<br>
+    REQUISITES</p></td>
+    <td bordercolor="#FFFFFF" bgcolor="#ffffff">&nbsp;</td>
+  </tr>
+  
+  <tr>
+    <td bordercolor="#FFFFFF" bgcolor="#184618" height="128"><span class="style74"></span></td>
+    <td bordercolor="#FFFFFF" bgcolor="#ffffff"><ul class="style108"><li class="style99">Verilog or VHDL</li>
+        <li class="style99">Basic knowledge of FPGA architecture</li>
+        <li class="style99">Xilinx ISE and PicoBlaze</li>
+      <li class="style99">Assembly language fundamentals </li>
+    </ul>    </td>
+  </tr>
+  <tr>
+    <td bordercolor="#FFFFFF" bgcolor="#013300" height="22"><div class="style95" align="right">
+      <div align="right"><span class="style74">OBJECTIVE</span></div>
+    </div></td>
+    <td bordercolor="#FFFFFF" bgcolor="#ffffff"><img src="help_files/barc41.jpg" width="850" height="35"></td>
+  </tr>
+  <tr>
+    <td bordercolor="#FFFFFF" bgcolor="#184618" height="246">&nbsp;</td>
+    <td bordercolor="#FFFFFF" bgcolor="#ffffff"><blockquote class="style65">
+      <p class="style102">      <br>
+        <span class="style106">To implement CORDIC based trigonometric computational unit. In simple terms, we will build a hardware to compute <strong>sine</strong> and <strong>cosine</strong>
+of given angles. But using normal methods like Taylor's expansion would
+require a lot of multiplications, which are not suitable for hardware
+implementation. In contrast the Cordic follows an iterative approach
+which takes much lesser time and hardware.</span></p>
+      <p class="style102"><span class="style106">Please note that this tutorial is written in view of giving you all the typical steps involved in implementing <strong>any program on FPGA</strong>. But as a specific example I have used CORDIC. You can follow your own example.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+The primary emphasis is given on making you familiar with the steps
+involved in working with FPGA kits. But I hope this would also be
+useful who are specifically working on Cordic based algorithms.</span><span class="style99"><br>
+        </span><br>
+      </p>
+    </blockquote></td>
+  </tr>
+  <tr>
+    <td bordercolor="#FFFFFF" bgcolor="#184618" height="40"><div class="style95" align="right">
+      <div align="right"><span class="style74">REQUIRED TOOLS</span></div>
+    </div></td>
+    <td bordercolor="#FFFFFF" bgcolor="#ffffff"><img src="help_files/barc41.jpg" width="850" height="35"></td>
+  </tr>
+  <tr>
+    <td bordercolor="#FFFFFF" bgcolor="#184618" height="333">&nbsp;</td>
+    <td bordercolor="#FFFFFF" bgcolor="#ffffff"><p class="style101"><strong><br>
+      <span class="style106">Hardware&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :</span></strong><span class="style106">Spartan - 3E starter kit<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+USB cable<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Adapter<br>
+  <strong>Software &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</strong>Xilinx ISE - (preferably version 7 or above)</span></p>
+      <p class="style101" align="center"><span class="style106"><img src="help_files/1.jpg" width="414" height="297"></span><br>
+        <br>
+      </p></td>
+  </tr>
+  <tr>
+    <td bordercolor="#FFFFFF" bgcolor="#184618" height="40"><div class="style95" align="right">
+      <div align="right"><span class="style74">CORDIC <br>
+        BASICS</span></div>
+    </div></td>
+    <td bordercolor="#FFFFFF" bgcolor="#ffffff"><img src="help_files/barc41.jpg" width="850" height="35"></td>
+  </tr>
+  <tr>
+    <td bordercolor="#FFFFFF" bgcolor="#184618" height="107">&nbsp;</td>
+    <td bordercolor="#FFFFFF" bgcolor="#ffffff"><blockquote class="style106">
+      <p><br>
+        CORDIC-Coordinate Rotation Digital Computer</p>
+      <p>Let
+us not delve too much in to the inside complexities of Cordic, but only
+understand how it makes the computations easy compared to other
+methods.For understanding Cordic, please refer to my project report
+link or you may try Wikipedia. It is easy and derivable by hand. All
+one needs is basic high school math.</p>
+    </blockquote>
+      <p class="style80">Understanding Cordic</p>
+      <blockquote class="style106">
+        <p>Let
+me explain you the core idea of Cordic. I already mentioned that we
+need to eliminate multipliers(dividers) as much as possible while
+working on hardware. Well, how are we going to do that? Okay, here is a
+small exercise for you.</p>
+        <p>Try to multiply (say) 489 and 7. You may need a pen or a calculator. <br>
+          The how about dividing 489 by 67. Even tougher..!!</p>
+        <p>Now try these 489*10 or 489 / 100.You get the answers on the spur! </p>
+        <p>So you realize that it is easy to perform computations if one of them is a power of 10(as we are in radix 10). <strong>Similarly multiplying or dividing by powers of 2 in base 2 system is virtually adding or eliminating zeroes in the end</strong>.
+So CORDIC takes advantage of this fact and limits all the
+multiplications that arise, only to the powers of 2. Any other
+constants that come up can be incorporated while initializing the
+values. Now being said that, you can easily understand the rest of it. </p>
+        <p>Our kit is still lying out there idle. Lets start making it busy!</p>
+      </blockquote></td>
+  </tr>
+  <tr>
+    <td bordercolor="#FFFFFF" bgcolor="#184618" height="40"><p class="style94" align="right">FILES <br>
+    REQUIRED</p>    </td>
+    <td bordercolor="#FFFFFF" bgcolor="#ffffff"><img src="help_files/barc41.jpg" width="850" height="35"></td>
+  </tr>
+  <tr>
+    <td bordercolor="#FFFFFF" bgcolor="#184618" height="107">&nbsp;</td>
+    <td bordercolor="#FFFFFF" bgcolor="#ffffff"><blockquote class="style106">
+      <p><strong><br>
+        NOTE:&nbsp;</strong>
+If you are trying to implement any other program, then you need to have
+a clear idea of your inputs and outputs. You should also assign the
+required pins by checking the FPGA kit manual.</p>
+        <p>If you
+want to write your own programs, then you may have to spend some more
+time before moving forward. But if you immediately want to see the FPGA
+kit spring up into life, then these are the files you need. You can
+download them and use. Follow the steps below. </p>
+        <p><a href="http://kaushikvemula.axspace.com/files_shared/cordic/audi.v">audi.v</a><br>
+          <a href="http://kaushikvemula.axspace.com/files_shared/cordic/audi_rom.v">audi_rom.v</a><br>
+          <a href="http://kaushikvemula.axspace.com/files_shared/cordic/binary_to_bcd.v">binary2bcd.v</a><br>
+          <a href="http://kaushikvemula.axspace.com/files_shared/cordic/audi.ucf">audi.ucf</a><br>
+          <br>
+          Wait ! You will need few more files.<br>
+          (Please note that the code is not supplied with comments. You may face problems if you try to understand them.) <br>
+          <br>
+        </p>
+    </blockquote></td>
+  </tr>
+  <tr>
+    <td bordercolor="#FFFFFF" bgcolor="#184618" height="42"><div class="style96" align="right">
+      <p class="style93">CONFIGURING LCD<br>
+        -PICOBLAZE </p>
+      </div></td>
+    <td bordercolor="#FFFFFF" bgcolor="#ffffff"><img src="help_files/barc41.jpg" width="850" height="35"></td>
+  </tr>
+  <tr>
+    <td bordercolor="#FFFFFF" bgcolor="#184618" height="107">&nbsp;</td>
+    <td bordercolor="#FFFFFF" bgcolor="#ffffff"><blockquote class="style106"><br>
+The major problem one faces while dealing with the FPGA kit is how to
+show the outputs. Of course it is clearly mentioned in the manual that
+we can use the LCD to display any useful information. Here comes the
+complexity. You need to get introduced to a new term called PICOBLAZE.
+It is a virtual microprocessor that comes with Xilinx kits.</blockquote>
+      <blockquote class="style106">
+        <p>In
+order to get the display working, we need to send the data in precise
+intervals or time delay. Getting the required delays using logic gates
+of FPGA is highly cumbersome. Where as PICOBLAZE provides us with fixed
+time delays for executing any of its commands. So we can make use of
+this property for controlling the date sent to display.</p>
+        <p>You
+need this folder KCPSM3 which can be downloaded from Xilinx web site in
+order to create the virtual microprocessor. If you don't want to mess
+up with it, then no problem, here are the final files you need. Just
+put these in the current working folder and add them to your project.</p>
+        <p><a href="http://kaushikvemula.axspace.com/files_shared/cordic/embedded_kcpsm3.v">embedded_kcpsm3.v</a><br>
+          <a href="http://kaushikvemula.axspace.com/files_shared/cordic/kcpsm3.v">kcpsm3.v</a><br>
+          <a href="http://kaushikvemula.axspace.com/files_shared/cordic/AUDI_LCD.V">audi_lcd.v</a></p>
+        <p>Note
+that these files are generated using assembly language code run with a
+program that comes with KCPSM3 folder. These are necessary for the
+functioning of LCD screen.</p>
+        <p>Now lets get to the exact steps. If you have downloaded the above seven files, then you can simply follow these steps. <br>
+          <br>
+        </p>
+    </blockquote></td>
+  </tr>
+  <tr>
+    <td bordercolor="#FFFFFF" bgcolor="#184618" height="35"><div class="style96" align="right"><span class="style93">GET STARTED!</span></div></td>
+    <td bordercolor="#FFFFFF" bgcolor="#ffffff"><img src="help_files/barc41.jpg" width="850" height="35"></td>
+  </tr>
+  <tr>
+    <td bordercolor="#FFFFFF" bgcolor="#184618" height="107">&nbsp;</td>
+    <td bordercolor="#FFFFFF" bgcolor="#ffffff"><blockquote class="style106">
+      <p><br>
+        Check the Hardware</p>
+    </blockquote>      <p class="style106" align="center"><img src="help_files/1.jpg" width="600" height="450"></p>
+    <p class="style106" align="left"><strong>Connections</strong>:</p>
+    <blockquote>
+      <p class="style106" align="left">
+Remember to put the kit in USB mode by removing the jumper wires. The
+mode details are given in the manual. For Spratan-3E kit. Use the
+following settings. You can keep the power off. </p>
+    </blockquote>
+    <p class="style106" align="center"><img src="help_files/2.jpg" width="600" height="450"></p>
+    <blockquote>
+      <p class="style106" align="left">Jumper settings: <img src="help_files/jump.jpg" width="100" height="111"></p>
+    </blockquote>    <p class="style106" align="center">&nbsp;</p></td>
+  </tr>
+  <tr>
+    <td bordercolor="#FFFFFF" bgcolor="#184618" height="35"><div class="style96" align="right"><span class="style93">STEP 1</span></div></td>
+    <td bordercolor="#FFFFFF" bgcolor="#ffffff"><img src="help_files/barc41.jpg" width="850" height="35"></td>
+  </tr>
+  <tr>
+    <td bordercolor="#FFFFFF" bgcolor="#184618" height="107">&nbsp;</td>
+    <td bordercolor="#FFFFFF" bgcolor="#ffffff"><blockquote>
+      <p class="style106"><br>
+Start the Xilinx ISE -&gt; Project navigator. Open new project and
+follow as shown.Enter the hardware specifications. For this example, I
+have used the specs as shown in the figure. You can find yours right on
+the board or in the user manual.</p>
+      <p class="style106" align="center"><img src="help_files/project%2520specs1.htm" width="607" height="424"><br>
+        <br>
+      </p>
+    </blockquote></td>
+  </tr>
+  <tr>
+    <td bordercolor="#FFFFFF" bgcolor="#184618" height="40"><div class="style96" align="right"><span class="style93">STEP 2<br>
+    SIMULATION</span></div></td>
+    <td bordercolor="#FFFFFF" bgcolor="#ffffff"><img src="help_files/barc41.jpg" width="850" height="35"></td>
+  </tr>
+  <tr>
+    <td bordercolor="#FFFFFF" bgcolor="#184618" height="107">&nbsp;</td>
+    <td bordercolor="#FFFFFF" bgcolor="#ffffff"><blockquote class="style106"><br>
+      Once the project is created. Just add all the above files to it. From the tab project -&gt; add source.<br>
+      After adding the files check for syntax errors. Then you can try simulating it. <br>
+      <br>
+      <em>But
+remember simulation is not going to be easy as the program includes
+delays of the order of several milliseconds, which would take a lot of
+time for simulators. So its always better to verify you program by
+directly implementing it on the hardware. Here is how a simulation
+looks for an input of 30 degrees.</em></blockquote>
+      <blockquote class="style106">
+        <p align="left"><img src="help_files/simu_30.htm" width="785" height="448"></p>
+        <p align="left">Cordic Iterations for angle 30 degrees. You can observe them on the waveform.</p>
+        <p align="center"><img src="help_files/iters.htm" width="349" height="277"></p>
+      </blockquote></td>
+  </tr>
+  <tr>
+    <td bordercolor="#FFFFFF" bgcolor="#184618" height="42"><p class="style94" align="right">STEP 3<br>
+      SYNTHESIS</p>    </td>
+    <td bordercolor="#FFFFFF" bgcolor="#ffffff"><img src="help_files/barc41.jpg" width="850" height="35"></td>
+  </tr>
+  <tr>
+    <td bordercolor="#FFFFFF" bgcolor="#184618" height="107">&nbsp;</td>
+    <td bordercolor="#FFFFFF" bgcolor="#ffffff"><blockquote class="style106">
+      <p><br>
+Double click on the synthesize tab. Ignore any warnings. You may check
+the RTL Schematic to get and idea of the exact inputs and outputs.</p>
+      <p align="center"><img src="help_files/sythfinish.htm" width="600" height="449"></p>
+    </blockquote></td>
+  </tr>
+  <tr>
+    <td bordercolor="#FFFFFF" bgcolor="#184618" height="23"><div class="style96" align="right"><span class="style93">STEP 4<br>  
+        IMPLEMENT</span></div></td>
+    <td bordercolor="#FFFFFF" bgcolor="#ffffff"><img src="help_files/barc41.jpg" width="850" height="35"></td>
+  </tr>
+  <tr>
+    <td bordercolor="#FFFFFF" bgcolor="#184618" height="107">&nbsp;</td>
+    <td bordercolor="#FFFFFF" bgcolor="#ffffff"><blockquote>
+      <p class="style106" align="left"><br>
+Add the constraint file which contains both the timing constrains and
+pin assignments. If you have already added it, then you need not do it
+again.</p>
+      </blockquote>      
+      <ul>
+        <li class="style99">audi.ucf (Designed only for Spartan-3E starter kit)</li>
+      </ul>
+      <blockquote>
+        <p class="style106" align="left">Now, implement the design by clicking the appropriate tab.</p>
+    </blockquote>      <p class="style106" align="center"><img src="help_files/implefinish.jpg" width="600" height="449"></p></td>
+  </tr>
+  <tr>
+    <td bordercolor="#FFFFFF" bgcolor="#184618" height="84"><p class="style94" align="right">STEP 5<br>
+      CONSTRAINTS&amp; PIN-ASSIGNMENT</p>    </td>
+    <td bordercolor="#FFFFFF" bgcolor="#ffffff"><img src="help_files/barc41.jpg" width="850" height="35"></td>
+  </tr>
+  <tr>
+    <td bordercolor="#FFFFFF" bgcolor="#184618" height="107">&nbsp;</td>
+    <td bordercolor="#FFFFFF" bgcolor="#ffffff"><p class="style106" align="left"><strong>TIME CONSTRAINTS AND CLOCK</strong></p>
+      <blockquote>
+        <p class="style106" align="left">The
+timing and pin assignments are given in the file .ucf(user constraint
+file). For timing analysis you need to implement it several times with
+different <strong>offset and hold</strong> timings and check for the optimum one. Currently we are using 50 MHz clock available directly on the kit.</p>
+      </blockquote>
+      <p class="style106" align="left"><strong>PIN ASSIGNMENT</strong></p>
+      <blockquote>
+        <p class="style106" align="left">Input
+data
+pins&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:
+Four switches for entering the BCD values of each digit of the
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;input
+angle<br>
+          Input 
+          interruption pins: Three direction buttons<br>
+North&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:
+RESET<br>
+West&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:
+FLAG (to indicate first digit is entered)<br>
+East&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:
+START(start the program)</p>
+        <p class="style106" align="left"><em>Instead
+of the above seemingly cumbersome input method, one can use an
+alpha-numeric pad for inputs. But you have to spend those extra bucks
+or at least go to your college Lab to get one. For now, you don't need
+them.</em><br>
+          <br>
+          Output: LCD </p>
+        <p class="style106" align="left">Check
+if the pin assignments are correct by clicking the PIN constraints
+tab.PACE EDITOR opens up. The pin number should be verified from the
+spartan user manual and they differ with each kit. Please be careful if
+your kit is a different one. It is better if you can cross check the
+current file pins from the manual.</p>
+      </blockquote>
+    <p class="style106" align="center"><img src="help_files/packagepins.jpg" width="600" height="449"></p></td>
+  </tr>
+  <tr>
+    <td bordercolor="#FFFFFF" bgcolor="#184618" height="63"><p class="style95" align="right"><span class="style74">STEP 6<br>
+      BIT FILE<br>
+    GENERATION</span><br>
+      </p>    </td>
+    <td bordercolor="#FFFFFF" bgcolor="#ffffff"><img src="help_files/barc41.jpg" width="850" height="35"></td>
+  </tr>
+  <tr>
+    <td bordercolor="#FFFFFF" bgcolor="#184618" height="107">&nbsp;</td>
+    <td bordercolor="#FFFFFF" bgcolor="#ffffff"><blockquote>
+      <p class="style106"><br>
+        Click on Generate programming file tab. A file &lt;your_program&gt;.bit is generated in the work folder. <br>
+        This single file is all we need..!!!</p>
+    </blockquote>
+      <p class="style106" align="center"><img src="help_files/confistart.jpg" width="600" height="449"></p></td>
+  </tr>
+  <tr>
+    <td bordercolor="#FFFFFF" bgcolor="#184618" height="63"><p class="style94" align="right">STEP 7<br>
+    DOWNLOAD<br>
+    TO FPGA</p>    </td>
+    <td bordercolor="#FFFFFF" bgcolor="#ffffff"><img src="help_files/barc41.jpg" width="850" height="35"></td>
+  </tr>
+  <tr>
+    <td bordercolor="#FFFFFF" bgcolor="#184618" height="107">&nbsp;</td>
+    <td bordercolor="#FFFFFF" bgcolor="#ffffff"><blockquote>
+      <p class="style106" align="left"><br>
+Still the kit is powered off. Now connect it through USB cable . Also
+connect the power cord and switch it on. You will be prompted to
+install few driver programs. Follow them and once you are done it shows
+that "Your hardware is ready to use". Note that it prompts you
+continuously three times. Do not skip any of them. After it is ready,
+click on the IMPACT tool tab.As you start the impact tool with the kit
+powered on, You will find the following screen opening up.</p>
+    </blockquote>      <p class="style106" align="center"><img src="help_files/downladconnection.htm" width="600" height="449"></p>
+    <p class="style106" align="center">&nbsp;</p></td>
+  </tr>
+  <tr>
+    <td bordercolor="#FFFFFF" bgcolor="#184618" height="63"><p class="style94" align="right">STEP 8<br>
+    BURN THE <br>
+    FPGA..!!!!!!</p>    </td>
+    <td bordercolor="#FFFFFF" bgcolor="#ffffff"><img src="help_files/barc41.jpg" width="850" height="35"></td>
+  </tr>
+  <tr>
+    <td bordercolor="#FFFFFF" bgcolor="#184618" height="107">&nbsp;</td>
+    <td bordercolor="#FFFFFF" bgcolor="#ffffff"><blockquote>
+      <p class="style106"><br>
+Now xilinx prompts you for file assignment. Select the .bit file.
+Cancel all the further prompts. They are necessary if you are using any
+of the memory storage like PROM or FLASH. At present we are directly
+programming the FPGA and do not need them. </p>
+      <p class="style106"><em>That implies, we have to program the FPGA each time it is powered on.</em> In order to store the bit file in any of the sources available on the kit, you need few more steps, which I have not included. </p>
+      <p class="style106">After assigning bit file, right click on the XILINX chip symbol and click on "program". </p>
+    </blockquote>
+      <p class="style106" align="center"><img src="help_files/prog.jpg" width="475" height="370"></p>
+      <blockquote>
+        <p class="style106" align="left">&nbsp;</p>
+        <p class="style106" align="left">      If it is successful, the following screen appears and the DONE led(on the board) is on.</p>
+      </blockquote>
+      <p class="style106" align="center"><img src="help_files/success.htm" width="400" height="289"><img src="help_files/3.htm" width="436" height="290"></p>    </td>
+  </tr>
+  <tr>
+    <td bordercolor="#FFFFFF" bgcolor="#184618" height="42"><p class="style94" align="right">STEP 9<br>
+      SEE IT WORK</p>      </td>
+    <td bordercolor="#FFFFFF" bgcolor="#ffffff"><img src="help_files/barc41.jpg" width="850" height="35"></td>
+  </tr>
+  <tr>
+    <td bordercolor="#FFFFFF" bgcolor="#184618" height="107">&nbsp;</td>
+    <td bordercolor="#FFFFFF" bgcolor="#ffffff"><blockquote>
+      <p class="style106"><br>
+        As soon as the done led shows up, the fpga starts working. And you will find the following lines on the LCD.</p>
+      <p class="style106">"CORDIC ALGO"<br>
+        "ENTER ANGLE"</p>
+      <p class="style106">Now press RESET (Press each time you input a new angle)</p>
+    </blockquote>      <p class="style106" align="center"><img src="help_files/8.htm" width="494" height="191"><br>
+    </p>    </td>
+  </tr>
+  <tr>
+    <td bordercolor="#FFFFFF" bgcolor="#184618" height="35"><div class="style96" align="right"><span class="style93">EXMAPLE-1</span></div></td>
+    <td bordercolor="#FFFFFF" bgcolor="#ffffff"><img src="help_files/barc41.jpg" width="850" height="35"></td>
+  </tr>
+  <tr>
+    <td bordercolor="#FFFFFF" bgcolor="#184618" height="107">&nbsp;</td>
+    <td bordercolor="#FFFFFF" bgcolor="#ffffff"><blockquote>
+      <p class="style106"><br>
+        Input angle 35 degrees. We are giving it as a BCD code. As we have<br>
+only four switches we need to enter each digit saparately.Put these
+switches in On mode as shown. We enter the digit 3 now;its BCD code is
+0011.</p>
+      </blockquote>
+      <p class="style106" align="center"><img src="help_files/4.jpg" width="392" height="165"></p>
+      <blockquote>
+        <p class="style106">&nbsp;</p>
+        <p class="style106">Now press left direction key to indicate that first digit has been entered</p>
+      </blockquote>
+      <p class="style106" align="center"><img src="help_files/9.htm" width="408" height="156"></p>
+      <blockquote>
+        <p class="style106">&nbsp;</p>
+        <p class="style106">Now give the input as 5 i.e. the ones digit of input angle 35 degrees.</p>
+      </blockquote>
+      <p class="style106" align="center"><img src="help_files/5.htm" width="402" height="157"></p>
+      <p class="style106" align="center"><img src="help_files/10.htm" width="399" height="151"></p>
+      <blockquote>
+        <p class="style106">Immediately you will see the the following things popping up on the LCD screen.</p>
+      </blockquote>      <p class="style106" align="center"><img src="help_files/11.htm" width="410" height="176"></p></td>
+  </tr>
+  <tr>
+    <td bordercolor="#FFFFFF" bgcolor="#184618" height="35"><div class="style96" align="right"><span class="style93">EXAMPLE 2</span></div></td>
+    <td bordercolor="#FFFFFF" bgcolor="#ffffff"><img src="help_files/barc41.jpg" width="850" height="35"></td>
+  </tr>
+  <tr>
+    <td bordercolor="#FFFFFF" bgcolor="#184618" height="107">&nbsp;</td>
+    <td bordercolor="#FFFFFF" bgcolor="#ffffff"><br>
+      <blockquote>
+      <p class="style106">You
+can try another example. Say 60 deg. Now follow the previous steps. For
+your convenience I have given them again with respect to 60.</p>
+      <p class="style106">Do not forget to press the RESET button(we have assigned it to  the NORTH direction pin)</p>
+      <p class="style106">&nbsp;</p>
+    </blockquote>
+    <p class="style106" align="center"><img src="help_files/6.htm" width="356" height="159"></p>
+    <p class="style106" align="center"><img src="help_files/9.htm" width="353" height="154"></p>
+    <p class="style106" align="center"><img src="help_files/7.htm" width="341" height="148"></p>
+    <p class="style106" align="center"><img src="help_files/10.htm" width="348" height="151"></p>
+    <p class="style106" align="left">OUTPUT:</p>
+    <p class="style106" align="center"><img src="help_files/12.htm" width="334" height="149"></p>
+    <p class="style106" align="center">&nbsp;</p>
+    <blockquote>
+      <p class="style106" align="left">Note
+that the accuracy is good for angles in the range of (5-85) degrees.
+For the rest it needs more steps for converging. Currently we are using
+only 8 iterations. </p>
+    </blockquote>    <div align="left"></div></td>
+  </tr>
+  <tr>
+    <td bordercolor="#FFFFFF" bgcolor="#184618" height="20">&nbsp;</td>
+    <td bordercolor="#FFFFFF" bgcolor="#ffffff"><img src="help_files/barc41.jpg" width="850" height="35"></td>
+  </tr>
+  <tr>
+    <td bordercolor="#FFFFFF" bgcolor="#184618" height="71">&nbsp;</td>
+    <td bordercolor="#FFFFFF" bgcolor="#ffffff"><blockquote class="style106">
+      <p><br>
+I hope you have enjoyed it. This is my first attempt to make a tutorial
+and I welcome your valuable suggestions to improve it. I admit that I
+am also a beginner to this field and I realize that there are many more
+concepts involved in working with FPGAs. Please do contact me if you
+have any thing to discuss.</p>
+      <p class="style112">KAUSHIK VEMULA<br>
+        Department of Electrical Engineering<br>
+          IIT Kharagpur<br>
+        Contact Email: <span class="style114">kvemula [at] iitkgp.ac.in</span><br>
+        Phone&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <span class="style113">91 9932750760</span><br>
+        <br>
+      </p>
+      </blockquote>    </td>
+  </tr>
+  <tr>
+    <td rowspan="2" bordercolor="#FFFFFF" bgcolor="#184618" height="107"><span class="style74"></span></td>
+    <td bordercolor="#FFFFFF" bgcolor="#184618"><blockquote>&nbsp;</blockquote>      <div align="center"></div></td>
+  </tr>
+  <tr>
+    <td bordercolor="#FFFFFF" bgcolor="#ffffff"><div align="center"><a href="http://kaushikvemula.axspace.com/index.htm">LINK TO HOME PAGE</a></div></td>
+  </tr>
+</tbody></table>
+</body></html>

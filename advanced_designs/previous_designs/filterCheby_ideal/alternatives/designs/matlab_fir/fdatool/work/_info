@@ -1,0 +1,26 @@
+m255
+13
+cModel Technology
+dY:\theja\filter_ideal\hdlsrc\fdatool
+vdetailed_testbench
+IWf[FiN@jMi`mL3zKSUccD0
+VQdX<I>2B[BYWhK[f@JTM13
+w1237641527
+F./detailed_testbench.v
+L0 2
+OX;L;6.0d;29
+r1
+31
+o-work work -O0
+tGenerateLoopIterationMax 100000
+vfilter_ideal
+IKlim`]Q5:oU]B0`l=``KS2
+VmL4;ZcmBZkiRbLY6hf0050
+w1237643300
+F./filter_ideal.v
+L0 43
+OX;L;6.0d;29
+r1
+31
+o-work work -O0
+tGenerateLoopIterationMax 100000

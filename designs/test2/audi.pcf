@@ -1,0 +1,197 @@
+//! **************************************************************************
+// Written by: Map I.24 on Fri Mar 13 19:01:40 2009
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "lcd<0>" LOCATE = SITE "M18" LEVEL 1;
+COMP "lcd<1>" LOCATE = SITE "L17" LEVEL 1;
+COMP "lcd<2>" LOCATE = SITE "L18" LEVEL 1;
+COMP "lcd<3>" LOCATE = SITE "D16" LEVEL 1;
+COMP "lcd<4>" LOCATE = SITE "R15" LEVEL 1;
+COMP "lcd<5>" LOCATE = SITE "R16" LEVEL 1;
+COMP "lcd<6>" LOCATE = SITE "P17" LEVEL 1;
+COMP "lcd<7>" LOCATE = SITE "M15" LEVEL 1;
+COMP "reset" LOCATE = SITE "V4" LEVEL 1;
+COMP "switch<0>" LOCATE = SITE "F12" LEVEL 1;
+COMP "switch<1>" LOCATE = SITE "E11" LEVEL 1;
+COMP "switch<2>" LOCATE = SITE "C11" LEVEL 1;
+COMP "switch<3>" LOCATE = SITE "E9" LEVEL 1;
+COMP "start" LOCATE = SITE "H13" LEVEL 1;
+COMP "flag" LOCATE = SITE "D18" LEVEL 1;
+COMP "clk" LOCATE = SITE "C9" LEVEL 1;
+COMP "theta_in<0>" LOCATE = SITE "L13" LEVEL 1;
+COMP "theta_in<1>" LOCATE = SITE "L14" LEVEL 1;
+COMP "theta_in<2>" LOCATE = SITE "H18" LEVEL 1;
+COMP "theta_in<3>" LOCATE = SITE "N17" LEVEL 1;
+NET "clk_BUFGP/IBUFG" BEL "clk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+TIMEGRP clk = BEL "svaluer_0" BEL "svaluer_1" BEL "svaluer_2" BEL "svaluer_3"
+        BEL "svaluer_4" BEL "svaluer_5" BEL "svaluer_6" BEL "svaluer_7" BEL
+        "svaluer_8" BEL "svaluer_9" BEL "svaluer_10" BEL "svaluer_11" BEL
+        "anglecoveredr_0" BEL "anglecoveredr_1" BEL "anglecoveredr_2" BEL
+        "anglecoveredr_3" BEL "anglecoveredr_4" BEL "anglecoveredr_5" BEL
+        "anglecoveredr_6" BEL "anglecoveredr_7" BEL "anglecoveredr_8" BEL
+        "anglecoveredr_9" BEL "anglecoveredr_10" BEL "anglecoveredr_11" BEL
+        "ex" BEL "inter_ackr" BEL "theta_10_0" BEL "theta_10_1" BEL
+        "theta_10_2" BEL "theta_10_3" BEL "startr" BEL "theta_1_0" BEL
+        "theta_1_1" BEL "theta_1_2" BEL "theta_1_3" BEL "flagr" BEL "re" BEL
+        "inter" BEL "sync_0" BEL "sync_1" BEL "sync_2" BEL "sync_3" BEL
+        "in_port_0" BEL "in_port_1" BEL "in_port_2" BEL "in_port_3" BEL
+        "in_port_4" BEL "in_port_5" BEL "lcd_0" BEL "lcd_1" BEL "lcd_2" BEL
+        "lcd_3" BEL "lcd_4" BEL "lcd_5" BEL "lcd_6" BEL "lcd_7" BEL
+        "cvaluer_2" BEL "cvaluer_0" BEL "cvaluer_1" BEL "cvaluer_5" BEL
+        "cvaluer_3" BEL "cvaluer_4" BEL "cvaluer_8" BEL "cvaluer_6" BEL
+        "cvaluer_7" BEL "cvaluer_11" BEL "cvaluer_9" BEL "cvaluer_10" BEL
+        "read_count_0" BEL "read_count_1" BEL "read_count_2" BEL
+        "read_count_3" BEL "countr_0" BEL "countr_1" BEL "countr_2" BEL
+        "countr_3" BEL "picb/program/ram_1024_x_18.A" BEL
+        "b2bcd_sin/bcd_reg_0" BEL "b2bcd_sin/bcd_reg_1" BEL
+        "b2bcd_sin/bcd_reg_2" BEL "b2bcd_sin/bcd_reg_3" BEL
+        "b2bcd_sin/bcd_reg_4" BEL "b2bcd_sin/bcd_reg_5" BEL
+        "b2bcd_sin/bcd_reg_6" BEL "b2bcd_sin/bcd_reg_7" BEL
+        "b2bcd_sin/bcd_reg_8" BEL "b2bcd_sin/bcd_reg_9" BEL
+        "b2bcd_sin/bcd_reg_10" BEL "b2bcd_sin/bcd_reg_11" BEL
+        "b2bcd_sin/busy_bit" BEL "b2bcd_sin/bin_reg_0" BEL
+        "b2bcd_sin/bin_reg_1" BEL "b2bcd_sin/bin_reg_2" BEL
+        "b2bcd_sin/bin_reg_3" BEL "b2bcd_sin/bin_reg_4" BEL
+        "b2bcd_sin/bin_reg_5" BEL "b2bcd_sin/bin_reg_6" BEL
+        "b2bcd_sin/bin_reg_7" BEL "b2bcd_sin/bin_reg_8" BEL
+        "b2bcd_sin/bin_reg_9" BEL "b2bcd_sin/dat_bcd_o_0" BEL
+        "b2bcd_sin/dat_bcd_o_1" BEL "b2bcd_sin/dat_bcd_o_2" BEL
+        "b2bcd_sin/dat_bcd_o_3" BEL "b2bcd_sin/dat_bcd_o_4" BEL
+        "b2bcd_sin/dat_bcd_o_5" BEL "b2bcd_sin/dat_bcd_o_6" BEL
+        "b2bcd_sin/dat_bcd_o_7" BEL "b2bcd_sin/dat_bcd_o_8" BEL
+        "b2bcd_sin/dat_bcd_o_9" BEL "b2bcd_sin/dat_bcd_o_10" BEL
+        "b2bcd_sin/dat_bcd_o_11" BEL "b2bcd_sin/bit_count_0" BEL
+        "b2bcd_sin/bit_count_1" BEL "b2bcd_sin/bit_count_2" BEL
+        "b2bcd_sin/bit_count_3" BEL "b2bcd_cos/bcd_reg_0" BEL
+        "b2bcd_cos/bcd_reg_1" BEL "b2bcd_cos/bcd_reg_2" BEL
+        "b2bcd_cos/bcd_reg_3" BEL "b2bcd_cos/bcd_reg_4" BEL
+        "b2bcd_cos/bcd_reg_5" BEL "b2bcd_cos/bcd_reg_6" BEL
+        "b2bcd_cos/bcd_reg_7" BEL "b2bcd_cos/bcd_reg_8" BEL
+        "b2bcd_cos/bcd_reg_9" BEL "b2bcd_cos/bcd_reg_10" BEL
+        "b2bcd_cos/bcd_reg_11" BEL "b2bcd_cos/busy_bit" BEL
+        "b2bcd_cos/bin_reg_0" BEL "b2bcd_cos/bin_reg_1" BEL
+        "b2bcd_cos/bin_reg_2" BEL "b2bcd_cos/bin_reg_3" BEL
+        "b2bcd_cos/bin_reg_4" BEL "b2bcd_cos/bin_reg_5" BEL
+        "b2bcd_cos/bin_reg_6" BEL "b2bcd_cos/bin_reg_7" BEL
+        "b2bcd_cos/bin_reg_8" BEL "b2bcd_cos/bin_reg_9" BEL
+        "b2bcd_cos/dat_bcd_o_0" BEL "b2bcd_cos/dat_bcd_o_1" BEL
+        "b2bcd_cos/dat_bcd_o_2" BEL "b2bcd_cos/dat_bcd_o_3" BEL
+        "b2bcd_cos/dat_bcd_o_4" BEL "b2bcd_cos/dat_bcd_o_5" BEL
+        "b2bcd_cos/dat_bcd_o_6" BEL "b2bcd_cos/dat_bcd_o_7" BEL
+        "b2bcd_cos/dat_bcd_o_8" BEL "b2bcd_cos/dat_bcd_o_9" BEL
+        "b2bcd_cos/dat_bcd_o_10" BEL "b2bcd_cos/dat_bcd_o_11" BEL
+        "b2bcd_cos/bit_count_0" BEL "b2bcd_cos/bit_count_1" BEL
+        "b2bcd_cos/bit_count_2" BEL "b2bcd_cos/bit_count_3" BEL
+        "picb/processor/toggle_flop" BEL "picb/processor/reset_flop1" BEL
+        "picb/processor/reset_flop2" BEL "picb/processor/int_capture_flop" BEL
+        "picb/processor/int_flop" BEL "picb/processor/ack_flop" BEL
+        "picb/processor/shadow_carry_flop" BEL
+        "picb/processor/shadow_zero_flop" BEL "picb/processor/int_enable_flop"
+        BEL "picb/processor/flag_write_flop" BEL
+        "picb/processor/zero_flag_flop" BEL "picb/processor/carry_flag_flop"
+        BEL "picb/processor/pc_loop_register_bit_0" BEL
+        "picb/processor/pc_loop_register_bit_1" BEL
+        "picb/processor/pc_loop_register_bit_2" BEL
+        "picb/processor/pc_loop_register_bit_3" BEL
+        "picb/processor/pc_loop_register_bit_4" BEL
+        "picb/processor/pc_loop_register_bit_5" BEL
+        "picb/processor/pc_loop_register_bit_6" BEL
+        "picb/processor/pc_loop_register_bit_7" BEL
+        "picb/processor/pc_loop_register_bit_8" BEL
+        "picb/processor/pc_loop_register_bit_9" BEL
+        "picb/processor/register_write_flop" BEL
+        "picb/processor/memory_write_flop" BEL "picb/processor/store_flop_0"
+        BEL "picb/processor/store_flop_1" BEL "picb/processor/store_flop_2"
+        BEL "picb/processor/store_flop_3" BEL "picb/processor/store_flop_4"
+        BEL "picb/processor/store_flop_5" BEL "picb/processor/store_flop_6"
+        BEL "picb/processor/store_flop_7" BEL "picb/processor/logical_flop_0"
+        BEL "picb/processor/logical_flop_1" BEL
+        "picb/processor/logical_flop_2" BEL "picb/processor/logical_flop_3"
+        BEL "picb/processor/logical_flop_4" BEL
+        "picb/processor/logical_flop_5" BEL "picb/processor/logical_flop_6"
+        BEL "picb/processor/logical_flop_7" BEL "picb/processor/pipeline_bit"
+        BEL "picb/processor/shift_flop_0" BEL "picb/processor/shift_flop_1"
+        BEL "picb/processor/shift_flop_2" BEL "picb/processor/shift_flop_3"
+        BEL "picb/processor/shift_flop_4" BEL "picb/processor/shift_flop_5"
+        BEL "picb/processor/shift_flop_6" BEL "picb/processor/shift_flop_7"
+        BEL "picb/processor/arith_flop_0" BEL "picb/processor/arith_flop_1"
+        BEL "picb/processor/arith_flop_2" BEL "picb/processor/arith_flop_3"
+        BEL "picb/processor/arith_flop_4" BEL "picb/processor/arith_flop_5"
+        BEL "picb/processor/arith_flop_6" BEL "picb/processor/arith_flop_7"
+        BEL "picb/processor/arith_carry_flop" BEL
+        "picb/processor/sel_group_flop" BEL "picb/processor/write_strobe_flop"
+        BEL "picb/processor/read_strobe_flop" BEL
+        "picb/processor/stack_flop_0" BEL "picb/processor/stack_flop_1" BEL
+        "picb/processor/stack_flop_2" BEL "picb/processor/stack_flop_3" BEL
+        "picb/processor/stack_flop_4" BEL "picb/processor/stack_flop_5" BEL
+        "picb/processor/stack_flop_6" BEL "picb/processor/stack_flop_7" BEL
+        "picb/processor/stack_flop_8" BEL "picb/processor/stack_flop_9" BEL
+        "picb/processor/stack_count_loop_register_bit_0" BEL
+        "picb/processor/stack_count_loop_register_bit_1" BEL
+        "picb/processor/stack_count_loop_register_bit_2" BEL
+        "picb/processor/stack_count_loop_register_bit_3" BEL
+        "picb/processor/stack_count_loop_register_bit_4" BEL
+        "picb/processor/reg_loop_register_bit_0.SLICEM_F" BEL
+        "picb/processor/reg_loop_register_bit_0.SLICEM_G" BEL
+        "picb/processor/reg_loop_register_bit_1.SLICEM_F" BEL
+        "picb/processor/reg_loop_register_bit_1.SLICEM_G" BEL
+        "picb/processor/reg_loop_register_bit_2.SLICEM_F" BEL
+        "picb/processor/reg_loop_register_bit_2.SLICEM_G" BEL
+        "picb/processor/reg_loop_register_bit_3.SLICEM_F" BEL
+        "picb/processor/reg_loop_register_bit_3.SLICEM_G" BEL
+        "picb/processor/reg_loop_register_bit_4.SLICEM_F" BEL
+        "picb/processor/reg_loop_register_bit_4.SLICEM_G" BEL
+        "picb/processor/reg_loop_register_bit_5.SLICEM_F" BEL
+        "picb/processor/reg_loop_register_bit_5.SLICEM_G" BEL
+        "picb/processor/reg_loop_register_bit_6.SLICEM_F" BEL
+        "picb/processor/reg_loop_register_bit_6.SLICEM_G" BEL
+        "picb/processor/reg_loop_register_bit_7.SLICEM_F" BEL
+        "picb/processor/reg_loop_register_bit_7.SLICEM_G" BEL "theta_10_1_1"
+        BEL "theta_1_3_1" BEL "countr_2_1" BEL
+        "picb/processor/memory_bit_0/G.S0" BEL
+        "picb/processor/memory_bit_0/F.S0" BEL
+        "picb/processor/memory_bit_0/F.S1" BEL
+        "picb/processor/memory_bit_0/G.S1" BEL
+        "picb/processor/memory_bit_1/G.S0" BEL
+        "picb/processor/memory_bit_1/F.S0" BEL
+        "picb/processor/memory_bit_1/F.S1" BEL
+        "picb/processor/memory_bit_1/G.S1" BEL
+        "picb/processor/memory_bit_2/G.S0" BEL
+        "picb/processor/memory_bit_2/F.S0" BEL
+        "picb/processor/memory_bit_2/F.S1" BEL
+        "picb/processor/memory_bit_2/G.S1" BEL
+        "picb/processor/memory_bit_3/G.S0" BEL
+        "picb/processor/memory_bit_3/F.S0" BEL
+        "picb/processor/memory_bit_3/F.S1" BEL
+        "picb/processor/memory_bit_3/G.S1" BEL
+        "picb/processor/memory_bit_4/G.S0" BEL
+        "picb/processor/memory_bit_4/F.S0" BEL
+        "picb/processor/memory_bit_4/F.S1" BEL
+        "picb/processor/memory_bit_4/G.S1" BEL
+        "picb/processor/memory_bit_5/G.S0" BEL
+        "picb/processor/memory_bit_5/F.S0" BEL
+        "picb/processor/memory_bit_5/F.S1" BEL
+        "picb/processor/memory_bit_5/G.S1" BEL
+        "picb/processor/memory_bit_6/G.S0" BEL
+        "picb/processor/memory_bit_6/F.S0" BEL
+        "picb/processor/memory_bit_6/F.S1" BEL
+        "picb/processor/memory_bit_6/G.S1" BEL
+        "picb/processor/memory_bit_7/G.S0" BEL
+        "picb/processor/memory_bit_7/F.S0" BEL
+        "picb/processor/memory_bit_7/F.S1" BEL
+        "picb/processor/memory_bit_7/G.S1" BEL "picb/processor/stack_bit_0/G"
+        BEL "picb/processor/stack_bit_0/F" BEL "picb/processor/stack_bit_1/G"
+        BEL "picb/processor/stack_bit_1/F" BEL "picb/processor/stack_bit_2/G"
+        BEL "picb/processor/stack_bit_2/F" BEL "picb/processor/stack_bit_3/G"
+        BEL "picb/processor/stack_bit_3/F" BEL "picb/processor/stack_bit_4/G"
+        BEL "picb/processor/stack_bit_4/F" BEL "picb/processor/stack_bit_5/G"
+        BEL "picb/processor/stack_bit_5/F" BEL "picb/processor/stack_bit_6/G"
+        BEL "picb/processor/stack_bit_6/F" BEL "picb/processor/stack_bit_7/G"
+        BEL "picb/processor/stack_bit_7/F" BEL "picb/processor/stack_bit_8/G"
+        BEL "picb/processor/stack_bit_8/F" BEL "picb/processor/stack_bit_9/G"
+        BEL "picb/processor/stack_bit_9/F";
+TS_clk = PERIOD TIMEGRP "clk" 20 ns HIGH 50%;
+OFFSET = IN 9 ns BEFORE COMP "clk";
+OFFSET = OUT 9 ns AFTER COMP "clk";
+SCHEMATIC END;

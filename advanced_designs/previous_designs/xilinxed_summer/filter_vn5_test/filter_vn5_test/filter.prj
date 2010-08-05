@@ -1,0 +1,5 @@
+verilog work "../multALU.v"
+verilog work "../mult.v"
+vhdl work "../kcpsm3.vhd"
+verilog work "../ADDA_CTR.V"
+verilog work "../filter.v"

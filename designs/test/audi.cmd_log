@@ -1,0 +1,6 @@
+xst -ise "C:/Documents and Settings/theja/My Documents/prj/test/test/test.ise" -intstyle ise -ifn "C:/Documents and Settings/theja/My Documents/prj/test/test/audi.xst" -ofn "C:/Documents and Settings/theja/My Documents/prj/test/test/audi.syr"
+ngdbuild -ise "C:/Documents and Settings/theja/My Documents/prj/test/test/test.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc3s500e-fg320-4 "audi.ngc" audi.ngd
+map -ise "C:/Documents and Settings/theja/My Documents/prj/test/test/test.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr off -k 4 -c 100 -o audi_map.ncd audi.ngd audi.pcf
+par -ise "C:/Documents and Settings/theja/My Documents/prj/test/test/test.ise" -w -intstyle ise -ol std -t 1 audi_map.ncd audi.ncd audi.pcf
+trce -ise "C:/Documents and Settings/theja/My Documents/prj/test/test/test.ise" -intstyle ise -e 3 -s 4 -xml audi audi.ncd -o audi.twr audi.pcf -ucf audi.ucf
+bitgen -ise "C:/Documents and Settings/theja/My Documents/prj/test/test/test.ise" -intstyle ise -f audi.ut audi.ncd

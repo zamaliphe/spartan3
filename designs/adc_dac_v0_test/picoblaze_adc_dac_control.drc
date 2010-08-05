@@ -1,0 +1,5 @@
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<adc_ctrl_001/ram_1024_x_18/adc_ctrl_001/ram_1024_x_18.A>:<RAMB16_RAMB1
+   6A>.  The block is configured to use an input parity pins. There is a
+   dangling output parity pin.
+DRC detected 0 errors and 1 warnings.

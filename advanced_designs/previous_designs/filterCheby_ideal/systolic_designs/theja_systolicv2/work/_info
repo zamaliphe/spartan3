@@ -1,0 +1,51 @@
+m255
+13
+cModel Technology
+dD:\embedded_lab\test\filterCheby_ideal\theja_systolicv2
+vdetailed_testbench
+I?mABWIGaS5Y64HO3X;K:@3
+V88]SMC]jL2iK46k?Rg;@=3
+w1243496488
+F./detailed_testbench.v
+L0 3
+OX;L;6.0d;29
+r1
+31
+o-work work -O0
+tGenerateLoopIterationMax 100000
+vmult
+I]=R5H02XE0QWV[X[Gj6;C1
+VSkXSRKZc?S@?dLDcn0mZ;1
+w1243435814
+F./mult.v
+L0 7
+OX;L;6.0d;29
+r1
+31
+o-work work -O0
+tGenerateLoopIterationMax 100000
+vmultALU
+IoMmUa11dC``LlT9[`OGn?3
+V4=RhS@1cJd0g`6Nl9zSG53
+w1242978152
+F./multALU.v
+L0 10
+OX;L;6.0d;29
+r1
+31
+o-work work -O0
+tGenerateLoopIterationMax 100000
+nmult@a@l@u
+vsystolic_PE1
+IcE^LcTf2@4F:`^kkJO_XP2
+Vl69S2U__1oQZ`Gz7RCOHF2
+w1243495730
+F./systolic_PE1.v
+FC_row1.v
+L0 9
+OX;L;6.0d;29
+r1
+31
+o-work work -O0
+tGenerateLoopIterationMax 100000
+nsystolic_@p@e1

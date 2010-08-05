@@ -1,0 +1,6 @@
+MO picoblaze_adc_dac_control NULL D:/embedded_lab/test/adc_dac_fir_v1_test/picoblaze_adc_dac_control.v vlg1F/picoblaze__adc__dac__control.bin 1237271613
+AR kcpsm3 low_level_definition D:/embedded_lab/test/adc_dac_fir_v1_test/kcpsm3.vhd sub00/vhpl03 1237271616
+MO multiplier NULL D:/embedded_lab/test/adc_dac_fir_v1_test/multiplier.v vlg7B/multiplier.bin 1237271613
+AR adda_ctr low_level_definition D:/embedded_lab/test/adc_dac_fir_v1_test/ADDA_CTR.VHD sub00/vhpl01 1237271614
+EN kcpsm3 NULL D:/embedded_lab/test/adc_dac_fir_v1_test/kcpsm3.vhd sub00/vhpl02 1237271615
+EN adda_ctr NULL D:/embedded_lab/test/adc_dac_fir_v1_test/ADDA_CTR.VHD sub00/vhpl00 1237271613

@@ -1,0 +1,5 @@
+setmode -bs
+setcable -port auto
+adddevice -p 1 -file "software.xsvf"
+play
+quit

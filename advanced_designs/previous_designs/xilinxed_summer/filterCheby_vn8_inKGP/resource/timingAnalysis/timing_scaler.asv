@@ -1,0 +1,18 @@
+clc;
+
+numberofpoints = 16;
+
+[times interruptType]=textread('times.txt','%f %f');
+
+%title('input and output signals to the BPF(Fpass=100to200hz,Fs = 1kHz)');
+%xlabel('sample number'),ylabel('magnitude scaled to 16 bit resolution');
+%h = legend('input','output',2);
+
+deltaTintermed = cat(1,times(2:length(times)),2+times(1))-times;
+
+deltaT = cat(1,deltaTintermed(end),deltaTintermed(1:length(deltaTintermed)-1));
+
+scale = 50*10^6/(2*10^3);    %desired average sampling... say want 1Khz avg 
+                            %sampling factor 2 is because there are 
+                            %equidistant no-sampling interrrupts also.
+deltaTscaled = (deltaT'*(scale/mean(deltaT)));

@@ -1,0 +1,3 @@
+vhdl work "D:/embedded_lab/test/adc_dac_v1_test/kcpsm3.vhd"
+verilog work "D:/embedded_lab/test/adc_dac_v1_test/ADDA_CTR.V"
+verilog work "D:/embedded_lab/test/adc_dac_v1_test/picoblaze_adc_dac_control.v"

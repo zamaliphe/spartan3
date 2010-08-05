@@ -1,0 +1,64 @@
+--------------------------------------------------------------------------------
+Release 8.1i Trace I.24
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+
+D:\Xilinx\bin\nt\trce.exe -ise adc_control_v0.ise -intstyle ise -e 3 -l 3 -s 4
+-xml picoblaze_amp_adc_control picoblaze_amp_adc_control.ncd -o
+picoblaze_amp_adc_control.twr picoblaze_amp_adc_control.pcf
+
+
+Design file:              picoblaze_amp_adc_control.ncd
+Physical constraint file: picoblaze_amp_adc_control.pcf
+Device,speed:             xc3s500e,-4 (PRODUCTION 1.17 2005-11-04)
+Report level:             error report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths
+   option. All paths that are not constrained will be reported in the
+   unconstrained paths section(s) of the report.
+
+================================================================================
+Timing constraint: NET "clk_BUFGP/IBUFG" PERIOD = 20 ns HIGH 50%;
+
+ 7108 items analyzed, 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum period is  13.898ns.
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |   13.898|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0
+
+Constraints cover 7108 paths, 0 nets, and 1134 connections
+
+Design statistics:
+   Minimum period:  13.898ns (Maximum frequency:  71.953MHz)
+
+
+Analysis completed Sat Mar 14 17:04:51 2009
+--------------------------------------------------------------------------------
+
+
+
+Peak Memory Usage: 127 MB

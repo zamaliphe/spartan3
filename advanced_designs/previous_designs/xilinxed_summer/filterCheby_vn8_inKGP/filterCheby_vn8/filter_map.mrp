@@ -1,0 +1,479 @@
+Release 10.1 Map K.31 (nt)
+Xilinx Mapping Report File for Design 'filter'
+
+Design Information
+------------------
+Command Line   : map -ise
+D:/embedded_lab/test/filterCheby_vn8/filterCheby_vn8/filterCheby_vn8.ise
+-intstyle ise -p xc3s500e-fg320-4 -cm area -pr off -k 4 -c 100 -o filter_map.ncd
+filter.ngd filter.pcf 
+Target Device  : xc3s500e
+Target Package : fg320
+Target Speed   : -4
+Mapper Version : spartan3e -- $Revision: 1.46 $
+Mapped Date    : Tue Jun 02 15:04:09 2009
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    8
+Logic Utilization:
+  Number of Slice Flip Flops:           170 out of   9,312    1%
+  Number of 4 input LUTs:               265 out of   9,312    2%
+Logic Distribution:
+  Number of occupied Slices:            183 out of   4,656    3%
+    Number of Slices containing only related logic:     183 out of     183 100%
+    Number of Slices containing unrelated logic:          0 out of     183   0%
+      *See NOTES below for an explanation of the effects of unrelated logic.
+  Total Number of 4 input LUTs:         298 out of   9,312    3%
+    Number used as logic:               197
+    Number used as a route-thru:         33
+    Number used for Dual Port RAMs:      16
+      (Two LUTs used per Dual Port RAM)
+    Number used for 32x1 RAMs:           52
+      (Two LUTs used per 32x1 RAM)
+  Number of bonded IOBs:                 42 out of     232   18%
+  Number of RAMB16s:                      2 out of      20   10%
+  Number of BUFGMUXs:                     1 out of      24    4%
+
+Peak Memory Usage:  161 MB
+Total REAL time to MAP completion:  8 secs 
+Total CPU time to MAP completion:   7 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Modular Design Summary
+Section 11 - Timing Report
+Section 12 - Configuration String Information
+Section 13 - Control Set Information
+Section 14 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:LIT:243 - Logical network btn_north_IBUF has no load.
+WARNING:LIT:395 - The above warning message base_net_load_rule is repeated 5
+   more times for the following (max. 5 shown):
+   btn_east_IBUF,
+   btn_west_IBUF,
+   btn_south_IBUF,
+   switch<3>_IBUF,
+   switch<2>_IBUF
+   To see the details of these warning messages, please use the -detail switch.
+WARNING:PhysDesignRules:367 - The signal <btn_south_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <btn_east_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <switch<2>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <switch<3>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <btn_west_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <btn_north_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+
+Section 3 - Informational
+-------------------------
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:MapLib:986 - The SAVE constraint for nets has been made more strict
+   starting in 10.1, such that the net driver and load blocks will be preserved
+   as well. To revert to the original behavior please set XIL_MAP_OLD_SAVE.
+INFO:MapLib:985 - SAVE has been detected on the following signals (maximum 5
+   shown):
+   btn_north,
+   btn_east,
+   btn_west,
+   btn_south,
+   switch<3>.
+   To list all affected signals, run Map -detail.
+INFO:MapLib:159 - Net Timing constraints on signal clk are pushed forward
+   through input buffer.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+  48 block(s) removed
+  17 block(s) optimized away
+  47 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+The signal "fifo/BU2/U0/grf.rf/gl0.rd/grss.rsts/ram_empty_fb_i_mux0000" is
+sourceless and has been removed.
+The signal "fifo/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_mux0000<3>" is sourceless
+and has been removed.
+The signal "fifo/BU2/U0/grf.rf/gl0.rd/rpntr/Mcount_count4" is sourceless and has
+been removed.
+The signal "fifo/BU2/U0/grf.rf/gl0.rd/rpntr/Mcount_count7" is sourceless and has
+been removed.
+The signal "fifo/BU2/U0/grf.rf/gl0.rd/rpntr/Mcount_count10" is sourceless and
+has been removed.
+The signal "fifo/BU2/U0/grf.rf/gl0.wr/gwss.wsts/ram_full_i_mux0000" is
+sourceless and has been removed.
+The signal "fifo/BU2/U0/grf.rf/gl0.wr/wpntr/count_not0001" is sourceless and has
+been removed.
+ Sourceless block "fifo/BU2/U0/grf.rf/gl0.wr/wpntr/count_0" (FF) removed.
+  The signal "fifo/BU2/U0/grf.rf/gl0.wr/wpntr/count<0>" is sourceless and has been
+removed.
+   Sourceless block "fifo/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_mux0000<3>1" (ROM)
+removed.
+    The signal "fifo/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_mux0000<3>" is sourceless
+and has been removed.
+   Sourceless block "fifo/BU2/U0/grf.rf/gl0.wr/wpntr/Mcount_count_xor<0>11" (ROM)
+removed.
+    The signal "fifo/BU2/U0/grf.rf/gl0.wr/wpntr/Mcount_count" is sourceless and has
+been removed.
+   Sourceless block "fifo/BU2/U0/grf.rf/gl0.wr/wpntr/Mcount_count_xor<1>11" (ROM)
+removed.
+    The signal "fifo/BU2/U0/grf.rf/gl0.wr/wpntr/Mcount_count3" is sourceless and has
+been removed.
+     Sourceless block "fifo/BU2/U0/grf.rf/gl0.wr/wpntr/count_1" (FF) removed.
+      The signal "fifo/BU2/U0/grf.rf/gl0.wr/wpntr/count<1>" is sourceless and has been
+removed.
+       Sourceless block "fifo/BU2/U0/grf.rf/gl0.wr/wpntr/Mcount_count41" (ROM) removed.
+        The signal "fifo/BU2/U0/grf.rf/gl0.wr/wpntr/Mcount_count4" is sourceless and has
+been removed.
+       Sourceless block "fifo/BU2/U0/grf.rf/gl0.wr/wpntr/Mcount_count_xor<2>11" (ROM)
+removed.
+        The signal "fifo/BU2/U0/grf.rf/gl0.wr/wpntr/Mcount_count6" is sourceless and has
+been removed.
+         Sourceless block "fifo/BU2/U0/grf.rf/gl0.wr/wpntr/count_2" (FF) removed.
+          The signal "fifo/BU2/U0/grf.rf/gl0.wr/wpntr/count<2>" is sourceless and has been
+removed.
+           Sourceless block "fifo/BU2/U0/grf.rf/gl0.wr/wpntr/Mcount_count71" (ROM) removed.
+            The signal "fifo/BU2/U0/grf.rf/gl0.wr/wpntr/Mcount_count7" is sourceless and has
+been removed.
+           Sourceless block "fifo/BU2/U0/grf.rf/gl0.wr/wpntr/Mcount_count_xor<3>1" (ROM)
+removed.
+            The signal "fifo/BU2/U0/grf.rf/gl0.wr/wpntr/Mcount_count9" is sourceless and has
+been removed.
+             Sourceless block "fifo/BU2/U0/grf.rf/gl0.wr/wpntr/count_3" (FF) removed.
+              The signal "fifo/BU2/U0/grf.rf/gl0.wr/wpntr/count<3>" is sourceless and has been
+removed.
+               Sourceless block "fifo/BU2/U0/grf.rf/gl0.wr/wpntr/Mcount_count101" (ROM)
+removed.
+                The signal "fifo/BU2/U0/grf.rf/gl0.wr/wpntr/Mcount_count10" is sourceless and
+has been removed.
+               Sourceless block "fifo/BU2/U0/grf.rf/gl0.wr/gwss.wsts/ram_full_i_mux000062"
+(ROM) removed.
+                The signal "fifo/BU2/U0/grf.rf/gl0.wr/gwss.wsts/ram_full_i_mux000062" is
+sourceless and has been removed.
+                 Sourceless block "fifo/BU2/U0/grf.rf/gl0.wr/gwss.wsts/ram_full_i_mux0000105"
+(ROM) removed.
+           Sourceless block "fifo/BU2/U0/grf.rf/gl0.wr/gwss.wsts/ram_full_i_mux000077_SW0"
+(ROM) removed.
+            The signal "fifo/BU2/N4" is sourceless and has been removed.
+       Sourceless block "fifo/BU2/U0/grf.rf/gl0.wr/wpntr/Mcount_count_xor<3>1_SW0"
+(ROM) removed.
+        The signal "fifo/BU2/U0/grf.rf/gl0.wr/wpntr/Mcount_count_xor<3>1_SW0/O" is
+sourceless and has been removed.
+         Sourceless block
+"fifo/BU2/U0/grf.rf/gl0.wr/wpntr/Mcount_count_xor<3>1_SW0/LUT2_L_BUF" (BUF)
+removed.
+          The signal "fifo/BU2/N01" is sourceless and has been removed.
+       Sourceless block "fifo/BU2/U0/grf.rf/gl0.wr/gwss.wsts/ram_full_i_mux000021"
+(ROM) removed.
+        The signal "fifo/BU2/U0/grf.rf/gl0.wr/gwss.wsts/ram_full_i_mux000021/O" is
+sourceless and has been removed.
+         Sourceless block
+"fifo/BU2/U0/grf.rf/gl0.wr/gwss.wsts/ram_full_i_mux000021/LUT4_L_BUF" (BUF)
+removed.
+          The signal "fifo/BU2/U0/grf.rf/gl0.wr/gwss.wsts/ram_full_i_mux000021" is
+sourceless and has been removed.
+The signal "fifo/BU2/U0/grf.rf/gl0.rd/rpntr/Mcount_count3" is sourceless and has
+been removed.
+ Sourceless block "fifo/BU2/U0/grf.rf/gl0.rd/rpntr/count_1" (FF) removed.
+  The signal "fifo/BU2/U0/grf.rf/gl0.rd/rpntr/count<1>" is sourceless and has been
+removed.
+   Sourceless block "fifo/BU2/U0/grf.rf/gl0.rd/rpntr/Mcount_count41" (ROM) removed.
+   Sourceless block "fifo/BU2/U0/grf.rf/gl0.rd/rpntr/Mcount_count_xor<1>11" (ROM)
+removed.
+   Sourceless block "fifo/BU2/U0/grf.rf/gl0.rd/rpntr/Mcount_count_xor<2>11" (ROM)
+removed.
+    The signal "fifo/BU2/U0/grf.rf/gl0.rd/rpntr/Mcount_count6" is sourceless and has
+been removed.
+     Sourceless block "fifo/BU2/U0/grf.rf/gl0.rd/rpntr/count_2" (FF) removed.
+      The signal "fifo/BU2/U0/grf.rf/gl0.rd/rpntr/count<2>" is sourceless and has been
+removed.
+       Sourceless block "fifo/BU2/U0/grf.rf/gl0.rd/rpntr/Mcount_count71" (ROM) removed.
+       Sourceless block "fifo/BU2/U0/grf.rf/gl0.rd/rpntr/Mcount_count_xor<3>1" (ROM)
+removed.
+        The signal "fifo/BU2/U0/grf.rf/gl0.rd/rpntr/Mcount_count9" is sourceless and has
+been removed.
+         Sourceless block "fifo/BU2/U0/grf.rf/gl0.rd/rpntr/count_3" (FF) removed.
+          The signal "fifo/BU2/U0/grf.rf/gl0.rd/rpntr/count<3>" is sourceless and has been
+removed.
+           Sourceless block "fifo/BU2/U0/grf.rf/gl0.rd/rpntr/Mcount_count101" (ROM)
+removed.
+           Sourceless block "fifo/BU2/U0/grf.rf/gl0.rd/grss.rsts/ram_empty_fb_i_mux000056"
+(ROM) removed.
+            The signal "fifo/BU2/U0/grf.rf/gl0.rd/grss.rsts/ram_empty_fb_i_mux000056" is
+sourceless and has been removed.
+             Sourceless block "fifo/BU2/U0/grf.rf/gl0.rd/grss.rsts/ram_empty_fb_i_mux000073"
+(ROM) removed.
+              The signal "fifo/BU2/U0/grf.rf/gl0.rd/grss.rsts/ram_empty_fb_i_mux000073" is
+sourceless and has been removed.
+               Sourceless block "fifo/BU2/U0/grf.rf/gl0.rd/grss.rsts/ram_empty_fb_i_mux0000102"
+(ROM) removed.
+       Sourceless block "fifo/BU2/U0/grf.rf/gl0.rd/grss.rsts/ram_empty_fb_i_mux000029"
+(ROM) removed.
+        The signal "fifo/BU2/U0/grf.rf/gl0.rd/grss.rsts/ram_empty_fb_i_mux000029/O" is
+sourceless and has been removed.
+         Sourceless block
+"fifo/BU2/U0/grf.rf/gl0.rd/grss.rsts/ram_empty_fb_i_mux000029/LUT3_L_BUF" (BUF)
+removed.
+          The signal "fifo/BU2/U0/grf.rf/gl0.rd/grss.rsts/ram_empty_fb_i_mux000029" is
+sourceless and has been removed.
+   Sourceless block "fifo/BU2/U0/grf.rf/gl0.rd/rpntr/Mcount_count_xor<3>1_SW0"
+(ROM) removed.
+    The signal "fifo/BU2/U0/grf.rf/gl0.rd/rpntr/Mcount_count_xor<3>1_SW0/O" is
+sourceless and has been removed.
+     Sourceless block
+"fifo/BU2/U0/grf.rf/gl0.rd/rpntr/Mcount_count_xor<3>1_SW0/LUT2_L_BUF" (BUF)
+removed.
+      The signal "fifo/BU2/N2" is sourceless and has been removed.
+The signal "fifo/BU2/U0/grf.rf/gl0.rd/rpntr/Mcount_count" is sourceless and has
+been removed.
+ Sourceless block "fifo/BU2/U0/grf.rf/gl0.rd/rpntr/count_0" (FF) removed.
+  The signal "fifo/BU2/U0/grf.rf/gl0.rd/rpntr/count<0>" is sourceless and has been
+removed.
+   Sourceless block "fifo/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_mux0000<3>1" (ROM)
+removed.
+   Sourceless block "fifo/BU2/U0/grf.rf/gl0.rd/rpntr/Mcount_count_xor<0>11" (ROM)
+removed.
+   Sourceless block
+"fifo/BU2/U0/grf.rf/gl0.rd/grss.rsts/ram_empty_fb_i_mux000073_SW0" (ROM)
+removed.
+    The signal "fifo/BU2/N6" is sourceless and has been removed.
+The signal "fifo/BU2/U0/grf.rf/ram_rd_en" is sourceless and has been removed.
+ Sourceless block "fifo/BU2/U0/grf.rf/gl0.wr/gwss.wsts/ram_full_i_mux00005" (ROM)
+removed.
+  The signal "fifo/BU2/U0/grf.rf/gl0.wr/gwss.wsts/ram_full_i_mux00005/O" is
+sourceless and has been removed.
+   Sourceless block
+"fifo/BU2/U0/grf.rf/gl0.wr/gwss.wsts/ram_full_i_mux00005/LUT4_L_BUF" (BUF)
+removed.
+    The signal "fifo/BU2/U0/grf.rf/gl0.wr/gwss.wsts/ram_full_i_mux00005" is
+sourceless and has been removed.
+The signal "fifo/BU2/U0/grf.rf/gl0.rd/grss.rsts/ram_empty_fb_i_mux00003132" is
+sourceless and has been removed.
+ Sourceless block "fifo/BU2/U0/grf.rf/gl0.rd/grss.rsts/ram_empty_fb_i_mux0000100"
+(ROM) removed.
+  The signal "fifo/BU2/U0/grf.rf/gl0.rd/grss.rsts/ram_empty_fb_i_mux0000100/O" is
+sourceless and has been removed.
+The signal "fifo/BU2/U0/grf.rf/gl0.rd/grss.rsts/ram_empty_fb_i_mux00003159" is
+sourceless and has been removed.
+
+The trimmed logic reported below is either:
+   1. part of a cycle
+   2. part of disabled logic
+   3. a side-effect of other trimmed logic
+
+The signal "f_full" is unused and has been removed.
+Unused block "fifo/BU2/U0/grf.rf/gl0.rd/grss.rsts/ram_empty_fb_i_mux00003132"
+(ROM) removed.
+Unused block "fifo/BU2/U0/grf.rf/gl0.rd/grss.rsts/ram_empty_fb_i_mux00003159"
+(ROM) removed.
+Unused block "fifo/BU2/U0/grf.rf/gl0.rd/ram_rd_en_i1" (ROM) removed.
+Unused block "fifo/BU2/U0/grf.rf/gl0.wr/wpntr/count_not00011" (ROM) removed.
+Unused block "fifo/GND" (ZERO) removed.
+Unused block "fifo/VCC" (ONE) removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
+FDP 		fifo/BU2/U0/grf.rf/gl0.rd/grss.rsts/ram_empty_fb_i
+   optimized to 1
+FDP 		fifo/BU2/U0/grf.rf/gl0.rd/grss.rsts/ram_empty_i
+   optimized to 1
+FDCE 		fifo/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_0
+   optimized to 0
+FDCE 		fifo/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_1
+   optimized to 0
+FDCE 		fifo/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_2
+   optimized to 0
+FDCE 		fifo/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_3
+   optimized to 0
+FDC 		fifo/BU2/U0/grf.rf/gl0.wr/gwss.wsts/ram_full_fb_i
+   optimized to 0
+FDC 		fifo/BU2/U0/grf.rf/gl0.wr/gwss.wsts/ram_full_i
+   optimized to 0
+FDCE 		fifo/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_0
+   optimized to 0
+FDCE 		fifo/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_1
+   optimized to 0
+FDCE 		fifo/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_2
+   optimized to 0
+FDCE 		fifo/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_3
+   optimized to 0
+GND 		fifo/BU2/XST_GND
+VCC 		fifo/BU2/XST_VCC
+FDRE 		led_6
+   optimized to 0
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |             | Strength | Rate |              |          | Delay    |
++----------------------------------------------------------------------------------------------------------------------------------------+
+| btn_east                           | IBUF             | INPUT     | LVTTL       |          |      |              | PULLDOWN | 0 / 0    |
+| btn_north                          | IBUF             | INPUT     | LVTTL       |          |      |              | PULLDOWN | 0 / 0    |
+| btn_south                          | IBUF             | INPUT     | LVTTL       |          |      |              | PULLDOWN | 0 / 0    |
+| btn_west                           | IBUF             | INPUT     | LVTTL       |          |      |              | PULLDOWN | 0 / 0    |
+| clk                                | IBUF             | INPUT     | LVTTL       |          |      |              |          | 0 / 0    |
+| lcd_d<4>                           | IOB              | BIDIR     | LVTTL       | 2        | SLOW |              |          | 0 / 0    |
+| lcd_d<5>                           | IOB              | BIDIR     | LVTTL       | 2        | SLOW |              |          | 0 / 0    |
+| lcd_d<6>                           | IOB              | BIDIR     | LVTTL       | 2        | SLOW |              |          | 0 / 0    |
+| lcd_d<7>                           | IOB              | BIDIR     | LVTTL       | 2        | SLOW |              |          | 0 / 0    |
+| lcd_e                              | IOB              | OUTPUT    | LVTTL       | 2        | SLOW |              |          | 0 / 0    |
+| lcd_rs                             | IOB              | OUTPUT    | LVTTL       | 2        | SLOW |              |          | 0 / 0    |
+| lcd_rw                             | IOB              | OUTPUT    | LVTTL       | 2        | SLOW |              |          | 0 / 0    |
+| led<0>                             | IOB              | OUTPUT    | LVTTL       | 4        | SLOW |              |          | 0 / 0    |
+| led<1>                             | IOB              | OUTPUT    | LVTTL       | 4        | SLOW |              |          | 0 / 0    |
+| led<2>                             | IOB              | OUTPUT    | LVTTL       | 4        | SLOW |              |          | 0 / 0    |
+| led<3>                             | IOB              | OUTPUT    | LVTTL       | 4        | SLOW |              |          | 0 / 0    |
+| led<4>                             | IOB              | OUTPUT    | LVTTL       | 4        | SLOW |              |          | 0 / 0    |
+| led<5>                             | IOB              | OUTPUT    | LVTTL       | 4        | SLOW |              |          | 0 / 0    |
+| led<6>                             | IOB              | OUTPUT    | LVTTL       | 4        | SLOW |              |          | 0 / 0    |
+| led<7>                             | IOB              | OUTPUT    | LVTTL       | 4        | SLOW |              |          | 0 / 0    |
+| platformflash_oe                   | IOB              | OUTPUT    | LVTTL       | 2        | SLOW |              |          | 0 / 0    |
+| simple_io<9>                       | IOB              | OUTPUT    | LVCMOS33    | 4        | SLOW |              |          | 0 / 0    |
+| simple_io<10>                      | IOB              | OUTPUT    | LVCMOS33    | 4        | SLOW |              |          | 0 / 0    |
+| simple_io<11>                      | IOB              | OUTPUT    | LVCMOS33    | 4        | SLOW |              |          | 0 / 0    |
+| simple_io<12>                      | IOB              | OUTPUT    | LVCMOS33    | 4        | SLOW |              |          | 0 / 0    |
+| spi_adc_conv                       | IOB              | OUTPUT    | LVCMOS33    | 8        | SLOW |              |          | 0 / 0    |
+| spi_amp_cs                         | IOB              | OUTPUT    | LVCMOS33    | 8        | SLOW |              |          | 0 / 0    |
+| spi_amp_sdo                        | IBUF             | INPUT     | LVCMOS33    |          |      |              |          | 0 / 0    |
+| spi_amp_shdn                       | IOB              | OUTPUT    | LVCMOS33    | 8        | SLOW |              |          | 0 / 0    |
+| spi_dac_clr                        | IOB              | OUTPUT    | LVCMOS33    | 8        | SLOW |              |          | 0 / 0    |
+| spi_dac_cs                         | IOB              | OUTPUT    | LVCMOS33    | 8        | SLOW |              |          | 0 / 0    |
+| spi_rom_cs                         | IOB              | OUTPUT    | LVCMOS33    | 8        | SLOW |              |          | 0 / 0    |
+| spi_sck                            | IOB              | OUTPUT    | LVCMOS33    | 8        | SLOW |              |          | 0 / 0    |
+| spi_sdi                            | IOB              | OUTPUT    | LVCMOS33    | 8        | SLOW |              |          | 0 / 0    |
+| spi_sdo                            | IBUF             | INPUT     | LVCMOS33    |          |      |              |          | 0 / 0    |
+| strataflash_ce                     | IOB              | OUTPUT    | LVTTL       | 2        | SLOW |              |          | 0 / 0    |
+| strataflash_oe                     | IOB              | OUTPUT    | LVTTL       | 2        | SLOW |              |          | 0 / 0    |
+| strataflash_we                     | IOB              | OUTPUT    | LVTTL       | 2        | SLOW |              |          | 0 / 0    |
+| switch<0>                          | IBUF             | INPUT     | LVTTL       |          |      |              | PULLUP   | 0 / 0    |
+| switch<1>                          | IBUF             | INPUT     | LVTTL       |          |      |              | PULLUP   | 0 / 0    |
+| switch<2>                          | IBUF             | INPUT     | LVTTL       |          |      |              | PULLUP   | 0 / 0    |
+| switch<3>                          | IBUF             | INPUT     | LVTTL       |          |      |              | PULLUP   | 0 / 0    |
++----------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Modular Design Summary
+-----------------------------------
+Modular Design not used for this design.
+
+Section 11 - Timing Report
+--------------------------
+This design was not run using timing mode.
+
+Section 12 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 13 - Control Set Information
+------------------------------------
+No control set information for this architecture.
+
+Section 14 - Utilization by Hierarchy
+-------------------------------------
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Module                        | Partition | Slices        | Slice Reg     | LUTs          | LUTRAM        | BRAM      | MULT18X18 | BUFG  | DCM   | Full Hierarchical Name                                                                                             |
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| filter/                       |           | 112/210       | 94/170        | 124/298       | 0/68          | 0/2       | 0/0       | 1/1   | 0/0   | filter                                                                                                             |
+| +adda_ctrl_001                |           | 0/0           | 0/0           | 0/0           | 0/0           | 1/1       | 0/0       | 0/0   | 0/0   | filter/adda_ctrl_001                                                                                               |
+| +fifo                         |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0       | 0/0   | 0/0   | filter/fifo                                                                                                        |
+| ++BU2                         |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0       | 0/0   | 0/0   | filter/fifo/BU2                                                                                                    |
+| +++U0                         |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0       | 0/0   | 0/0   | filter/fifo/BU2/U0                                                                                                 |
+| ++++grf.rf                    |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0       | 0/0   | 0/0   | filter/fifo/BU2/U0/grf.rf                                                                                          |
+| +++++mem                      |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0       | 0/0   | 0/0   | filter/fifo/BU2/U0/grf.rf/mem                                                                                      |
+| ++++++gbm.gbmg.gbmga.ngecc.bm |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0       | 0/0   | 0/0   | filter/fifo/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg                                                             |
+| +++++++blk_mem_generator      |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0       | 0/0   | 0/0   | filter/fifo/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator                                           |
+| ++++++++valid.cstr            |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0       | 0/0   | 0/0   | filter/fifo/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr                                |
+| +++++++++ramloop[0].ram.r     |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0       | 0/0   | 0/0   | filter/fifo/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r               |
+| ++++++++++v2_noinit.ram       |           | 0/0           | 0/0           | 0/0           | 0/0           | 1/1       | 0/0       | 0/0   | 0/0   | filter/fifo/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_noinit.ram |
+| +processor                    |           | 98/98         | 76/76         | 174/174       | 68/68         | 0/0       | 0/0       | 0/0   | 0/0   | filter/processor                                                                                                   |
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+* Slices can be packed with basic elements from multiple hierarchies.
+  Therefore, a slice will be counted in every hierarchical module
+  that each of its packed basic elements belong to.
+** For each column, there are two numbers reported <A>/<B>.
+   <A> is the number of elements that belong to that specific hierarchical module.
+   <B> is the total number of elements from that hierarchical module and any lower level
+   hierarchical modules below.
+*** The LUTRAM column counts all LUTs used as memory including RAM, ROM, and shift registers.

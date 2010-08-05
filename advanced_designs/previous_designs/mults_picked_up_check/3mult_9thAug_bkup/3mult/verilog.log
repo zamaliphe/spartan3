@@ -1,0 +1,54 @@
+Host command: /software/ldv06/IUS/tools/verilog/bin/verilog.exe
+Command arguments:
+    alternate_MULT_TOP.v
+    booth_encode.v
+    wallace_tree.v
+    half_adder.v
+    full_adder_1bit.v
+    carry_look_ahead_16bit.v
+    carry_look_ahead_4bit.v
+
+Tool:	VERILOG-XL	05.60.001-p log file created Aug  9, 2006  18:11:46
+Tool:	VERILOG-XL	05.60.001-p   Aug  9, 2006  18:11:46
+
+Copyright (c) 1995-2004 Cadence Design Systems, Inc.  All Rights Reserved.
+Unpublished -- rights reserved under the copyright laws of the United States.
+
+Copyright (c) 1995-2004 UNIX Systems Laboratories, Inc.  Reproduced with Permission.
+
+THIS SOFTWARE AND ON-LINE DOCUMENTATION CONTAIN CONFIDENTIAL INFORMATION
+AND TRADE SECRETS OF CADENCE DESIGN SYSTEMS, INC.  USE, DISCLOSURE, OR
+REPRODUCTION IS PROHIBITED WITHOUT THE PRIOR EXPRESS WRITTEN PERMISSION OF
+CADENCE DESIGN SYSTEMS, INC.
+RESTRICTED RIGHTS LEGEND
+
+Use, duplication, or disclosure by the Government is subject to
+restrictions as set forth in subparagraph (c)(1)(ii) of the Rights in
+Technical Data and Computer Software clause at DFARS 252.227-7013 or
+subparagraphs (c)(1) and (2) of Commercial Computer Software -- Restricted
+Rights at 48 CFR 52.227-19, as applicable.
+
+                Cadence Design Systems, Inc.
+                555 River Oaks Parkway
+                San Jose, California  95134
+
+For technical assistance please contact the Cadence Response Center at
+1-877-CDS-4911 or send email to support@cadence.com
+
+For more information on Cadence's Verilog-XL product line send email to
+talkv@cadence.com
+
+Compiling source file "alternate_MULT_TOP.v"
+Compiling source file "booth_encode.v"
+Compiling source file "wallace_tree.v"
+Compiling source file "half_adder.v"
+Compiling source file "full_adder_1bit.v"
+Compiling source file "carry_look_ahead_16bit.v"
+Compiling source file "carry_look_ahead_4bit.v"
+Highest level modules:
+alternate_MULT_TOP
+
+L23 "alternate_MULT_TOP.v": $finish at simulation time 60
+0 simulation events (use +profile or +listcounts option to count)
+CPU time: 0.0 secs to compile + 0.2 secs to link + 0.2 secs in simulation
+End of Tool:	VERILOG-XL	05.60.001-p   Aug  9, 2006  18:11:47
