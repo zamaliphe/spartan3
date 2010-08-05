@@ -1,0 +1,12 @@
+clc;
+clear;
+%read the image
+y=imread('lena2.bmp','bmp');
+%imshow(y);
+z = log_polar(y);
+imshow(z);
+w = imlogpolar(y,size(y, 1),64,'bilinear');
+figure;
+imshow(y);
+figure;
+imshow(w);

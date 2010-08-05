@@ -1,0 +1,10 @@
+N = 64
+for i=1:N
+    re1(i) = test_op1(2*i-1,1);
+    im1(i) = test_op1(2*i,1);
+    y1(i) = sqrt(re1(i)^2 + im1(i)^2);
+    re1(i) = test_op1(2*i-1,1);
+    im1(i) = test_op1(2*i,1);
+    y1(i) = sqrt(re1(i)^2 + im1(i)^2);
+end
+plot(y1);

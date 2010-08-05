@@ -1,0 +1,5 @@
+I = imread('fingerprint.bmp');
+J = rgb2gray(I);
+%figure, imshow(I), figure, imshow(J);
+pcf = poc(J,J);
+surf(fftshift(pcf));

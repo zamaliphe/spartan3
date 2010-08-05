@@ -1,0 +1,24 @@
+total_rams = 32;
+ram_row_max = 2;
+N = total_rams*ram_row_max;
+
+%Filling up the original Matrix
+for i0=1:N
+    for j0=1:N
+        mat1(i,j) = (i-1)*N+j;
+    end
+end
+display(mat1);    
+mat_ori = mat1;
+
+%Transposing it distributedly
+for k=1:total_rams
+    for iX=1:ram_row_max
+        for jX=(k-1)*2+iX+1:N
+            jX=jX+1;
+            tempX = mat1((k-1)*2+iX,jX);
+            mat1((k-1)*2+iX,jX) = mat1(jX,(k-1)*2+iX);
+            mat1(jX,(k-1)*2+iX) = tempX;
+        end
+    end
+end

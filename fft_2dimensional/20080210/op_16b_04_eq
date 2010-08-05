@@ -1,0 +1,182 @@
+Tool:	VERILOG-XL	05.60.001-p   Feb 10, 2008  20:45:18
+
+Copyright (c) 1995-2004 Cadence Design Systems, Inc.  All Rights Reserved.
+Unpublished -- rights reserved under the copyright laws of the United States.
+
+Copyright (c) 1995-2004 UNIX Systems Laboratories, Inc.  Reproduced with Permission.
+
+THIS SOFTWARE AND ON-LINE DOCUMENTATION CONTAIN CONFIDENTIAL INFORMATION
+AND TRADE SECRETS OF CADENCE DESIGN SYSTEMS, INC.  USE, DISCLOSURE, OR
+REPRODUCTION IS PROHIBITED WITHOUT THE PRIOR EXPRESS WRITTEN PERMISSION OF
+CADENCE DESIGN SYSTEMS, INC.
+RESTRICTED RIGHTS LEGEND
+
+Use, duplication, or disclosure by the Government is subject to
+restrictions as set forth in subparagraph (c)(1)(ii) of the Rights in
+Technical Data and Computer Software clause at DFARS 252.227-7013 or
+subparagraphs (c)(1) and (2) of Commercial Computer Software -- Restricted
+Rights at 48 CFR 52.227-19, as applicable.
+
+                Cadence Design Systems, Inc.
+                555 River Oaks Parkway
+                San Jose, California  95134
+
+For technical assistance please contact the Cadence Response Center at
+1-877-CDS-4911 or send email to support@cadence.com
+
+For more information on Cadence's Verilog-XL product line send email to
+talkv@cadence.com
+
+Compiling source file "test/detailed_TOP.v"
+Compiling source file "00defines.v"
+Compiling source file "AGU.v"
+Compiling source file "AGUabSequencer.v"
+Compiling source file "AGUwSequencer.v"
+Compiling source file "Butterfly.v"
+Compiling source file "Butterfly_Mult.v"
+Compiling source file "Butterfly_Mult_CLA16.v"
+Compiling source file "Butterfly_Mult_CLA4.v"
+Compiling source file "Butterfly_Mult_FullAdder.v"
+Compiling source file "Butterfly_Mult_HalfAdder.v"
+Compiling source file "Butterfly_Mult_Wallace.v"
+Compiling source file "Butterfly_Mult_Wallace_Adder.v"
+Compiling source file "Controller.v"
+Compiling source file "FFT1d_complete.v"
+Compiling source file "IO.v"
+Compiling source file "RAM.v"
+Compiling source file "ROM.v"
+Highest level modules:
+detailed_TOP
+
+         -5           1
+         -2           2
+         -4           3
+         -1           4
+         -3           5
+          0           6
+         -5           7
+          0           8
+         -3           9
+          1          10
+         -4          11
+          2          12
+         -5          13
+          2          14
+         -5          15
+          2          16
+         -4          17
+          3          18
+         -5          19
+          3          20
+         -7          21
+          5          22
+        -12          23
+          8          24
+        -23          25
+         18          26
+         94          27
+        -69          28
+         15          29
+        -11          30
+          7          31
+         -6          32
+          6          33
+         -3          34
+          5          35
+         -3          36
+          3          37
+         -3          38
+          3          39
+         -2          40
+          3          41
+         -2          42
+          2          43
+         -1          44
+          1          45
+         -1          46
+          2          47
+         -1          48
+          2          49
+         -1          50
+          1          51
+          0          52
+          1          53
+         -1          54
+          2          55
+         -1          56
+          0          57
+         -1          58
+          1          59
+          0          60
+          1          61
+         -1          62
+          2          63
+         -1          64
+          1          65
+          0          66
+          2          67
+          1          68
+          1          69
+          0          70
+          1          71
+          0          72
+          1          73
+          1          74
+          2          75
+          0          76
+          1          77
+          0          78
+          1          79
+          0          80
+          2          81
+          1          82
+          1          83
+          1          84
+          1          85
+          1          86
+          2          87
+          0          88
+          1          89
+          0          90
+          2          91
+          1          92
+          1          93
+          1          94
+          1          95
+          0          96
+          0          97
+          1          98
+          1          99
+          1         100
+          1         101
+          1         102
+          1         103
+          2         104
+          1         105
+          2         106
+          2         107
+          1         108
+          1         109
+          1         110
+          0         111
+          1         112
+          0         113
+          3         114
+          1         115
+          2         116
+          1         117
+          3         118
+          0         119
+          3         120
+          0         121
+          3         122
+          1         123
+          2         124
+          1         125
+          3         126
+          0         127
+          3         128
+L119 "test/detailed_TOP.v": $finish at simulation time 748200
+0 simulation events (use +profile or +listcounts option to count) + 24202 accelerated events
+CPU time: 0.1 secs to compile + 0.5 secs to link + 3.2 secs in simulation
+End of Tool:	VERILOG-XL	05.60.001-p   Feb 10, 2008  20:45:24
